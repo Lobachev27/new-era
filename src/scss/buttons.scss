@@ -1,0 +1,140 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 11px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 11px;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  width: auto;
+  height: 32px;
+  border-radius: 6px;
+  padding: 0 12px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: background-color $transition-time-fast, color $transition-time-fast;
+  @media screen and ($desktop1) {
+    font-size: 14px;
+    line-height: 14px;
+    height: 40px;
+    padding: 0 18px;
+    border-radius: 12px;
+  }
+
+  &:hover {
+    transition: background-color $transition-time-fast, color $transition-time-fast;
+  }
+
+  &[disabled] {
+    &:hover {
+      background-color: $button-bg-disabled;
+      transition: background-color $transition-time-fast, color $transition-time-fast;
+      cursor: default;
+    }
+  }
+
+  &.btn-black {
+    background-color: $button-bg;
+    color: $white;
+
+    &:hover {
+      background-color: $button-bg-hover;
+    }
+  }
+
+  &.btn-white {
+    background-color: $white;
+    color: $button-bg;
+
+    &:hover {
+      background-color: $gray;
+    }
+  }
+
+  &.btn-gray {
+    background-color: rgba(23, 23, 23, 0.1);
+    color: $black;
+
+    &:hover {
+      background-color: $gray;
+    }
+  }
+
+  &.btn-transparent {
+    background-color: transparent;
+    color: $black;
+    text-transform: capitalize;
+    height: auto;
+    border-radius: 0;
+    padding: 3px 0;
+    border-bottom: 1px solid #D9D9D9;
+    transition: background-color $transition-time-fast, color $transition-time-fast, border $transition-time-fast;
+
+    &:hover {
+      color: #555555;
+      border-bottom: 1px solid transparent;
+      transition: background-color $transition-time-fast, color $transition-time-fast, border $transition-time-fast;
+    }
+  }
+}
+
+#scrollToTop {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #D9D9D9;
+  padding: 0;
+  box-shadow: 0 4px 22px rgba(0,0,0, 0.07);
+  border: 1px solid #D9D9D9;
+  z-index: 50;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: background-color $transition-time-fast, opacity $transition-time-fast;
+  @media screen and ($tablet1) {
+    right: 32px;
+    bottom: 32px;
+  }
+  @media screen and ($desktop1) {
+    width: 60px;
+    height: 60px;
+  }
+
+  &:hover {
+    background-color: #F5F5F5;
+    transition: background-color $transition-time-fast, opacity$transition-time-fast;
+  }
+
+  &:before {
+    content:"";
+    background: url("../img/icon-chevron.svg") no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 10px;
+    height: 20px;
+    position: absolute;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    top: 50%;
+    left: 50%;
+    @media screen and ($desktop1) {
+      width: 14px;
+      height: 28px;
+    }
+  }
+
+  &.show {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+}

@@ -1,0 +1,18 @@
+<div class="actual">
+  <div class="title-h6">@@context.title</div>
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      @@for (var i = 0; i < context.arr.length; i++) {
+      <div class="swiper-slide">
+        <div class="actual__box">
+          <a class="actual__box-text" href="`+context.arr[i].link+`"><span>`+context.arr[i].text+`</span></a>
+          <div class="actual__box-info">
+            <span class="actual__box-date">`+context.arr[i].date+`</span>,
+            <span class="actual__box-city">`+context.arr[i].city+`</span>
+          </div>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+</div>

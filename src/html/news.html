@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include("./shared/head.html", {
+  "title": "Новости"
+})
+
+<body>
+
+@@include("./components/header.html", {
+  context: {
+    "classList": "",
+    "linkActive": false,
+    arr: [
+      {'class': '', 'link': './nir.html', 'text': 'Научно-исследовательские работы'},
+      {'class': '', 'link': './library.html', 'text': 'Библиотека'},
+      {'class': 'active', 'link': './news.html', 'text': 'Новости'},
+      {'class': '', 'link': './authors.html', 'text': 'Авторы'},
+      {'class': '', 'link': './about-project.html', 'text': 'О проекте'},
+      {'class': '', 'link': './contacts.html', 'text': 'Контакты'},
+    ],
+  }
+})
+
+<main class="main">
+
+  @@include("./components/breadcrumbs.html", {
+    context: {
+      'lastBreadcrumb': 'Новости',
+      arr: [
+        {'text': 'Главная', 'link': './'},
+      ],
+    }
+  })
+
+  <section class="news-page">
+    <div class="container">
+      <h1 class="title-h1">Новости</h1>
+
+      @@include("./components/filter.html")
+
+      @@include("./components/news-list.html", {
+        context: {
+          arrNews: [
+            {'link': './news-detail.html', 'img': './img/news-1.jpg', 'text': 'Заседание круглого стола пройдет в Москве 24 мая', 'date': '23 апреля 2022', 'city': 'Москва',},
+            {'link': './news-detail.html', 'img': './img/news-2.jpg', 'text': 'На Нижегородской ярмарке состоялось заседание круглого стола “Гибридная война и кризис Западной цивилизации”', 'date': '23 апреля 2022', 'city': 'Москва',},
+            {'link': './news-detail.html', 'img': './img/news-3.jpg', 'text': 'В Москве состоялось заседание круглого стола “Цивилизационное будущее России”', 'date': '23 апреля 2022', 'city': 'Москва',},
+            {'link': './news-detail.html', 'img': './img/news-2.jpg', 'text': 'На Нижегородской ярмарке состоялось заседание круглого стола “Гибридная война и кризис Западной цивилизации”', 'date': '23 апреля 2022', 'city': 'Москва',},
+            {'link': './news-detail.html', 'img': './img/news-1.jpg', 'text': 'Заседание круглого стола пройдет в Москве 24 мая', 'date': '23 апреля 2022', 'city': 'Москва',},
+            {'link': './news-detail.html', 'img': './img/news-2.jpg', 'text': 'На Нижегородской ярмарке состоялось заседание круглого стола “Гибридная война и кризис Западной цивилизации”', 'date': '23 апреля 2022', 'city': 'Москва',},
+            {'link': './news-detail.html', 'img': './img/news-3.jpg', 'text': 'В Москве состоялось заседание круглого стола “Цивилизационное будущее России”', 'date': '23 апреля 2022', 'city': 'Москва',},
+            {'link': './news-detail.html', 'img': './img/news-2.jpg', 'text': 'На Нижегородской ярмарке состоялось заседание круглого стола “Гибридная война и кризис Западной цивилизации”', 'date': '23 апреля 2022', 'city': 'Москва',},
+            {'link': './news-detail.html', 'img': './img/news-1.jpg', 'text': 'Заседание круглого стола пройдет в Москве 24 мая', 'date': '23 апреля 2022', 'city': 'Москва',},
+            {'link': './news-detail.html', 'img': './img/news-2.jpg', 'text': 'На Нижегородской ярмарке состоялось заседание круглого стола “Гибридная война и кризис Западной цивилизации”', 'date': '23 апреля 2022', 'city': 'Москва',},
+            {'link': './news-detail.html', 'img': './img/news-3.jpg', 'text': 'В Москве состоялось заседание круглого стола “Цивилизационное будущее России”', 'date': '23 апреля 2022', 'city': 'Москва',},
+            {'link': './news-detail.html', 'img': './img/news-2.jpg', 'text': 'На Нижегородской ярмарке состоялось заседание круглого стола “Гибридная война и кризис Западной цивилизации”', 'date': '23 апреля 2022', 'city': 'Москва',},
+            {'link': './news-detail.html', 'img': './img/news-1.jpg', 'text': 'Заседание круглого стола пройдет в Москве 24 мая', 'date': '23 апреля 2022', 'city': 'Москва',},
+            {'link': './news-detail.html', 'img': './img/news-2.jpg', 'text': 'На Нижегородской ярмарке состоялось заседание круглого стола “Гибридная война и кризис Западной цивилизации”', 'date': '23 апреля 2022', 'city': 'Москва',},
+            {'link': './news-detail.html', 'img': './img/news-3.jpg', 'text': 'В Москве состоялось заседание круглого стола “Цивилизационное будущее России”', 'date': '23 апреля 2022', 'city': 'Москва',},
+            {'link': './news-detail.html', 'img': './img/news-2.jpg', 'text': 'На Нижегородской ярмарке состоялось заседание круглого стола “Гибридная война и кризис Западной цивилизации”', 'date': '23 апреля 2022', 'city': 'Москва',},
+          ],
+        }
+      })
+
+      @@include("./components/pagination.html")
+
+    </div>
+  </section>
+
+</main>
+
+@@include("./components/footer.html")
+
+@@include("./shared/script.html")
+</body>
+</html>

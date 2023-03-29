@@ -1,0 +1,60 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.breadcrumbs {
+  position: relative;
+  width: 100%;
+
+  & .container {
+    display: flex;
+    align-items: center;
+  }
+
+  &__list {
+    position: relative;
+    display: block;
+    padding: 16px 0;
+    @media screen and ($tablet1) {
+      padding: 20px 0;
+    }
+    @media screen and ($desktop1) {
+      padding: 24px 0;
+    }
+
+    & span {
+      display: inline-block;
+      background: url("../img/icon-chevron.svg") no-repeat;
+      background-position: center;
+      background-size: contain;
+      width: 6px;
+      height: 11px;
+      padding: 0 12px;
+      opacity: 0.4;
+    }
+  }
+
+  &__link {
+    display: inline;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    color: $black;
+    transition: opacity $transition-time-fast;
+    @media screen and ($tablet1) {
+      font-size: 13px;
+    }
+    @media screen and ($desktop1) {
+      font-size: 14px;
+    }
+
+    &:hover {
+      opacity: 0.7;
+      transition: opacity $transition-time-fast;
+    }
+
+    &:last-child {
+      opacity: 0.4 !important;
+      cursor: default;
+    }
+  }
+}

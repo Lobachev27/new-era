@@ -1,0 +1,47 @@
+<div class="tabs-main">
+  <div class="tabs-main__tabs">
+    <a class="tabs-main__tab" href="#news">Новости</a>
+    <a class="tabs-main__tab" href="#nir">Научные работы</a>
+  </div>
+  <div id="news" class="tabs-main__container">
+    <ul>
+      @@for (var i = 0; i < context.arrNews.length; i++) {
+      <li class="news__box">
+        <div class="news__box-image">
+          <img src="`+context.arrNews[i].img+`" alt="">
+        </div>
+        <div class="news__box-content">
+          <div class="news__box-text">`+context.arrNews[i].text+`</div>
+          <div class="news__box-info">
+            <span class="news__box-date">`+context.arrNews[i].date+`</span>,
+            <span class="news__box-city">`+context.arrNews[i].city+`</span>
+          </div>
+        </div>
+        <a class="news__box-link" href="`+context.arrNews[i].link+`"></a>
+      </li>
+      }
+    </ul>
+    <a class="news__more" href="./news.html"><span>Смотреть все новости</span></a>
+  </div>
+  <div id="nir" class="tabs-main__container">
+    <ul>
+      @@for (var i = 0; i < context.arrNir.length; i++) {
+      <li class="news__box">
+        <div class="news__box-image">
+          <img src="`+context.arrNir[i].img+`" alt="">
+        </div>
+        <div class="news__box-chapter">`+context.arrNir[i].chapter+`</div>
+        <div class="news__box-type">`+context.arrNir[i].type+`</div>
+        <div class="news__box-content">
+          <div class="news__box-text">`+context.arrNir[i].text+`</div>
+          <div class="news__box-info">
+            Автор: <span class="news__box-city">`+context.arrNir[i].author+`</span>
+          </div>
+        </div>
+        <a class="news__box-link" href="`+context.arrNir[i].link+`"></a>
+      </li>
+      }
+    </ul>
+    <a class="news__more" href="./nir.html"><span>Смотреть все работы</span></a>
+  </div>
+</div>

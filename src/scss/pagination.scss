@@ -1,0 +1,80 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.pagination {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  @media screen and ($tablet1) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__pages {
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+    @media screen and ($tablet1) {
+      margin-top: 0;
+    }
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 11px;
+    font-weight: 500;
+    background-color: $white;
+    color: $black;
+    border: 1px solid #D9D9D9;
+    border-radius: 6px;
+    width: 32px;
+    height: 32px;
+    margin: 0 4px;
+    transition: background-color $transition-time-fast, color $transition-time-fast, $transition-time-fast;
+    z-index: 1;
+    @media screen and ($desktop1) {
+      font-size: 14px;
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &.active {
+      background-color: rgba(23, 23, 23, 0.1);
+      border: 1px solid rgba(23, 23, 23, 0.1);
+    }
+
+    &:hover {
+      background-color: rgba(23, 23, 23, 0.1);
+      border: 1px solid rgba(23, 23, 23, 0.1);
+      transition: background-color $transition-time-fast, color $transition-time-fast, $transition-time-fast;
+    }
+
+    &.prev,
+    &.next {
+      svg{
+        width: 6px;
+        fill: $black;
+      }
+    }
+
+    &.prev {
+      svg{
+        transform: rotate(180deg);
+      }
+    }
+  }
+}

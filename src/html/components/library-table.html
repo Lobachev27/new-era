@@ -1,0 +1,35 @@
+<div class="library">
+  <div class="library__wrapper">
+    <div class="library__table">
+      <div class="library__topic">
+        <div class="library__topic-col col-name">Название</div>
+        <div class="library__topic-col col-author">Автор</div>
+        <div class="library__topic-col col-year">Год</div>
+        <div class="library__topic-col col-publishing">Издательство</div>
+        <div class="library__topic-col col-categories">Категории</div>
+        <div class="library__topic-col col-link"></div>
+      </div>
+      <ul class="library__list">
+        @@for (var i = 0; i < context.arr.length; i++) {
+        <li class="library__item">
+          <div class="library__item-col col-name">
+            <a class="js-popup" href="#library"
+                data-image="`+context.arr[i].image+`"
+                data-author="`+context.arr[i].author+`"
+                data-name="`+context.arr[i].name+`"
+                data-description="`+context.arr[i].description+`"
+            >
+              `+context.arr[i].name+`
+            </a>
+          </div>
+          <div class="library__item-col col-author"><span>`+context.arr[i].author+`</span></div>
+          <div class="library__item-col col-year"><span>`+context.arr[i].year+`</span></div>
+          <div class="library__item-col col-publishing"><span>`+context.arr[i].publishing+`</span></div>
+          <div class="library__item-col col-categories"><span>`+context.arr[i].categories+`</span></div>
+          <div class="library__item-col col-link"><span>`+context.arr[i].link+`</span></div>
+        </li>
+        }
+      </ul>
+    </div>
+  </div>
+</div>

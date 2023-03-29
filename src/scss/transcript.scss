@@ -1,0 +1,491 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.transcript {
+  &__date {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 14px;
+    color: #999999;
+    margin-bottom: 8px;
+    @media screen and ($tablet1) {
+      font-size: 16px;
+      line-height: 16px;
+      margin-bottom: 10px;
+    }
+    @media screen and ($desktop3) {
+      font-size: 18px;
+      line-height: 18px;
+      margin-bottom: 12px;
+    }
+  }
+
+  &__slider {
+    position: relative;
+    width: 100%;
+    height: 50vw;
+    margin: 10px 0;
+    @media screen and ($tablet1) {
+      height: 52vw;
+      margin: 24px 0;
+    }
+    @media screen and ($desktop1) {
+      margin: 24px 0 0;
+    }
+    @media screen and ($desktop2) {
+      height: 40vw;
+    }
+    @media screen and ($desktop3) {
+      height: 738px;
+    }
+
+    & .swiper-container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    & .swiper-slide {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background-color: $gray-middle;
+
+      & img {
+        width: 100%;
+        height: 100%;
+        object-position: center;
+        object-fit: contain;
+      }
+    }
+  }
+
+  &__content {
+    position: relative;
+    padding: 0;
+    z-index: 2;
+    @media screen and ($desktop1) {
+      padding: 0 60px;
+      margin-top: -40px;
+    }
+    @media screen and ($desktop3) {
+      padding: 0 120px;
+    }
+  }
+
+  &__box {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    @media screen and ($tablet1) {
+      display: grid;
+      grid-template-columns: 110px 1fr;
+      grid-gap: 24px;
+    }
+    @media screen and ($desktop1) {
+      grid-gap: 40px;
+    }
+
+    &-left {
+      margin-bottom: 12px;
+      @media screen and ($tablet1) {
+        margin-bottom: 0;
+      }
+    }
+
+    &-image {
+      position: relative;
+      width: 110px;
+      height: 110px;
+      overflow: hidden;
+      background-color: #E8E8E8;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 50%;
+        height: 50%;
+        background: url("../img/icon-user-white.svg") no-repeat;
+        background-position: center;
+        background-size: contain;
+        transform: translate(-50%, -50%);
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $black;
+        opacity: 0;
+        transition: opacity $transition-time-fast;
+      }
+
+      & img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-position: center 25%;
+        object-fit: cover;
+        transform: scale(1);
+        transition: transform $transition-time-fast;
+      }
+    }
+
+    &-name {
+      display: inline;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 24px;
+      padding: 3px 0;
+      border-bottom: 1px solid #D9D9D9;
+      color: $black;
+      transition: border $transition-time-fast;
+      @media screen and ($tablet1) {
+        font-size: 16px;
+        line-height: 28px;
+      }
+      @media screen and ($desktop1) {
+        font-size: 18px;
+        line-height: 32px;
+      }
+
+      &:hover {
+        border-bottom: 1px solid transparent;
+      }
+
+      &:not([href]) {
+        border-bottom: 1px solid transparent;
+        cursor: default;
+      }
+    }
+
+    &-status {
+      display: block;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 20px;
+      color: #5B5B5B;
+      margin-top: 6px;
+      @media screen and ($tablet1) {
+        font-size: 14px;
+        line-height: 24px;
+      }
+      @media screen and ($desktop1) {
+        font-size: 16px;
+        line-height: 28px;
+      }
+    }
+
+    &-text {
+      position: relative;
+      width: 100%;
+      font-size: 14px;
+      color: $black;
+      margin-top: 12px;
+      @media screen and ($tablet1) {
+        font-size: 16px;
+      }
+      @media screen and ($desktop2) {
+        font-size: 18px;
+      }
+
+      & p,
+      & ul,
+      & ol,
+      & li,
+      & span,
+      & table {
+        font-size: 14px;
+        line-height: 22px;
+        color: $black;
+        @media screen and ($tablet1) {
+          font-size: 16px;
+          line-height: 28px;
+        }
+        @media screen and ($desktop2) {
+          font-size: 18px;
+          line-height: 36px;
+        }
+      }
+
+      & ol,
+      & ul {
+        padding-left: 24px;
+
+        & li {
+          &::marker {
+            display: block;
+            min-width: 24px;
+          }
+        }
+      }
+
+      & p {
+        margin-bottom: 12px;
+        @media screen and ($tablet1) {
+          margin-bottom: 16px;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        & img {
+          max-width: 1024px;
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      & table {
+        position: relative;
+        min-width: auto;
+        margin: 0 auto;
+        width: 100%;
+
+        & th,
+        & td {
+          border:1px solid #d9d9d9;;
+          padding: 5px 10px;
+        }
+
+        & tr {
+          &:first-child {
+            & td {
+              background-color: #f5f5f5;
+              font-weight: 500;
+              color: $black;
+            }
+          }
+        }
+      }
+    }
+
+    &-file {
+      position: relative;
+      display: block;
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 20px;
+      color: $black;
+      padding: 0 40px 0 50px;
+      transition: opacity $transition-time-fast;
+      opacity: 1;
+      @media screen and ($tablet1) {
+        font-size: 14px;
+        line-height: 24px;
+      }
+      @media screen and ($desktop1) {
+        font-size: 16px;
+        line-height: 28px;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: calc(50% + 8px);
+        left: 0;
+        transform: translateY(-50%);
+        width: 34px;
+        height: 34px;
+        background: url("../img/icon-file.svg") no-repeat;
+        background-position: center;
+        background-size: contain;
+        @media screen and ($tablet1) {
+          top: calc(50% + 12px);
+        }
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: calc(50% + 8px);
+        right: 0;
+        transform: translateY(-50%);
+        width: 24px;
+        height: 24px;
+        background: url("../img/icon-download.svg") no-repeat;
+        background-position: center;
+        background-size: contain;
+        @media screen and ($tablet1) {
+          top: calc(50% + 12px);
+        }
+      }
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  &__intro {
+    padding: 16px;
+    background-color: $gray;
+    @media screen and ($tablet1) {
+      padding: 24px;
+    }
+    @media screen and ($desktop1) {
+      padding: 40px;
+    }
+
+    & .transcript__box-text {
+      font-weight: 500;
+      padding-bottom: 16px;
+      @media screen and ($tablet1) {
+        padding-bottom: 24px;
+      }
+    }
+
+    & .transcript__box-file {
+      padding-top: 16px;
+      border-top: 1px solid #D9D9D9;
+      @media screen and ($tablet1) {
+        padding-top: 24px;
+      }
+    }
+  }
+
+  &__report {
+    position: relative;
+    padding: 0 16px;
+    margin-top: 40px;
+    @media screen and ($tablet1) {
+      padding: 0 24px;
+      margin-top: 50px;
+    }
+    @media screen and ($desktop1) {
+      padding: 0 40px;
+    }
+
+    &-type {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 14px;
+      color: #999999;
+      margin-bottom: 8px;
+      @media screen and ($tablet1) {
+        font-size: 16px;
+        line-height: 16px;
+        margin-bottom: 10px;
+      }
+      @media screen and ($desktop3) {
+        font-size: 18px;
+        line-height: 18px;
+        margin-bottom: 12px;
+      }
+    }
+
+    &-title {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0.01em;
+      padding-bottom: 16px;
+      border-bottom: 1px solid #D9D9D9;
+      @media screen and ($tablet1) {
+        font-size: 24px;
+        line-height: 30px;
+        padding-bottom: 24px;
+      }
+      @media screen and ($desktop1) {
+        font-size: 30px;
+        line-height: 36px;
+      }
+    }
+
+    &-main {
+      padding: 16px 0;
+      @media screen and ($tablet1) {
+        padding: 24px 0;
+      }
+    }
+
+    &-more {
+      &.active {
+        & .transcript__report-more-title {
+          border-bottom: 1px solid #D9D9D9;
+
+          &:after {
+            transform: translate(-50%, -50%) rotate(270deg);
+            transition: transform $transition-time-middle;
+          }
+        }
+
+        & .transcript__report-more-content {
+          max-height: 10000vh;
+          overflow: visible;
+        }
+      }
+
+      &-title {
+        position: relative;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.01em;
+        padding: 16px 40px 16px 0;
+        border-bottom: 1px solid transparent;
+        transition: border $transition-time-fast;
+        cursor: pointer;
+        @media screen and ($tablet1) {
+          font-size: 24px;
+          line-height: 30px;
+          padding: 24px 40px 24px 0;
+        }
+
+        &:after {
+          content:"";
+          background: url("../img/icon-chevron.svg") no-repeat;
+          background-position: center;
+          background-size: contain;
+          width: 8px;
+          height: 16px;
+          position: absolute;
+          transform: translate(-50%, -50%) rotate(90deg);
+          top: 50%;
+          right: 12px;
+          transition: transform $transition-time-middle;
+        }
+      }
+
+      &-content {
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height $transition-time-middle;
+      }
+    }
+
+    &-comment {
+      margin-top: 16px;
+      @media screen and ($tablet1) {
+        margin-top: 24px;
+      }
+
+      & .transcript__box-text {
+
+        font-weight: 500;
+        background-color: $gray;
+        padding: 16px;
+        border-radius: 0px 16px 16px 16px;
+        @media screen and ($tablet1) {
+          padding: 24px;
+          margin-top: 24px;
+          border-radius: 0px 24px 24px 24px;
+        }
+        @media screen and ($desktop1) {
+          padding: 32px;
+          margin-top: 32px;
+          border-radius: 0px 32px 32px 32px;
+        }
+      }
+    }
+  }
+}

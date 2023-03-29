@@ -1,0 +1,118 @@
+<div  class="form-opening">
+  <div class="form-opening__box">
+    <div class="form-opening__box-info">
+      <div class="form-opening__box-title">Регистрация на мероприятие</div>
+      <div class="form-opening__box-description">Пройдите опрос о посещении мероприятия</div>
+    </div>
+    <div class="form-opening__box-button">
+      <button class="btn btn-black" type="button">Пройти опрос</button>
+    </div>
+  </div>
+  <form class="form-opening__wrapper">
+    <div class="form-box form-col-1">
+
+      @@include("./radio.html", {
+        context: {
+          classesList: "",
+          required: false,
+          disabled: false,
+          readonly: false,
+          label: "Пойдешь на мероприятия?",
+          message: "",
+          arr: [
+            {"text": "Конечно пойду", "name": "event", "checked": "",},
+            {"text": "Постараюсь, но пока не могу точно сказать", "name": "event", "checked": "checked",},
+          ],
+        }
+      })
+
+    </div>
+    <div class="form-box form-col-2">
+
+      @@include("./select.html", {
+        context: {
+          classesList: "",
+          class: "",
+          required: false,
+          disabled: false,
+          readonly: false,
+          label: "Укажите удобный способ связи",
+          placeholder: "Выберите способ связи",
+          message: "",
+          arr: [
+            {'selected': '', 'text': "What's App",},
+            {'selected': '', 'text': 'Telegram',},
+            {'selected': '', 'text': 'Почта',},
+            {'selected': '', 'text': 'Мобильный телефон',},
+          ],
+        }
+      })
+
+      @@include("./select.html", {
+        context: {
+          classesList: "",
+          class: "",
+          required: false,
+          disabled: false,
+          readonly: false,
+          label: "Дополнительный способ связи",
+          placeholder: "Выберите способ связи",
+          message: "",
+          arr: [
+            {'selected': '', 'text': "What's App",},
+            {'selected': '', 'text': 'Telegram',},
+            {'selected': '', 'text': 'Почта',},
+            {'selected': '', 'text': 'Мобильный телефон',},
+          ],
+        }
+      })
+
+    </div>
+    <div class="form-box form-col-1">
+
+      @@include("./textarea.html", {
+        context: {
+          classesList: "",
+          required: false,
+          disabled: false,
+          readonly: false,
+          label: "Оставьте отзыв об опросе",
+          placeholder: "Напишите отзыв",
+          value: "",
+          message: "",
+        }
+      })
+
+    </div>
+    <div class="form-box form-col-1">
+
+      @@include("./select-multi.html", {
+        context: {
+          classesList: "",
+          class: "",
+          required: false,
+          disabled: false,
+          readonly: false,
+          label: "Вопрос с мультиселектом",
+          placeholder: "Выберите из списка",
+          message: "",
+          arr: [
+            {'selected': '', 'text': 'Проведение мероприятий',},
+            {'selected': '', 'text': 'Менторская программа',},
+            {'selected': '', 'text': 'Карьерный центр',},
+            {'selected': '', 'text': 'Проведение мероприятий 2',},
+            {'selected': '', 'text': 'Менторская программа 2',},
+            {'selected': '', 'text': 'Карьерный центр 2',},
+            {'selected': '', 'text': 'Проведение мероприятий 3',},
+            {'selected': '', 'text': 'Менторская программа 3',},
+            {'selected': '', 'text': 'Карьерный центр 3',},
+          ],
+        }
+      })
+
+    </div>
+    <div class="form-opening__wrapper-button">
+      <button class="btn btn-black" type="submit">Отправить</button>
+    </div>
+  </form>
+</div>

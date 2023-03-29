@@ -1,0 +1,137 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.actual {
+  position: relative;
+  margin: 22px 0;
+  @media screen and ($tablet1) {
+    margin: 20px 0;
+  }
+  @media screen and ($desktop1) {
+    margin: 25px 0;
+  }
+  @media screen and ($desktop2) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+    margin: 45px 0;
+  }
+  @media screen and ($desktop3) {
+    margin: 65px 0;
+  }
+
+  & .swiper-container {
+    position: relative;
+    width: calc(100% + 16px);
+    @media screen and ($mobile3) {
+      width: 100%;
+    }
+    @media screen and ($desktop2) {
+      display: block;
+      overflow: visible;
+    }
+
+    & .swiper-wrapper {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      margin: 0 auto;
+      @media screen and ($desktop2) {
+        display: block;
+        overflow: visible;
+      }
+    }
+
+    & .swiper-slide {
+      position: relative;
+      @media screen and ($desktop2) {
+        width: 100%;
+      }
+
+      &:last-child {
+        & .actual__box {
+          @media screen and ($desktop2) {
+            border-bottom: none;
+          }
+        }
+      }
+    }
+  }
+
+  &__box {
+    width: 100%;
+    height: 145px;
+    background-color: $gray;
+    padding: 16px;
+    @media screen and ($tablet1) {
+      padding: 20px;
+      height: 169px;
+    }
+    @media screen and ($desktop2) {
+      padding: 24px 0;
+      height: auto;
+      background-color: $white;
+      border-bottom: 1px solid #D9D9D9;
+    }
+
+    &-text {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      color: $black;
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      min-height: 80px;
+      @media screen and ($tablet1) {
+        font-size: 16px;
+        line-height: 24px;
+        min-height: 96px;
+      }
+      @media screen and ($desktop2) {
+        min-height: auto;
+        display: block;
+        -webkit-line-clamp: none;
+        overflow: visible;
+      }
+      @media screen and ($desktop3) {
+        font-size: 18px;
+        line-height: 28px;
+      }
+
+      & span {
+        border-bottom: 1px solid transparent;
+        padding: 2px 0;
+        transition: border $transition-time-fast;
+      }
+
+      &:hover {
+        & span {
+          border-bottom: 1px solid $black;
+          transition: border $transition-time-fast;
+        }
+      }
+    }
+
+    &-info {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 28px;
+      margin-top: 5px;
+      color: #BDBBBB;
+      @media screen and ($tablet1) {
+        font-size: 14px;
+      }
+      @media screen and ($desktop2) {
+        font-size: 16px;
+      }
+    }
+  }
+
+  & .title-h6 {
+    @media screen and ($desktop2) {
+      margin: 0;
+    }
+  }
+}

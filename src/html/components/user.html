@@ -1,0 +1,26 @@
+<div class="user">
+
+  @@if (!context.user){
+  <div class="user__box">
+    <div class="user__box-image">
+      <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 5a4 4 0 100 8 4 4 0 000-8zm0 2a2 2 0 110 4 2 2 0 010-4zm0 7c2.991 0 5.308 1.16 6.835 3.448a1 1 0 11-1.664 1.11c-1.144-1.715-2.829-2.557-5.171-2.557-2.34 0-4.017.841-5.147 2.553a1 1 0 11-1.669-1.102c1.512-2.291 3.823-3.451 6.816-3.451z"/></svg>
+    </div>
+    <a class="user__box-link js-popup" href="#auth"></a>
+  </div>
+  }
+
+  @@if (context.user){
+  <div class="user__box">
+    <div class="user__box-image">
+      <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 5a4 4 0 100 8 4 4 0 000-8zm0 2a2 2 0 110 4 2 2 0 010-4zm0 7c2.991 0 5.308 1.16 6.835 3.448a1 1 0 11-1.664 1.11c-1.144-1.715-2.829-2.557-5.171-2.557-2.34 0-4.017.841-5.147 2.553a1 1 0 11-1.669-1.102c1.512-2.291 3.823-3.451 6.816-3.451z"/></svg>
+      <img src="@@context.image" alt="">
+    </div>
+    <span class="user__box-name">@@context.user</span>
+  </div>
+  <div class="user__dd">
+    <a class="user__dd-link" href="./lk-personal-data.html">Личный кабинет</a>
+    <a class="user__dd-link" href="javascript:void(0);">Выход</a>
+  </div>
+  }
+
+</div>

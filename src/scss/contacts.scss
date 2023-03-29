@@ -1,0 +1,188 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.contacts {
+  margin: 22px 0;
+  @media screen and ($tablet1) {
+    margin: 20px 0;
+  }
+  @media screen and ($desktop1) {
+    margin: 25px 0;
+  }
+  @media screen and ($desktop2) {
+    margin: 30px 0;
+  }
+  @media screen and ($desktop3) {
+    margin: 40px 0;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    @media screen and ($desktop2) {
+      display: grid;
+      grid-template-columns: minmax(300px, 1334fr) 394fr;
+      grid-column-gap: 32px;
+      margin-top: 30px;
+    }
+    @media screen and ($desktop3) {
+      grid-column-gap: 64px;
+      margin-top: 40px;
+    }
+  }
+
+  &__info {
+    margin: 16px 0 32px;
+    @media screen and ($tablet1) {
+      margin: 20px 0 40px;
+    }
+    @media screen and ($desktop1) {
+      margin: 25px 0 50px;
+    }
+    @media screen and ($desktop2) {
+      order: 2;
+      margin: 8px 0 0;
+    }
+  }
+
+  &__box {
+    border-bottom: 1px solid #D9D9D9;
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+    @media screen and ($tablet1) {
+      padding-bottom: 24px;
+      margin-bottom: 24px;
+    }
+    @media screen and ($desktop2) {
+      padding-bottom: 32px;
+      margin-bottom: 32px;
+    }
+
+    &:last-child {
+      border: none;
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+
+    &-title {
+      font-size: 14px;
+      line-height: 24px;
+      font-weight: 700;
+      color: $black;
+      @media screen and ($tablet1) {
+        font-size: 18px;
+        line-height: 24px;
+      }
+      @media screen and ($desktop1) {
+        font-size: 22px;
+        line-height: 32px;
+      }
+    }
+
+    &-item {
+      margin-top: 12px;
+
+      & * {
+        font-size: 12px;
+        line-height: 24px;
+        letter-spacing: 0.01em;
+        color: $black;
+
+        @media screen and ($tablet1) {
+          font-size: 14px;
+          line-height: 26px;
+        }
+        @media screen and ($desktop2) {
+          font-size: 16px;
+          line-height: 32px;
+        }
+      }
+
+      & .contacts__box-text,
+      & .contacts__box-phone {
+        display: block;
+      }
+
+      & .contacts__box-email,
+      & .contacts__box-social {
+        display: inline;
+        padding: 3px 0;
+        border-bottom: 1px solid #d9d9d9;;
+        transition: border $transition-time-fast;
+
+        &:hover {
+          border-bottom: 1px solid $black;
+          transition: color $transition-time-fast, border $transition-time-fast;
+
+          & a {
+            color: $black;
+            transition: color $transition-time-fast;
+          }
+        }
+
+        & a {
+          color: #878787;
+          transition: color $transition-time-fast;
+        }
+      }
+
+      & .contacts__box-social {
+        margin-right: 8px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  &__feedback {
+    &-title {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0.01em;
+      margin-bottom: 22px;
+      @media screen and ($tablet1) {
+        font-size: 20px;
+        line-height: 26px;
+      }
+      @media screen and ($desktop1) {
+        font-size: 24px;
+        line-height: 32px;
+      }
+      @media screen and ($desktop2) {
+        font-size: 30px;
+        line-height: 40px;
+      }
+    }
+
+    & .row {
+      align-items: center;
+      margin-top: 16px;
+      @media screen and ($tablet1) {
+        margin-top: 24px;
+      }
+      @media screen and ($desktop3) {
+        margin-top: 32px;
+      }
+    }
+
+    &-text {
+      display: none;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 12px;
+      text-align: right;
+      @media screen and ($tablet1) {
+        display: block;
+        font-size: 14px;
+        line-height: 14px;
+      }
+
+      & sup {
+        color: #EA1B1B;
+      }
+    }
+  }
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include("./shared/head.html", {
+  "title": "О центре"
+})
+
+<body>
+
+@@include("./components/header.html", {
+  context: {
+    "classList": "",
+    "linkActive": '',
+    arr: [
+      {'class': '', 'link': './nir.html', 'text': 'Научно-исследовательские работы'},
+      {'class': '', 'link': './library.html', 'text': 'Библиотека'},
+      {'class': '', 'link': './news.html', 'text': 'Новости'},
+      {'class': '', 'link': './projects.html', 'text': 'Проекты'},
+      {'class': 'active', 'link': './about-center.html', 'text': 'О центре'},
+      {'class': '', 'link': './contacts.html', 'text': 'Контакты'},
+    ],
+  }
+})
+
+<main class="main">
+
+  @@include("./components/breadcrumbs.html", {
+    context: {
+      'lastBreadcrumb': 'О центре',
+      arr: [
+        {'text': 'Главная', 'link': './'},
+        {'text': 'Центр развития манитарных технологий', 'link': './center.html'},
+      ],
+    }
+  })
+
+  <section class="about-page">
+    <div class="container">
+      <div class="about-page-left">
+        <h1 class="title-h1">О центре</h1>
+      </div>
+      <div class="about-page-right">
+        <div class="about-page__description">
+          <p>В 2020 году была основана ассоциация выпускников факультета политологии МГУ имени М.В. Ломоносова. В процессе становления организация занималась проведением интервью успешных выпускников, а также размещением их вакансий на работу и практику:</p>
+          <ul>
+            <li>34 интервью;</li>
+            <li>90 студентов на практику;</li>
+            <li>15 выпускников трудоустроены.</li>
+          </ul>
+          <p>В 2022 году Ассоциация провела первые очные мероприятия, в том числе запустила открытый лекторий «НОВАЯ ЭРА». Лекции читали ведущие преподаватели Московского университета. Мероприятия стали привлекать все больше студентов и выпускников других факультетов и вузов России. В связи с возросшим интересом к проекту было принято решение о преобразовании Ассоциации в многопрофильный Центр развития гуманитарных технологий «НОВАЯ ЭРА», целевой аудитории которого стали все студенты и выпускники социально-гуманитарных направлений, в том числе СПбГУ, МГИМО, НИУ ВШЭ, РАНХиГС, Финансовый университет и пр.</p>
+        </div>
+        <h6 class="title-h6">Ключевые направления работы Центра</h6>
+        <ul class="about-page__directions">
+          <li>
+            <div class="about-page__directions-title">Образовательное</div>
+            <div class="about-page__directions-description">Организация образовательных мероприятий  и поддержка научного сообщества при помощи  стипендиальных и грантовых программ,  а также издательской деятельность </div>
+          </li>
+          <li>
+            <div class="about-page__directions-title">Культурное</div>
+            <div class="about-page__directions-description">Формирование сообщества посредством проведения неформальных мероприятий (встречи, экскурсии, посещение выставок)</div>
+          </li>
+          <li>
+            <div class="about-page__directions-title">Карьерное</div>
+            <div class="about-page__directions-description">Содействия в трудоустройстве лучших студентов и выпускников и создания системы повышения квалификации</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+@@include("./components/footer.html")
+
+@@include("./shared/script.html")
+</body>
+</html>

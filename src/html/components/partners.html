@@ -1,0 +1,14 @@
+<section class="partners">
+  <div class="container">
+    <div class="row">
+      <h2 class="title-h2">Партнеры</h2>
+    </div>
+    <ul>
+      @@for (var i = 0; i < context.arr.length; i++) {
+      <li>
+        <img src="`+context.arr[i]+`" alt="">
+      </li>
+      }
+    </ul>
+  </div>
+</section>

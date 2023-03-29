@@ -1,0 +1,2114 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Открытая лекция Кирилла Телина</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="title" content="" />
+    <meta name="description" content="" />
+    <link
+      rel="stylesheet"
+      href="https://necolas.github.io/normalize.css/latest/normalize.css"
+    />
+    <link rel="stylesheet" href="./css/swiper.min.css" />
+    <link rel="stylesheet" href="./css/flatpickr.min.css" />
+    <link rel="stylesheet" href="./css/jquery.dropdown.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container">
+        <a class="header__logo" href="./">
+          <span>Новая эра</span>
+        </a>
+        <div class="header__main">
+          <ul>
+            <li>
+              <a class="header__link" href="./club.html"
+                ><span>Философский клуб</span></a
+              >
+            </li>
+            <li>
+              <a class="header__link" href="./center.html"
+                ><span>Центр развития</span></a
+              >
+            </li>
+            <li>
+              <a class="btn btn-black js-popup" href="#application"
+                >Подать заявку</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="header__extra">
+          <ul>
+            <li>
+              <a class="header__link" href="./nir.html"
+                ><span>Научно-исследовательские работы</span></a
+              >
+            </li>
+
+            <li>
+              <a class="header__link" href="./library.html"
+                ><span>Библиотека</span></a
+              >
+            </li>
+
+            <li>
+              <a class="header__link active" href="./news.html"
+                ><span>Новости</span></a
+              >
+            </li>
+
+            <li>
+              <a class="header__link" href="./authors.html"
+                ><span>Авторы</span></a
+              >
+            </li>
+
+            <li>
+              <a class="header__link" href="./about-project.html"
+                ><span>О проекте</span></a
+              >
+            </li>
+
+            <li>
+              <a class="header__link" href="./contacts.html"
+                ><span>Контакты</span></a
+              >
+            </li>
+          </ul>
+          <div class="header__action">
+            <div class="search">
+              <div class="input-wrapper input-search">
+                <div class="input-box">
+                  <input
+                    class="input"
+                    type="text"
+                    placeholder="Поиск"
+                    autocomplete="off"
+                    value=""
+                  />
+                  <i class="icon-delete">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      version="1.1"
+                      width="512"
+                      height="512"
+                      x="0"
+                      y="0"
+                      viewBox="0 0 32 32"
+                      style="enable-background: new 0 0 512 512"
+                      xml:space="preserve"
+                      class=""
+                    >
+                      <g>
+                        <g
+                          xmlns="http://www.w3.org/2000/svg"
+                          id="Layer_22"
+                          data-name="Layer 22"
+                        >
+                          <path
+                            d="m25.9 6.1a14 14 0 1 0 0 19.8 14 14 0 0 0 0-19.8zm-4.9 13.44a1 1 0 0 1 0 1.46 1 1 0 0 1 -.71.29 1 1 0 0 1 -.7-.29l-3.59-3.59-3.54 3.59a1 1 0 0 1 -.7.29 1 1 0 0 1 -.71-.29 1 1 0 0 1 0-1.41l3.54-3.59-3.54-3.54a1 1 0 0 1 1.41-1.41l3.54 3.54 3.54-3.54a1 1 0 0 1 1.46 1.41l-3.59 3.54z"
+                            data-original="#000000"
+                          ></path>
+                        </g>
+                      </g>
+                    </svg>
+                  </i>
+
+                  <i class="icon"
+                    ><svg
+                      width="17"
+                      height="17"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M7 0a7 7 0 015.6 11.2l.012.009.094.083 3.02 3.01a1 1 0 01-1.318 1.499l-.094-.083-3.02-3.01a1.023 1.023 0 01-.094-.108A7 7 0 117 0zm0 2a5 5 0 100 10A5 5 0 007 2z"
+                        fill-rule="evenodd"
+                      /></svg
+                  ></i>
+                </div>
+                <span class="message-text"></span>
+              </div>
+            </div>
+
+            <div class="user">
+              <div class="user__box">
+                <div class="user__box-image">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 5a4 4 0 100 8 4 4 0 000-8zm0 2a2 2 0 110 4 2 2 0 010-4zm0 7c2.991 0 5.308 1.16 6.835 3.448a1 1 0 11-1.664 1.11c-1.144-1.715-2.829-2.557-5.171-2.557-2.34 0-4.017.841-5.147 2.553a1 1 0 11-1.669-1.102c1.512-2.291 3.823-3.451 6.816-3.451z"
+                    />
+                  </svg>
+                  <img src="./img/person-06.jpg" alt="" />
+                </div>
+                <span class="user__box-name">Администратор</span>
+              </div>
+              <div class="user__dd">
+                <a class="user__dd-link" href="./lk-personal-data.html"
+                  >Личный кабинет</a
+                >
+                <a class="user__dd-link" href="javascript:void(0);">Выход</a>
+              </div>
+            </div>
+            <!--
+
+        <div class="input-wrapper ">
+  
+  <select class="select " name=""   >
+    <option value="hide">Выберите язык</option>
+    
+    <option selected>RU</option>
+    
+    <option >ENG</option>
+    
+  </select>
+  <span class="message-text"></span>
+</div>
+-->
+
+            <div class="header__menu">
+              <svg
+                class="m-1"
+                width="24"
+                height="18"
+                viewBox="0 0 24 18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect width="24" height="2" rx="1" />
+                <rect y="16" width="24" height="2" rx="1" />
+                <rect y="8" width="24" height="2" rx="1" />
+              </svg>
+              <svg
+                class="m-2"
+                xmlns="http://www.w3.org/2000/svg"
+                version="1.1"
+                width="512"
+                height="512"
+                x="0"
+                y="0"
+                viewBox="0 0 512.001 512.001"
+              >
+                <path
+                  d="M284.286,256.002L506.143,34.144c7.811-7.811,7.811-20.475,0-28.285c-7.811-7.81-20.475-7.811-28.285,0L256,227.717    L34.143,5.859c-7.811-7.811-20.475-7.811-28.285,0c-7.81,7.811-7.811,20.475,0,28.285l221.857,221.857L5.858,477.859    c-7.811,7.811-7.811,20.475,0,28.285c3.905,3.905,9.024,5.857,14.143,5.857c5.119,0,10.237-1.952,14.143-5.857L256,284.287    l221.857,221.857c3.905,3.905,9.024,5.857,14.143,5.857s10.237-1.952,14.143-5.857c7.811-7.811,7.811-20.475,0-28.285 L284.286,256.002z"
+                  data-original="#000000"
+                ></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="header-mobile">
+      <div class="container">
+        <ul>
+          <li>
+            <a class="header__link" href="./nir.html"
+              ><span>Научно-исследовательские работы</span></a
+            >
+          </li>
+
+          <li>
+            <a class="header__link" href="./library.html"
+              ><span>Библиотека</span></a
+            >
+          </li>
+
+          <li>
+            <a class="header__link active" href="./news.html"
+              ><span>Новости</span></a
+            >
+          </li>
+
+          <li>
+            <a class="header__link" href="./authors.html"
+              ><span>Авторы</span></a
+            >
+          </li>
+
+          <li>
+            <a class="header__link" href="./about-project.html"
+              ><span>О проекте</span></a
+            >
+          </li>
+
+          <li>
+            <a class="header__link" href="./contacts.html"
+              ><span>Контакты</span></a
+            >
+          </li>
+        </ul>
+        <a class="btn btn-black js-popup" href="#application">Подать заявку</a>
+      </div>
+    </div>
+
+    <main class="main">
+      <div class="breadcrumbs">
+        <div class="container">
+          <div class="breadcrumbs__list">
+            <a class="breadcrumbs__link" href="./">Главная</a>
+            <span></span>
+
+            <a class="breadcrumbs__link" href="./news.html">Новости</a>
+            <span></span>
+
+            <p class="breadcrumbs__link">Открытая лекция Кирилла Телина</p>
+          </div>
+        </div>
+      </div>
+
+      <section class="news-detail">
+        <div class="container">
+          <div class="news-detail-content">
+            <h1 class="title-h1">
+              СОВРЕМЕННЫЕ ЦЕННОСТНЫЕ УСТАНОВКИ И ОРИЕНТИРЫ ЖИТЕЛЕЙ РЕГИОНОВ
+              РОССИИ: СОЦИОКУЛЬТУРНЫЙ И СОЦИОПОЛИТИЧЕСКИЙ ВЫБОР
+            </h1>
+            <div class="news-detail__image">
+              <img
+                border="0"
+                src="http://srv180598.hoster-test.ru/upload/iblock/5e9/p1a1x6sv4h6qddpzx206ws6iv8fxuvd3.jpg"
+                width="1080"
+                height="1080"
+                alt="СОВРЕМЕННЫЕ ЦЕННОСТНЫЕ УСТАНОВКИ И ОРИЕНТИРЫ ЖИТЕЛЕЙ РЕГИОНОВ РОССИИ: СОЦИОКУЛЬТУРНЫЙ И СОЦИОПОЛИТИЧЕСКИЙ ВЫБОР"
+                title="СОВРЕМЕННЫЕ ЦЕННОСТНЫЕ УСТАНОВКИ И ОРИЕНТИРЫ ЖИТЕЛЕЙ РЕГИОНОВ РОССИИ: СОЦИОКУЛЬТУРНЫЙ И СОЦИОПОЛИТИЧЕСКИЙ ВЫБОР"
+              />
+            </div>
+            <div class="news-detail__text">
+              <div>
+                <p align="center">
+                  <b>Психосемантическое исследование</b>
+                </p>
+                <p align="center">
+                  <b
+                    >«Современные ценностные установки и ориентиры жителей
+                    регионов России: социокультурный и социополитический
+                    выбор»</b
+                  ><b> </b>
+                </p>
+                <p align="justify">
+                  <br />
+                  <br />
+                </p>
+                <p align="justify">
+                  Научно-исследовательским центром «ЭОН» совместно с Центром
+                  развития гуманитарных технологий «НОВАЯ ЭРА» было проведено
+                  психосемантическое исследование. Исследование позволяет
+                  выявить существующие ценностно-эмоциональные основания,
+                  определяющие мышление и поведение социальных групп в
+                  социально-политическом контексте.
+                </p>
+                <p align="justify">
+                  <i>Цель исследования:</i>
+                  изучить современные ценностные установки и ориентиры жителей
+                  регионов России.
+                </p>
+                <p align="justify">
+                  <i>Объект исследования:</i>
+                  население Нижегородской, Новосибирской и Белгородской
+                  областей.
+                </p>
+                <p align="justify">
+                  <i>Предмет исследования:</i>
+                  ценностные установки и ориентиры жителей этих регионов.
+                </p>
+                <p align="justify">
+                  Для достижения цели исследования был проведен анализ следующих
+                  модулей (направлений):
+                </p>
+                <b
+                  >l. Построение карты ценностей: основные точки и векторы
+                  социокультурного и ценностного выбора.</b
+                ><br />
+                <ol type="I"></ol>
+                <ol>
+                  <li>
+                    <p align="justify">
+                      Социальные ценности, установки и стереотипы.
+                    </p>
+                  </li>
+                  <li>
+                    <p align="justify">Счастье и благосостояние.</p>
+                  </li>
+                  <li>
+                    <p align="justify">
+                      Социальный капитал, доверие и самоидентичность.
+                    </p>
+                  </li>
+                  <li>
+                    <p align="justify">
+                      Экономические ценности и финансовые стереотипы.
+                    </p>
+                  </li>
+                  <li>
+                    <p align="justify">
+                      Ценности безопасности и социальной защищенности.
+                    </p>
+                  </li>
+                  <li>
+                    <p align="justify">Этические ценности и нормы.</p>
+                  </li>
+                  <li>
+                    <p align="justify">
+                      Ценности семьи и сексуально-нормативного поведения.
+                    </p>
+                  </li>
+                  <li>
+                    <p align="justify">Религиозные ценности.</p>
+                  </li>
+                  <li>
+                    <p align="justify">
+                      Представления о науке, технологиях и развитии.
+                    </p>
+                  </li>
+                  <li>
+                    <p align="justify">Постматериалистические ценности.</p>
+                  </li>
+                  <li>
+                    <p align="justify">Миграционные процессы.</p>
+                  </li>
+                  <li>
+                    <p align="justify">Коррупция.</p>
+                  </li>
+                  <li>
+                    <p align="justify">Устройство страны и управления.</p>
+                  </li>
+                  <li>
+                    <p align="justify">
+                      Ценности свободы слова и гражданского достоинства.
+                    </p>
+                  </li>
+                </ol>
+                <b
+                  >ll. Восприятие текущего социально-политического пространства
+                  России (социально-политический контекст социокультурного и
+                  ценностного выбора россиян).</b
+                ><br />
+                <ol type="I"></ol>
+                <ol>
+                  <li>
+                    <p align="justify">Место России в мире.</p>
+                  </li>
+                  <li>
+                    <p align="justify">
+                      Оценка деятельности различных органов власти.
+                    </p>
+                  </li>
+                  <li>
+                    <p align="justify">
+                      Доверие ключевым социально-политическим и общественным
+                      лидерам.
+                    </p>
+                  </li>
+                  <li>
+                    <p align="justify">Контуры лояльности и интеграции.</p>
+                  </li>
+                  <li>
+                    <p align="justify">
+                      Индикаторы аномии и отказа от участия в политической
+                      жизни.
+                    </p>
+                  </li>
+                  <li>
+                    <p align="justify">
+                      Мотивация принятия и неприятия происходящего.
+                    </p>
+                  </li>
+                </ol>
+                <b
+                  >lll. Сравнительное восприятие европейской и российской
+                  системы ценностей: различие и сходство.</b
+                ><br />
+                <b
+                  >lV. Типология социальных групп: основные векторы
+                  социально-культурного и ценностного выбора.</b
+                ><br />
+                <ol type="I"></ol>
+                <ol>
+                  <li>
+                    <p align="justify">
+                      Построение типов разного мировоззрения.
+                    </p>
+                  </li>
+                  <li>
+                    <p align="justify">Поколенческий подход.</p>
+                  </li>
+                </ol>
+                <p align="justify">
+                  <b>Технические характеристики исследования </b>
+                </p>
+                <p align="justify">
+                  Исследование проведено на территории трех регионов —
+                  Нижегородской, Новосибирской и Белгородской областей.
+                </p>
+                <p align="justify">
+                  Была проведена серия фокус-групп — по 3 группы в каждом
+                  регионе (всего 9 групп). в период с 17 по 27 июня 2022 г.
+                </p>
+                <p align="justify">
+                  <b>Структура групп</b>
+                </p>
+                <p align="justify">
+                  <b>Нижегородская и Новосибирская области:</b>
+                </p>
+                <ul>
+                  <li>
+                    <p align="justify">
+                      молодежь в возрасте до 35 лет без детей;
+                    </p>
+                  </li>
+                  <li>
+                    <p align="justify">рабочие производственных предприятий;</p>
+                  </li>
+                  <li>
+                    <p align="justify">
+                      представители среднего класса (высокооплачиваемые
+                      специалисты, менеджеры и предприниматели);
+                    </p>
+                  </li>
+                  <li>
+                    <p align="justify">пенсионеры.</p>
+                  </li>
+                </ul>
+                <p align="justify">
+                  <b>Белгородская область:</b>
+                </p>
+                <ul>
+                  <li>
+                    <p align="justify">
+                      молодежь в возрасте до 35 лет без детей;
+                    </p>
+                  </li>
+                  <li>
+                    <p align="justify">рабочие производственных предприятий;</p>
+                  </li>
+                  <li>
+                    <p align="justify">
+                      представители среднего класса (высокооплачиваемые
+                      специалисты, менеджеры и предприниматели);
+                    </p>
+                  </li>
+                  <li>
+                    <p align="justify">
+                      жители сел, удаленных от центра региона.
+                    </p>
+                  </li>
+                </ul>
+                <p align="justify">
+                  <br />
+                </p>
+                <p align="justify">
+                  <b
+                    >Количественное исследование (на базе психосемантической
+                    методики)</b
+                  >
+                </p>
+                <p align="justify">
+                  Метод сбора информации — интервью face-to-face. Инструмент
+                  сбора информации — анкета, разработанная в соответствии с
+                  параметрами, обозначенными Техническим заданием.
+                </p>
+                <p align="justify">
+                  В исследовании приняли участие 3004 респондента старше 18 лет,
+                  проживающих в указанных регионах. Отбор респондентов
+                  осуществлялся в соответствии с квотами по полу и возрасту.
+                </p>
+                <p align="justify">
+                  <br />
+                </p>
+                <p align="justify">
+                  Сбор информации в рамках количественного исследования
+                  осуществлен:
+                </p>
+                <ul>
+                  <li>
+                    <p align="justify">
+                      в Нижегородской области с 12 по 27 июля;
+                    </p>
+                  </li>
+                  <li>
+                    <p align="justify">
+                      в Новосибирской области с 9 по 21 июля;
+                    </p>
+                  </li>
+                  <li>
+                    <p align="justify">
+                      в Белгородской области с 15 по 31 июля.
+                    </p>
+                  </li>
+                </ul>
+                <p>
+                  <b><br /> </b>
+                </p>
+                <p>
+                  <b><br /> </b>
+                </p>
+                <p>
+                  <b>Социально-психологическое самочувствие населения </b>
+                </p>
+                <p>
+                  <br />
+                </p>
+                <p>
+                  Многоуровневые оценки социально-экономической ситуации: от
+                  международной до внутрисемейной
+                </p>
+                <p>
+                  <br />
+                </p>
+                <p>
+                  <img
+                    width="1024"
+                    alt="Слайд 5.jpg"
+                    src="http://srv180598.hoster-test.ru/upload/medialibrary/b2b/m55wkihbimwi8fw1yk0unqorppq2kv15.jpg"
+                    height="446"
+                    title="Слайд 5.jpg"
+                  /><br />
+                </p>
+                <p>
+                  <br />
+                </p>
+                <p>
+                  Социально-психологическое восприятие окружающего социума:
+                  интеграция или аномия
+                </p>
+                <p>
+                  <br />
+                </p>
+                <p>
+                  <img
+                    width="1024"
+                    alt="слайд 6.jpg"
+                    src="http://srv180598.hoster-test.ru/upload/medialibrary/700/v81lbbuhf5zon4vyvs079jn9w2lun05u.jpg"
+                    height="505"
+                    title="слайд 6.jpg"
+                  /><br />
+                </p>
+                <p>
+                  <br />
+                </p>
+                <p>Представление о будущем и его драйверах</p>
+                <p>
+                  <br />
+                </p>
+                <p>
+                  <img
+                    width="1024"
+                    alt=" слайд7.jpg"
+                    src="http://srv180598.hoster-test.ru/upload/medialibrary/4fc/1sdeglvgky7493xdrjncv23ar5bzrgx8.jpg"
+                    height="773"
+                    title=" слайд7.jpg"
+                  /><br />
+                </p>
+                <p>
+                  <br />
+                </p>
+                <p>
+                  <img
+                    width="1024"
+                    alt="слайд 8.jpg"
+                    src="http://srv180598.hoster-test.ru/upload/medialibrary/a9b/n0ie8zrf4cj2emwio22yzuizapb72mh4.jpg"
+                    height="499"
+                    title="слайд 8.jpg"
+                  /><br />
+                </p>
+                <p>
+                  <br />
+                </p>
+                <p>
+                  <br />
+                </p>
+                <p>
+                  <b>Ценностные основания и мировоззрения россиян </b>
+                </p>
+                <p>
+                  <br />
+                </p>
+                <p>Иерархия ценностей жизни человека</p>
+                <p>
+                  <img
+                    width="1024"
+                    alt="слайд10.jpg"
+                    src="http://srv180598.hoster-test.ru/upload/medialibrary/87a/x12i5exrquk2rm2o1tuvzfd3m9qlo24h.jpg"
+                    height="480"
+                    title="слайд10.jpg"
+                  /><br />
+                </p>
+                <p>
+                  <br />
+                </p>
+                <p>
+                  Влияние этапов жизненного цикла семьи на иерархию ценностей
+                </p>
+                <p>
+                  <img
+                    width="993"
+                    alt="слайд11.jpg"
+                    src="http://srv180598.hoster-test.ru/upload/medialibrary/457/0jnxgrxxr2p59iov3r9hf7lrg3di9hq1.jpg"
+                    height="1024"
+                    title="слайд11.jpg"
+                  /><br />
+                </p>
+                <p>
+                  <br />
+                </p>
+                <p>
+                  Профили ценностей: Идеал, Россия, Запад глазами россиян
+                  (отклонение &gt;60%)
+                </p>
+                <p>
+                  <img
+                    width="1024"
+                    alt="слайд 12.jpg"
+                    src="http://srv180598.hoster-test.ru/upload/medialibrary/932/gnh01ubf7xutlve5vsb7ca3d0czimmyj.jpg"
+                    height="597"
+                    title="слайд 12.jpg"
+                  /><br />
+                </p>
+                <p>
+                  <br />
+                </p>
+                <p>
+                  <br />
+                </p>
+                <p>
+                  Профили ценностей: Идеал, Россия, Запад глазами россиян
+                  (отклонение 30-60%)
+                </p>
+                <p>
+                  <img
+                    width="1024"
+                    alt="слайд 13.jpg"
+                    src="http://srv180598.hoster-test.ru/upload/medialibrary/5f8/mi3wq1q0h1dnbpl2fwqhtwvh2z27vexc.jpg"
+                    height="387"
+                    title="слайд 13.jpg"
+                  /><br />
+                </p>
+                <p>
+                  <br />
+                </p>
+                <p>
+                  <br />
+                </p>
+                <p>
+                  Профили ценностей: Идеал, Россия, Запад глазами россиян
+                  (отклонение 25-30%)
+                </p>
+                <p>
+                  <img
+                    width="1024"
+                    alt="слайд 14.jpg"
+                    src="http://srv180598.hoster-test.ru/upload/medialibrary/22a/9ounwuokhiib2h2jp0kn5kg35maqobgq.jpg"
+                    height="437"
+                    title="слайд 14.jpg"
+                  /><br />
+                </p>
+                <p>
+                  <br />
+                </p>
+                <p>
+                  <br />
+                </p>
+                <p>
+                  Профили ценностей: Идеал, Россия, Запад глазами россиян
+                  (отклонение &lt;20%)
+                </p>
+                <p>
+                  <img
+                    width="1024"
+                    alt="слайд 15.jpg"
+                    src="http://srv180598.hoster-test.ru/upload/medialibrary/b53/89dg2edjmc8ty09tbtq7fugnr8hb5k94.jpg"
+                    height="598"
+                    title="слайд 15.jpg"
+                  /><br />
+                </p>
+                <p>
+                  <br />
+                </p>
+                <p>
+                  <br />
+                </p>
+                <p>
+                  Оценка текущего положения взаимоотношений между россиянами и
+                  европейцами
+                </p>
+                <p>
+                  <img
+                    width="1024"
+                    alt="слайд 16.jpg"
+                    src="http://srv180598.hoster-test.ru/upload/medialibrary/113/5prthzuhf191mxj05v00fm3yv2ki01jp.jpg"
+                    height="732"
+                    title="слайд 16.jpg"
+                  /><br />
+                </p>
+                <p>
+                  <br />
+                </p>
+                <p>
+                  <br />
+                </p>
+                <p>
+                  Исторические аспекты формирования российской ценностной базы
+                </p>
+                <p>
+                  <img
+                    width="1024"
+                    alt="слайд 17.jpg"
+                    src="http://srv180598.hoster-test.ru/upload/medialibrary/61f/wmji5ywnhh7gb5acyvptfxxrnk6r3cuy.jpg"
+                    height="525"
+                    title="слайд 17.jpg"
+                  /><br />
+                </p>
+                <p>
+                  <br />
+                </p>
+                <p>
+                  <br />
+                </p>
+                <p>
+                  <b>Типология ценностных комплексов</b>
+                </p>
+                <p>
+                  <br />
+                </p>
+                <p>Психосемантические комплексы</p>
+                <p>
+                  <img
+                    width="1024"
+                    alt="слайд 19.jpg"
+                    src="http://srv180598.hoster-test.ru/upload/medialibrary/c07/258fgp203g43wwn92tlr0bg6b6o0drq6.jpg"
+                    height="689"
+                    title="слайд 19.jpg"
+                  /><br />
+                </p>
+                <p>
+                  <br />
+                </p>
+                <p>
+                  <br />
+                </p>
+                <p>
+                  <b>Прогосударственные ценности</b>
+                </p>
+                <p>
+                  <br />
+                </p>
+                <div class="form-table-section">
+                  <div class="form-table-wrapper">
+                    <table cellpadding="1" cellspacing="0">
+                      <colgroup>
+                        <col />
+                        <col />
+                        <col />
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <p>
+                              <br />
+                            </p>
+                          </td>
+                          <td>
+                            <p>
+                              <b>Сплочение, единство (34%)</b>
+                            </p>
+                          </td>
+                          <td>
+                            <p>
+                              <b>Разнообразие, дистанцированность (16%)</b>
+                            </p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td bgcolor="#f2f2f2" style="background: #f2f2f2">
+                            <p>Описание фактора</p>
+                          </td>
+                          <td bgcolor="#f2f2f2" style="background: #f2f2f2">
+                            <ul>
+                              <li>
+                                <p>
+                                  Выражена ценностная ориентация на интеграцию
+                                  общества на основе общих моральных ценностей и
+                                  норм, общей идеи, в качестве которой может
+                                  выступать как борьба с фашизмом, так и с
+                                  внешним врагом.
+                                </p>
+                              </li>
+                              <li>
+                                <p>
+                                  Повышена ценность гарантии защиты граждан со
+                                  стороны государства и превалирование законов
+                                  страны над законами мирового сообщества.
+                                </p>
+                              </li>
+                            </ul>
+                          </td>
+                          <td bgcolor="#f2f2f2" style="background: #f2f2f2">
+                            <ul>
+                              <li>
+                                <p>
+                                  Разнообразие мнений и позиций является
+                                  основанием развития общества, базируется на
+                                  признании ценности разнообразия мнений в
+                                  обществе, в том числе и «неправильных».
+                                  Государство должно предоставлять свободу
+                                  человеку и не вмешиваться в его дела.
+                                </p>
+                              </li>
+                              <li>
+                                <p>
+                                  В меньшей степени склонны к равенству, видя в
+                                  неравенстве мотивацию, стимул к деятельности,
+                                  направленной на улучшение своего положения.
+                                  Против военных конфликтов, предпочитают путь
+                                  переговоров.
+                                </p>
+                              </li>
+                            </ul>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <p>Социально-психологическое самочувствие</p>
+                          </td>
+                          <td>
+                            <ul>
+                              <li>
+                                <p>
+                                  Ощущение кризиса более абстрактно (в мире)
+                                </p>
+                              </li>
+                              <li>
+                                <p>
+                                  Уверенность, оптимизм, ощущение правильности
+                                </p>
+                              </li>
+                            </ul>
+                          </td>
+                          <td>
+                            <ul>
+                              <li>
+                                <p>
+                                  Растерянность, потерянность, критичность.
+                                  Ощущение кризиса ближе, непосредственно рядом,
+                                  вокруг
+                                </p>
+                              </li>
+                            </ul>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <p>
+                  <br />
+                </p>
+                <p>
+                  <br />
+                </p>
+                <p>
+                  <br />
+                </p>
+                <p>
+                  <b>Ценности, связанные со смыслом жизни</b>
+                </p>
+                <p>
+                  <br />
+                </p>
+                <p>
+                  <br />
+                </p>
+                <table cellpadding="1" cellspacing="0">
+                  <colgroup>
+                    <col />
+                    <col />
+                    <col />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <p>
+                          <br />
+                        </p>
+                      </td>
+                      <td>
+                        <p>
+                          <b>Долг, общественно-центрированные ценности (34%)</b>
+                        </p>
+                      </td>
+                      <td>
+                        <p>
+                          <b
+                            >Удовольствие, персонально-центрированные ценности
+                            (16%)</b
+                          >
+                        </p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td bgcolor="#f2f2f2" style="background: #f2f2f2">
+                        <p>Описание фактора</p>
+                      </td>
+                      <td bgcolor="#f2f2f2" style="background: #f2f2f2">
+                        <ul>
+                          <li>
+                            <p>
+                              Ценность долга человека перед Родиной,
+                              самоограничения и аскетизма ради защиты ресурсов
+                              страны и планеты.
+                            </p>
+                          </li>
+                          <li>
+                            <p>
+                              Преобладают традиционные ценности, связанные с
+                              ценностью семьи как ячейки общества,
+                              предназначенной для рождения детей.
+                            </p>
+                          </li>
+                          <li>
+                            <p>Резкое неприятие однополых отношений.</p>
+                          </li>
+                          <li>
+                            <p>
+                              Русских за рубежом сейчас не любят, что является
+                              для них объединяющим фактором внутри страны.
+                            </p>
+                          </li>
+                        </ul>
+                      </td>
+                      <td bgcolor="#f2f2f2" style="background: #f2f2f2">
+                        <ul>
+                          <li>
+                            <p>
+                              Ценность личности гораздо выше. Ярче проявляются
+                              ценности и установки, связанные с удовлетворением
+                              индивидуальных потребностей.
+                            </p>
+                          </li>
+                          <li>
+                            <p>
+                              В основе – свобода выбора человека (типа семьи,
+                              сексуальных отношений, личного мнения, формы
+                              проведения досуга и т.д.), которую никто не имеет
+                              права ограничивать.
+                            </p>
+                          </li>
+                          <li>
+                            <p>
+                              Восприятие отношения к русским в мире
+                              индивидуалистами менее катастрофично, выше доля
+                              уверенных, что к русским относятся, как и к
+                              остальным национальностям.
+                            </p>
+                          </li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <p>Социально-психологическое самочувствие</p>
+                      </td>
+                      <td>
+                        <ul>
+                          <li>
+                            <p>
+                              Ощущение мирового кризиса, в стране ситуация
+                              лучше, на близком к человеку уровне пока
+                              воспринимается как нормальная.
+                            </p>
+                          </li>
+                          <li>
+                            <p>Сохраняется надежда на улучшение ситуации.</p>
+                          </li>
+                        </ul>
+                      </td>
+                      <td>
+                        <ul>
+                          <li>
+                            <p>
+                              Повышенная тревожность (кризис), жизнь изменилась
+                              к худшему,
+                            </p>
+                          </li>
+                          <li>
+                            <p>
+                              Более пессимистичное восприятие действительности.
+                              Не покидает ощущение кризиса не только в мире, но
+                              и в стране, многие ощущают его на себе, своей
+                              семье. Значительная часть группы (44%) сохраняет
+                              надежду на улучшение, но повышена доля
+                              пессимистов, тех, у кого кончается терпение.
+                            </p>
+                          </li>
+                        </ul>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p>
+                  <br />
+                </p>
+                <p>
+                  <br />
+                </p>
+                <p>
+                  <br />
+                </p>
+                <p>
+                  <b>Ценности развития</b>
+                </p>
+                <p>
+                  <br />
+                </p>
+                <table cellpadding="1" cellspacing="0">
+                  <colgroup>
+                    <col />
+                    <col />
+                    <col />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <p>
+                          <br />
+                        </p>
+                      </td>
+                      <td>
+                        <p>
+                          <b>Социотехнологическое развитие (15%)</b>
+                        </p>
+                      </td>
+                      <td>
+                        <p>
+                          <b>Ценности охранения и консервации (34%)</b>
+                        </p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td bgcolor="#f2f2f2" style="background: #f2f2f2">
+                        <p>Описание фактора</p>
+                      </td>
+                      <td bgcolor="#f2f2f2" style="background: #f2f2f2">
+                        <ul>
+                          <li>
+                            <p>
+                              Передовые технологии являются благом для общества.
+                              Приветствуется клонирование человека и
+                              использование искусственного интеллекта как замена
+                              неэффективным политикам.
+                            </p>
+                          </li>
+                          <li>
+                            <p>
+                              ЛГБТ воспринимается как одно из допустимых
+                              направлений развития отдельных индивидов, при
+                              сохранении таких традиционных ценностей как
+                              доминирование основной нации, запрете на аборты и
+                              главенстве мужчины в семье.
+                            </p>
+                          </li>
+                        </ul>
+                      </td>
+                      <td bgcolor="#f2f2f2" style="background: #f2f2f2">
+                        <ul>
+                          <li>
+                            <p>
+                              Охранение общества от новых технологий,
+                              воспринимаемых как опасные, предпочтение
+                              традиционным типам отношений в обществе,
+                              управление обществом без применения технологий
+                              искусственного интеллекта.
+                            </p>
+                          </li>
+                          <li>
+                            <p>
+                              Значимой частью этой системы ценностей является
+                              идея равенства: государств в мире (отсюда –
+                              приоритет дипломатии и избегания военных
+                              конфликтов на международной арене), малых групп и
+                              народностей в обществе, мужчины и женщины в семье.
+                            </p>
+                          </li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <p>Социально-психологическое самочувствие</p>
+                      </td>
+                      <td>
+                        <ul>
+                          <li>
+                            <p>
+                              Признаки глубокого кризиса в мире (30%), которые
+                              затухают на уровне страны, на уровне населенного
+                              пункта кризисные явления менее заметны, но все же
+                              присутствуют.
+                            </p>
+                          </li>
+                          <li>
+                            <p>
+                              Представители этой группы сохраняют надежды на
+                              улучшение ситуации. Они довольно спокойны, живут с
+                              ощущением понимания ситуации. Недоверчивы.
+                            </p>
+                          </li>
+                        </ul>
+                      </td>
+                      <td>
+                        <ul>
+                          <li>
+                            <p>
+                              Треть говорит о глубоком кризисе в мире, более
+                              половины – о кризисе в стране, более половины
+                              отмечает, что кризис в полной мере не достиг
+                              городов и предприятий, на которых они работают, а
+                              также не в полной мере затронул семьи.
+                            </p>
+                          </li>
+                          <li>
+                            <p>
+                              Характерно более пессимистичное видение
+                              перспектив, выше доля тех, кто видит впереди
+                              дальнейшие ухудшения (16%). Представители этой
+                              группы более напуганы происходящим, но понимают,
+                              что происходит, планы на будущее стало строить
+                              сложнее.
+                            </p>
+                          </li>
+                        </ul>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p>
+                  <br />
+                </p>
+                <p>
+                  <br />
+                </p>
+                <p>
+                  <b>Социальная позиция</b>
+                </p>
+                <p>
+                  <br />
+                </p>
+                <table cellpadding="1" cellspacing="0">
+                  <colgroup>
+                    <col />
+                    <col />
+                    <col />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <p>
+                          <br />
+                        </p>
+                      </td>
+                      <td>
+                        <p>
+                          <b>Индивидуализм, независимость (33%)</b>
+                        </p>
+                      </td>
+                      <td>
+                        <p>
+                          <b>Кооперации, вписанности в социум (17%)</b>
+                        </p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td bgcolor="#f2f2f2" style="background: #f2f2f2">
+                        <p>
+                          <b>Описание фактора</b>
+                        </p>
+                      </td>
+                      <td bgcolor="#f2f2f2" style="background: #f2f2f2">
+                        <ul>
+                          <li>
+                            <p>
+                              <b
+                                >Право высказывать и распространять свое мнение
+                                – важная часть развития общества; человек,
+                                высказывающий мнение вразрез с позицией
+                                большинства, воспринимается как герой.
+                              </b>
+                            </p>
+                          </li>
+                          <li>
+                            <p>
+                              <b
+                                >Доход и социальный статус человека выступает
+                                основным критерием успешности.
+                              </b>
+                            </p>
+                          </li>
+                          <li>
+                            <p>
+                              <b
+                                >В отношении мигрантов прослеживается
+                                двойственная позиция: с одной стороны, они
+                                расцениваются как полезный элемент для развития
+                                экономики страны, с другой стороны, заметен
+                                низкий уровень толерантности по отношению к
+                                представителям других рас и народов.
+                              </b>
+                            </p>
+                          </li>
+                        </ul>
+                      </td>
+                      <td bgcolor="#f2f2f2" style="background: #f2f2f2">
+                        <ul>
+                          <li>
+                            <p>
+                              <b
+                                >Основан на ценности кооперации, соборности.
+                                Человек, высказывающий иное мнение,
+                                расценивается как эгоист, думающий только о
+                                себе.
+                              </b>
+                            </p>
+                          </li>
+                          <li>
+                            <p>
+                              <b
+                                >Потребности общества являются приоритетом, в
+                                рамках чего информация должна жестко
+                                контролироваться, чтобы не навредить
+                                общественным интересам. Общественное признание
+                                воспринимается как основное мерило успеха.
+                                Особенностями такого восприятия является
+                                негативное отношение к мигрантам как к обузе для
+                                общества, в сочетании с декларируемым
+                                миролюбивым отношением к другим расам и
+                                национальностям.
+                              </b>
+                            </p>
+                          </li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <p>
+                          <b>Социально-психологическое самочувствие</b>
+                        </p>
+                      </td>
+                      <td>
+                        <ul>
+                          <li>
+                            <p>
+                              <b
+                                >Более пессимистичное восприятие текущей
+                                ситуации в мире, несколько повышенное чувство
+                                тревожности при оценке ситуации на предприятии,
+                                в семье. Пессимизм проявляется и при оценке
+                                будущих перспектив, хотя надежды на улучшение
+                                преобладают. Для данной группы характерна
+                                несколько бòльшая растерянность, повышенная
+                                тревожность сочетается с недоверием всему
+                                вокруг, ощущением отсутствия консенсуса в
+                                обществе.</b
+                              >
+                            </p>
+                          </li>
+                        </ul>
+                      </td>
+                      <td>
+                        <ul>
+                          <li>
+                            <p>
+                              <b
+                                >Ощущают кризис в мире чуть менее остро, более
+                                спокойно воспринимая ситуацию в стране, но более
+                                остро реагируя на проявления кризиса на уровне
+                                населенного пункта. Значительная часть
+                                продолжает надеяться на улучшение ситуации в
+                                будущем, предпочитая ждать и терпеть. Они могут
+                                потерпеть ради будущего.
+                              </b>
+                            </p>
+                          </li>
+                          <li>
+                            <p>
+                              <b>Склонны доверять окружающим.</b>
+                            </p>
+                          </li>
+                        </ul>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p>
+                  <br />
+                </p>
+                <p>
+                  <br />
+                </p>
+                <p>
+                  <b>Формы управления социумом</b>
+                </p>
+                <p>
+                  <br />
+                </p>
+                <table cellpadding="1" cellspacing="0">
+                  <colgroup>
+                    <col />
+                    <col />
+                    <col />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <p>
+                          <br />
+                        </p>
+                      </td>
+                      <td>
+                        <p>
+                          <b>Демократия (33%)</b>
+                        </p>
+                      </td>
+                      <td>
+                        <p>
+                          <b>Авторитаризм (16%)</b>
+                        </p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td bgcolor="#f2f2f2" style="background: #f2f2f2">
+                        <p>
+                          <b>Описание фактора</b>
+                        </p>
+                      </td>
+                      <td bgcolor="#f2f2f2" style="background: #f2f2f2">
+                        <ul>
+                          <li>
+                            <p>
+                              <b
+                                >Ценность демократии как о самой эффективной
+                                форме управления обществом.
+                              </b>
+                            </p>
+                          </li>
+                          <li>
+                            <p>
+                              <b
+                                >Особой ценностью обладает участие людей в
+                                управлении обществом.
+                              </b>
+                            </p>
+                          </li>
+                          <li>
+                            <p>
+                              <b
+                                >Ценность человеческой жизни абсолютна и должна
+                                стоять превыше любых принципов.</b
+                              >
+                            </p>
+                          </li>
+                        </ul>
+                      </td>
+                      <td bgcolor="#f2f2f2" style="background: #f2f2f2">
+                        <ul>
+                          <li>
+                            <p>
+                              <b
+                                >Неверие в демократию как способ правления, не
+                                способный решать проблемы.</b
+                              >
+                            </p>
+                          </li>
+                          <li>
+                            <p>
+                              <b>Надежды на сильного властного лидера.</b>
+                            </p>
+                          </li>
+                          <li>
+                            <p>
+                              <b
+                                >Приоритет общественных интересов над личными
+                                (ценность человека в служении обществу).</b
+                              >
+                            </p>
+                          </li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <p>
+                          <b>Социально-психологическое самочувствие</b>
+                        </p>
+                      </td>
+                      <td>
+                        <ul>
+                          <li>
+                            <p>
+                              <b
+                                >Ощущение, что кризис проявляется сильнее на
+                                мировом уровне, его влияние снижается при
+                                переходе на уровень страны и тем более на уровне
+                                населенного пункта. В восприятии будущего больше
+                                оптимизма: почти половина из них надеется на
+                                лучшее (49%).
+                              </b>
+                            </p>
+                          </li>
+                          <li>
+                            <p>
+                              <b
+                                >Они несколько напуганы происходящим, но
+                                продолжают строить планы на будущее; нацелены на
+                                зарабатывание денег, но живут с ощущением, что
+                                бедны и продолжают беднеть.</b
+                              >
+                            </p>
+                          </li>
+                        </ul>
+                      </td>
+                      <td>
+                        <ul>
+                          <li>
+                            <p>
+                              <b
+                                >Более острое ощущение кризиса в мире,
+                                кризисного состояния России. Восприятие ситуации
+                                в населенном пункте, на своем предприятии как
+                                нормальной, дает им ощущение спокойствия,
+                                сохраняется надежды на улучшение. В среде
+                                авторитаристов есть ощущение единства
+                                взглядов.</b
+                              >
+                            </p>
+                          </li>
+                        </ul>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p>
+                  <br />
+                </p>
+                <p>
+                  <br />
+                </p>
+                <p>
+                  <br />
+                </p>
+                <p>
+                  <br />
+                </p>
+                <p>
+                  <b>Социально-демографические характеристики</b>
+                </p>
+                <p>
+                  <br />
+                </p>
+                <p></p>
+                <p>
+                  <img
+                    width="1024"
+                    alt="слайд 25.jpg"
+                    src="http://srv180598.hoster-test.ru/upload/medialibrary/3a5/0kc9p7472lo37jq7ag15mn7jx5ozepbb.jpg"
+                    height="853"
+                    title="слайд 25.jpg"
+                  /><br />
+                </p>
+                <p></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="actual">
+            <div class="title-h6">Новости</div>
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="actual__box">
+                    <a class="actual__box-text" href="./news-detail.html"
+                      ><span
+                        >Запуск менторской программы для студентов бакалавриата
+                        и магистратуры и выпускников социально-гуманитарного
+                        профиля.</span
+                      ></a
+                    >
+                    <div class="actual__box-info">
+                      <span class="actual__box-date">20 мая 2022</span>,
+                      <span class="actual__box-city">Москва</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="actual__box">
+                    <a class="actual__box-text" href="./news-detail.html"
+                      ><span
+                        >Открыта подача заявок на степендиальную программу на
+                        2022 год</span
+                      ></a
+                    >
+                    <div class="actual__box-info">
+                      <span class="actual__box-date">23 апреля 2022</span>,
+                      <span class="actual__box-city">Москва</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="actual__box">
+                    <a class="actual__box-text" href="./news-detail.html"
+                      ><span>Анонс предстоящего мероприятия</span></a
+                    >
+                    <div class="actual__box-info">
+                      <span class="actual__box-date">15 апреля 2022</span>,
+                      <span class="actual__box-city">Москва</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="actual__box">
+                    <a class="actual__box-text" href="./news-detail.html"
+                      ><span
+                        >Запуск менторской программы для студентов бакалавриата
+                        и магистратуры и выпускников социально-гуманитарного
+                        профиля.</span
+                      ></a
+                    >
+                    <div class="actual__box-info">
+                      <span class="actual__box-date">14 апреля 2022</span>,
+                      <span class="actual__box-city">Москва</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="actual__box">
+                    <a class="actual__box-text" href="./news-detail.html"
+                      ><span
+                        >Открыта подача заявок на степендиальную программу на
+                        2022 год</span
+                      ></a
+                    >
+                    <div class="actual__box-info">
+                      <span class="actual__box-date">13 апреля 2022</span>,
+                      <span class="actual__box-city">Москва</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="actual__box">
+                    <a class="actual__box-text" href="./news-detail.html"
+                      ><span
+                        >Открыта подача заявок на степендиальную программу на
+                        2022 год</span
+                      ></a
+                    >
+                    <div class="actual__box-info">
+                      <span class="actual__box-date">12 апреля 2022</span>,
+                      <span class="actual__box-city">Москва</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__subscribe">
+          <div class="footer__subscribe-title">Подпишитесь на анонсы</div>
+          <div class="footer__subscribe-description">
+            Главные новости — каждую неделю в вашей почте
+          </div>
+          <form class="footer__subscribe-form">
+            <div class="input-wrapper is-required">
+              <div class="input-box">
+                <input
+                  class="input"
+                  type="email"
+                  placeholder="Введите ваш email"
+                  autocomplete="off"
+                  required
+                  value=""
+                />
+                <i class="icon-delete">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    version="1.1"
+                    width="512"
+                    height="512"
+                    x="0"
+                    y="0"
+                    viewBox="0 0 32 32"
+                    style="enable-background: new 0 0 512 512"
+                    xml:space="preserve"
+                    class=""
+                  >
+                    <g>
+                      <g
+                        xmlns="http://www.w3.org/2000/svg"
+                        id="Layer_22"
+                        data-name="Layer 22"
+                      >
+                        <path
+                          d="m25.9 6.1a14 14 0 1 0 0 19.8 14 14 0 0 0 0-19.8zm-4.9 13.44a1 1 0 0 1 0 1.46 1 1 0 0 1 -.71.29 1 1 0 0 1 -.7-.29l-3.59-3.59-3.54 3.59a1 1 0 0 1 -.7.29 1 1 0 0 1 -.71-.29 1 1 0 0 1 0-1.41l3.54-3.59-3.54-3.54a1 1 0 0 1 1.41-1.41l3.54 3.54 3.54-3.54a1 1 0 0 1 1.46 1.41l-3.59 3.54z"
+                          data-original="#000000"
+                        ></path>
+                      </g>
+                    </g>
+                  </svg>
+                </i>
+              </div>
+              <span class="message-text"></span>
+            </div>
+            <button class="btn btn-black" type="submit">Подписаться</button>
+          </form>
+        </div>
+        <div class="footer__contacts">
+          <div class="footer__contacts-item">
+            <a class="footer__contacts-link" href="./club.html"
+              >Философский клуб</a
+            >
+            <a class="footer__contacts-phone" href="tel:+79150125050"
+              >+7 915 012 50 50</a
+            >
+            <a class="footer__contacts-phone" href="tel:+79165783605"
+              >+7 916 578 36 05</a
+            >
+            <a
+              class="footer__contacts-email"
+              href="mailto:civrussfuture@yandex.ru"
+              >civrussfuture@yandex.ru</a
+            >
+            <a class="footer__contacts-social" href="javascript:void(0);"
+              >Telegram</a
+            >
+            <a class="footer__contacts-social" href="javascript:void(0);"
+              >Вконтакте</a
+            >
+          </div>
+          <div class="footer__contacts-item">
+            <a class="footer__contacts-link" href="./center.html"
+              >Центр развития</a
+            >
+            <a class="footer__contacts-phone" href="tel:+74959393045"
+              >+7 (495) 9393 045</a
+            >
+            <a
+              class="footer__contacts-email"
+              href="mailto:graduate.politmsu@yandex.ru"
+              >graduate.politmsu@yandex.ru</a
+            >
+            <a
+              class="footer__contacts-social"
+              href="https://t.me/graduatepolitmsu"
+              >Telegram</a
+            >
+            <a
+              class="footer__contacts-social"
+              href="https://vk.com/graduate.politmsu"
+              >Вконтакте</a
+            >
+          </div>
+        </div>
+        <!--<div class="footer__contacts-single">
+      <div class="footer__contacts-single-left">
+        <a class="footer__contacts-link" href="./center.html">Центр развития</a>
+        <a class="footer__contacts-email" href="mailto:graduate.politmsu@yandex.ru">graduate.politmsu@yandex.ru</a>
+      </div>
+      <div class="footer__contacts-single-right">
+        <a class="footer__contacts-social" href="https://t.me/graduatepolitmsu">Telegram</a>
+        <a class="footer__contacts-social" href="https://vk.com/graduate.politmsu">Вконтакте</a>
+      </div>
+    </div>-->
+        <div class="footer__about">
+          <a class="footer__logo" href="./">
+            <span>Новая эра</span>
+          </a>
+          <a class="btn btn-black" href="./contacts.html">Обратная связь</a>
+          <div class="footer__copyright">© Новая эра, 2022</div>
+          <ul class="footer__pact">
+            <li>
+              <a href="./user-agreement.html">Пользовательское соглашение </a>
+            </li>
+            <li><a href="./user-policy.html">Конфидициальность</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <button id="scrollToTop" class="btn btn-gray" type="button"></button>
+
+    <div id="auth" class="popup">
+      <div class="popup__wrapper">
+        <div class="popup__close">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            version="1.1"
+            width="512"
+            height="512"
+            x="0"
+            y="0"
+            viewBox="0 0 512.001 512.001"
+          >
+            <path
+              d="M284.286,256.002L506.143,34.144c7.811-7.811,7.811-20.475,0-28.285c-7.811-7.81-20.475-7.811-28.285,0L256,227.717    L34.143,5.859c-7.811-7.811-20.475-7.811-28.285,0c-7.81,7.811-7.811,20.475,0,28.285l221.857,221.857L5.858,477.859    c-7.811,7.811-7.811,20.475,0,28.285c3.905,3.905,9.024,5.857,14.143,5.857c5.119,0,10.237-1.952,14.143-5.857L256,284.287    l221.857,221.857c3.905,3.905,9.024,5.857,14.143,5.857s10.237-1.952,14.143-5.857c7.811-7.811,7.811-20.475,0-28.285 L284.286,256.002z"
+              data-original="#000000"
+            ></path>
+          </svg>
+        </div>
+        <div class="popup__title">Вход в личный кабинет</div>
+        <form class="popup__content">
+          <div class="popup__box">
+            <div class="input-wrapper input-login is-required">
+              <div class="input-box">
+                <input
+                  class="input"
+                  type="text"
+                  placeholder="Логин"
+                  autocomplete="off"
+                  required
+                  value=""
+                />
+                <i class="icon-delete">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    version="1.1"
+                    width="512"
+                    height="512"
+                    x="0"
+                    y="0"
+                    viewBox="0 0 32 32"
+                    style="enable-background: new 0 0 512 512"
+                    xml:space="preserve"
+                    class=""
+                  >
+                    <g>
+                      <g
+                        xmlns="http://www.w3.org/2000/svg"
+                        id="Layer_22"
+                        data-name="Layer 22"
+                      >
+                        <path
+                          d="m25.9 6.1a14 14 0 1 0 0 19.8 14 14 0 0 0 0-19.8zm-4.9 13.44a1 1 0 0 1 0 1.46 1 1 0 0 1 -.71.29 1 1 0 0 1 -.7-.29l-3.59-3.59-3.54 3.59a1 1 0 0 1 -.7.29 1 1 0 0 1 -.71-.29 1 1 0 0 1 0-1.41l3.54-3.59-3.54-3.54a1 1 0 0 1 1.41-1.41l3.54 3.54 3.54-3.54a1 1 0 0 1 1.46 1.41l-3.59 3.54z"
+                          data-original="#000000"
+                        ></path>
+                      </g>
+                    </g>
+                  </svg>
+                </i>
+
+                <i class="icon"
+                  ><svg
+                    width="20"
+                    height="22"
+                    viewBox="0 0 20 22"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      cx="10"
+                      cy="6"
+                      r="5"
+                      stroke="black"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M1 21C2.71656 17.4295 6.103 15 10 15C13.897 15 17.2834 17.4295 19 21"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    /></svg
+                ></i>
+              </div>
+              <span class="message-text"></span>
+            </div>
+
+            <div class="input-wrapper input-password is-required">
+              <div class="input-box">
+                <input
+                  class="input"
+                  type="password"
+                  placeholder="Пароль"
+                  autocomplete="off"
+                  required
+                  value=""
+                />
+                <i class="icon-delete">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    version="1.1"
+                    width="512"
+                    height="512"
+                    x="0"
+                    y="0"
+                    viewBox="0 0 32 32"
+                    style="enable-background: new 0 0 512 512"
+                    xml:space="preserve"
+                    class=""
+                  >
+                    <g>
+                      <g
+                        xmlns="http://www.w3.org/2000/svg"
+                        id="Layer_22"
+                        data-name="Layer 22"
+                      >
+                        <path
+                          d="m25.9 6.1a14 14 0 1 0 0 19.8 14 14 0 0 0 0-19.8zm-4.9 13.44a1 1 0 0 1 0 1.46 1 1 0 0 1 -.71.29 1 1 0 0 1 -.7-.29l-3.59-3.59-3.54 3.59a1 1 0 0 1 -.7.29 1 1 0 0 1 -.71-.29 1 1 0 0 1 0-1.41l3.54-3.59-3.54-3.54a1 1 0 0 1 1.41-1.41l3.54 3.54 3.54-3.54a1 1 0 0 1 1.46 1.41l-3.59 3.54z"
+                          data-original="#000000"
+                        ></path>
+                      </g>
+                    </g>
+                  </svg>
+                </i>
+
+                <i class="icon"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    version="1.1"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xmlns:svgjs="http://svgjs.com/svgjs"
+                    width="512"
+                    height="512"
+                    x="0"
+                    y="0"
+                    viewBox="0 0 24 24"
+                    style="enable-background: new 0 0 512 512"
+                    xml:space="preserve"
+                    class=""
+                  >
+                    <g>
+                      <path
+                        xmlns="http://www.w3.org/2000/svg"
+                        d="m18.75 24h-13.5c-1.24 0-2.25-1.009-2.25-2.25v-10.5c0-1.241 1.01-2.25 2.25-2.25h13.5c1.24 0 2.25 1.009 2.25 2.25v10.5c0 1.241-1.01 2.25-2.25 2.25zm-13.5-13.5c-.413 0-.75.336-.75.75v10.5c0 .414.337.75.75.75h13.5c.413 0 .75-.336.75-.75v-10.5c0-.414-.337-.75-.75-.75z"
+                        fill="#000000"
+                        data-original="#000000"
+                        class=""
+                      ></path>
+                      <path
+                        xmlns="http://www.w3.org/2000/svg"
+                        d="m17.25 10.5c-.414 0-.75-.336-.75-.75v-3.75c0-2.481-2.019-4.5-4.5-4.5s-4.5 2.019-4.5 4.5v3.75c0 .414-.336.75-.75.75s-.75-.336-.75-.75v-3.75c0-3.309 2.691-6 6-6s6 2.691 6 6v3.75c0 .414-.336.75-.75.75z"
+                        fill="#000000"
+                        data-original="#000000"
+                        class=""
+                      ></path>
+                      <path
+                        xmlns="http://www.w3.org/2000/svg"
+                        d="m12 17c-1.103 0-2-.897-2-2s.897-2 2-2 2 .897 2 2-.897 2-2 2zm0-2.5c-.275 0-.5.224-.5.5s.225.5.5.5.5-.224.5-.5-.225-.5-.5-.5z"
+                        fill="#000000"
+                        data-original="#000000"
+                        class=""
+                      ></path>
+                      <path
+                        xmlns="http://www.w3.org/2000/svg"
+                        d="m12 20c-.414 0-.75-.336-.75-.75v-2.75c0-.414.336-.75.75-.75s.75.336.75.75v2.75c0 .414-.336.75-.75.75z"
+                        fill="#000000"
+                        data-original="#000000"
+                        class=""
+                      ></path>
+                    </g></svg
+                ></i>
+              </div>
+              <span class="message-text"></span>
+            </div>
+
+            <div class="row">
+              <button class="btn btn-black" type="submit">Войти</button>
+              <a class="popup__link js-popup" href="#pass"
+                ><span>Забыли пароль?</span></a
+              >
+            </div>
+          </div>
+          <div class="popup__bottom">
+            <a class="popup__link" href="./registration.html"
+              ><span>Зарегистрироваться</span></a
+            >
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div id="pass" class="popup">
+      <div class="popup__wrapper">
+        <div class="popup__close">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            version="1.1"
+            width="512"
+            height="512"
+            x="0"
+            y="0"
+            viewBox="0 0 512.001 512.001"
+          >
+            <path
+              d="M284.286,256.002L506.143,34.144c7.811-7.811,7.811-20.475,0-28.285c-7.811-7.81-20.475-7.811-28.285,0L256,227.717    L34.143,5.859c-7.811-7.811-20.475-7.811-28.285,0c-7.81,7.811-7.811,20.475,0,28.285l221.857,221.857L5.858,477.859    c-7.811,7.811-7.811,20.475,0,28.285c3.905,3.905,9.024,5.857,14.143,5.857c5.119,0,10.237-1.952,14.143-5.857L256,284.287    l221.857,221.857c3.905,3.905,9.024,5.857,14.143,5.857s10.237-1.952,14.143-5.857c7.811-7.811,7.811-20.475,0-28.285 L284.286,256.002z"
+              data-original="#000000"
+            ></path>
+          </svg>
+        </div>
+        <div class="popup__title">Восстановление пароля</div>
+        <form class="popup__content">
+          <div class="popup__box">
+            <div class="input-wrapper is-required">
+              <div class="input-box">
+                <input
+                  class="input"
+                  type="email"
+                  placeholder="Электронная почта"
+                  autocomplete="off"
+                  required
+                  value=""
+                />
+                <i class="icon-delete">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    version="1.1"
+                    width="512"
+                    height="512"
+                    x="0"
+                    y="0"
+                    viewBox="0 0 32 32"
+                    style="enable-background: new 0 0 512 512"
+                    xml:space="preserve"
+                    class=""
+                  >
+                    <g>
+                      <g
+                        xmlns="http://www.w3.org/2000/svg"
+                        id="Layer_22"
+                        data-name="Layer 22"
+                      >
+                        <path
+                          d="m25.9 6.1a14 14 0 1 0 0 19.8 14 14 0 0 0 0-19.8zm-4.9 13.44a1 1 0 0 1 0 1.46 1 1 0 0 1 -.71.29 1 1 0 0 1 -.7-.29l-3.59-3.59-3.54 3.59a1 1 0 0 1 -.7.29 1 1 0 0 1 -.71-.29 1 1 0 0 1 0-1.41l3.54-3.59-3.54-3.54a1 1 0 0 1 1.41-1.41l3.54 3.54 3.54-3.54a1 1 0 0 1 1.46 1.41l-3.59 3.54z"
+                          data-original="#000000"
+                        ></path>
+                      </g>
+                    </g>
+                  </svg>
+                </i>
+              </div>
+              <span class="message-text"></span>
+            </div>
+
+            <div class="row">
+              <button class="btn btn-black" type="submit">Отправить</button>
+              <a class="popup__link js-popup" href="#auth"
+                ><span>Авторизоваться</span></a
+              >
+            </div>
+          </div>
+          <div class="popup__bottom">
+            <a class="popup__link" href="./registration.html"
+              ><span>Зарегистрироваться</span></a
+            >
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div id="application" class="popup">
+      <div class="popup__wrapper">
+        <div class="popup__close">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            version="1.1"
+            width="512"
+            height="512"
+            x="0"
+            y="0"
+            viewBox="0 0 512.001 512.001"
+          >
+            <path
+              d="M284.286,256.002L506.143,34.144c7.811-7.811,7.811-20.475,0-28.285c-7.811-7.81-20.475-7.811-28.285,0L256,227.717    L34.143,5.859c-7.811-7.811-20.475-7.811-28.285,0c-7.81,7.811-7.811,20.475,0,28.285l221.857,221.857L5.858,477.859    c-7.811,7.811-7.811,20.475,0,28.285c3.905,3.905,9.024,5.857,14.143,5.857c5.119,0,10.237-1.952,14.143-5.857L256,284.287    l221.857,221.857c3.905,3.905,9.024,5.857,14.143,5.857s10.237-1.952,14.143-5.857c7.811-7.811,7.811-20.475,0-28.285 L284.286,256.002z"
+              data-original="#000000"
+            ></path>
+          </svg>
+        </div>
+        <div class="popup__title">Подать заявку</div>
+        <form class="popup__content">
+          <div class="popup__box">
+            <div class="popup__application">
+              <a class="btn btn-gray closed" href="javascript:void(0);"
+                >Опубликовать работу</a
+              >
+              <a class="btn btn-gray closed" href="javascript:void(0);"
+                >Получить стипендию</a
+              >
+              <a class="btn btn-gray closed" href="javascript:void(0);"
+                >Получить грунт</a
+              >
+            </div>
+          </div>
+
+          <div class="popup__bottom">
+            <div class="popup__text">
+              Для доступа к функционалу необходимо
+              <a class="popup__link js-popup" href="#auth"
+                ><span>авторизоваться</span></a
+              >
+              на портале
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div id="library" class="popup">
+      <div class="popup__wrapper">
+        <div class="popup__close">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            version="1.1"
+            width="512"
+            height="512"
+            x="0"
+            y="0"
+            viewBox="0 0 512.001 512.001"
+          >
+            <path
+              d="M284.286,256.002L506.143,34.144c7.811-7.811,7.811-20.475,0-28.285c-7.811-7.81-20.475-7.811-28.285,0L256,227.717    L34.143,5.859c-7.811-7.811-20.475-7.811-28.285,0c-7.81,7.811-7.811,20.475,0,28.285l221.857,221.857L5.858,477.859    c-7.811,7.811-7.811,20.475,0,28.285c3.905,3.905,9.024,5.857,14.143,5.857c5.119,0,10.237-1.952,14.143-5.857L256,284.287    l221.857,221.857c3.905,3.905,9.024,5.857,14.143,5.857s10.237-1.952,14.143-5.857c7.811-7.811,7.811-20.475,0-28.285 L284.286,256.002z"
+              data-original="#000000"
+            ></path>
+          </svg>
+        </div>
+        <div class="popup__content">
+          <div class="popup__box">
+            <div class="library__item-tooltip">
+              <div class="library__item-tooltip-image">
+                <img src="" alt="" />
+              </div>
+              <div class="library__item-tooltip-info">
+                <div class="library__item-tooltip-author"></div>
+                <div class="library__item-tooltip-name"></div>
+                <div class="library__item-tooltip-description"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./js/swiper.min.js"></script>
+    <script src="./js/flatpickr.min.js"></script>
+    <script src="./js/flatpickr-ru.min.js"></script>
+    <script src="./js/jquery.dropdown.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

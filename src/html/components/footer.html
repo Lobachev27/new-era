@@ -1,0 +1,78 @@
+<footer class="footer">
+  <div class="container">
+    <div class="footer__subscribe">
+      <div class="footer__subscribe-title">Подпишитесь на анонсы</div>
+      <div class="footer__subscribe-description">Главные новости — каждую неделю в вашей почте</div>
+      <form class="footer__subscribe-form">
+        @@include("./input.html", {
+          context: {
+            classesList: "is-required",
+            required: true,
+            disabled: false,
+            readonly: false,
+            datepicker: false,
+            type: "email",
+            label: "",
+            placeholder: "Введите ваш email",
+            icon: "",
+            value: "",
+            message: "",
+          }
+        })
+        <button class="btn btn-black" type="submit">Подписаться</button>
+      </form>
+    </div>
+    <div class="footer__contacts">
+      <div class="footer__contacts-item">
+        <a class="footer__contacts-link" href="./club.html">Философский клуб</a>
+        <a class="footer__contacts-phone" href="tel:+79150125050">+7 915 012 50 50</a>
+        <a class="footer__contacts-phone" href="tel:+79165783605">+7 916 578 36 05</a>
+        <a class="footer__contacts-email" href="mailto:civrussfuture@yandex.ru">civrussfuture@yandex.ru</a>
+        <a class="footer__contacts-social" href="javascript:void(0);">Telegram</a>
+        <a class="footer__contacts-social" href="javascript:void(0);">Вконтакте</a>
+      </div>
+      <div class="footer__contacts-item">
+        <a class="footer__contacts-link" href="./center.html">Центр развития</a>
+        <a class="footer__contacts-phone" href="tel:+74959393045">+7 (495) 9393 045</a>
+        <a class="footer__contacts-email" href="mailto:graduate.politmsu@yandex.ru">graduate.politmsu@yandex.ru</a>
+        <a class="footer__contacts-social" href="https://t.me/graduatepolitmsu">Telegram</a>
+        <a class="footer__contacts-social" href="https://vk.com/graduate.politmsu">Вконтакте</a>
+      </div>
+    </div>
+    <!--<div class="footer__contacts-single">
+      <div class="footer__contacts-single-left">
+        <a class="footer__contacts-link" href="./center.html">Центр развития</a>
+        <a class="footer__contacts-email" href="mailto:graduate.politmsu@yandex.ru">graduate.politmsu@yandex.ru</a>
+      </div>
+      <div class="footer__contacts-single-right">
+        <a class="footer__contacts-social" href="https://t.me/graduatepolitmsu">Telegram</a>
+        <a class="footer__contacts-social" href="https://vk.com/graduate.politmsu">Вконтакте</a>
+      </div>
+    </div>-->
+    <div class="footer__about">
+      <a class="footer__logo" href="./">
+        <span>Новая эра</span>
+      </a>
+      <a class="btn btn-black" href="./contacts.html">Обратная связь</a>
+      <div class="footer__copyright">©  Новая эра, 2022</div>
+      <ul class="footer__pact">
+        <li><a href="./user-agreement.html">Пользовательское соглашение </a></li>
+        <li><a href="./user-policy.html">Конфидициальность</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<button id="scrollToTop" class="btn btn-gray" type="button"></button>
+
+@@include("./popup-authorization.html")
+
+@@include("./popup-password.html")
+
+@@include("./popup-application.html", {
+  context: {
+    auth: false,
+  }
+})
+
+@@include("./popup-library.html")

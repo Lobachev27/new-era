@@ -1,0 +1,95 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.registration {
+  position: relative;
+  margin: 22px 0;
+  z-index: 3;
+  @media screen and ($tablet1) {
+    margin: 20px 0;
+  }
+  @media screen and ($desktop1) {
+    margin: 25px 0;
+  }
+  @media screen and ($desktop2) {
+    max-width: calc(75% - 16px);
+    margin: 30px 0;
+  }
+  @media screen and ($desktop3) {
+    max-width: calc(75% - 32px);
+    margin: 40px 0;
+  }
+
+  & .form-box {
+    @media screen and ($tablet1) {
+      padding: 12px 0;
+      border-bottom: 1px solid #D9D9D9;
+    }
+
+    &:nth-child(1) {
+      @media screen and ($tablet1) {
+        padding: 0;
+        border-bottom: none;
+      }
+    }
+
+    &:nth-child(2) {
+      @media screen and ($tablet1) {
+        padding-top: 0;
+      }
+    }
+
+    &:nth-child(4) {
+      @media screen and ($tablet1) {
+        padding-bottom: 0;
+        border-bottom: none;
+      }
+    }
+
+    &:nth-child(5) {
+      @media screen and ($tablet1) {
+        padding-bottom: 0;
+        border-bottom: none;
+      }
+    }
+  }
+
+  & .row {
+    align-items: center;
+    margin-top: 16px;
+    @media screen and ($tablet1) {
+      margin-top: 24px;
+    }
+    @media screen and ($desktop3) {
+      margin-top: 32px;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+
+    & .btn {
+      &:first-child {
+        margin-right: 16px;
+      }
+    }
+  }
+
+  &__text {
+    display: none;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 12px;
+    text-align: right;
+    @media screen and ($tablet1) {
+      display: block;
+      font-size: 14px;
+      line-height: 14px;
+    }
+
+    & sup {
+      color: #EA1B1B;
+    }
+  }
+}

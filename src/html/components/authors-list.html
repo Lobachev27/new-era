@@ -1,0 +1,14 @@
+<ul class="authors__list">
+  @@for (var i = 0; i < context.arr.length; i++) {
+  <li class="authors__box">
+    <div class="authors__box-image `+context.arr[i].class+`">
+      <img src="`+context.arr[i].img+`" alt="">
+    </div>
+    <div class="authors__box-info">
+      <span class="authors__box-name">`+context.arr[i].name+`</span>,
+      <span class="authors__box-status">`+context.arr[i].status+`</span>
+    </div>
+    <a class="authors__box-link" href="`+context.arr[i].link+`"></a>
+  </li>
+  }
+</ul>

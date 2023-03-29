@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include("./shared/head.html", {
+  "title": "Настройка подписки"
+})
+
+<body>
+
+@@include("./components/header.html", {
+  context: {
+    "classList": "",
+    "linkActive": false,
+    arr: [
+      {'class': '', 'link': './nir.html', 'text': 'Научно-исследовательские работы'},
+      {'class': '', 'link': './library.html', 'text': 'Библиотека'},
+      {'class': '', 'link': './news.html', 'text': 'Новости'},
+      {'class': '', 'link': './authors.html', 'text': 'Авторы'},
+      {'class': '', 'link': './about-project.html', 'text': 'О проекте'},
+      {'class': '', 'link': './contacts.html', 'text': 'Контакты'},
+    ],
+  }
+})
+
+<main class="main">
+
+  @@include("./components/breadcrumbs.html", {
+    context: {
+      'lastBreadcrumb': 'Настройка подписки',
+      arr: [
+        {'text': 'Главная', 'link': './'},
+        {'text': 'Личный кабинет', 'link': 'javascript:void(0);'},
+      ],
+    }
+  })
+
+  <section class="lk">
+    <div class="container">
+
+      @@include("./components/lk-sidebar.html", {
+        context: {
+          "linkActive": 5,
+        }
+      })
+
+      <div class="lk-content">
+        <h1 class="title-h1">Настройка подписки</h1>
+        <form class="lk-form lk-form-subscriptions">
+          <div class="form-box form-col-2">
+
+            @@include("./components/checkbox.html", {
+              context: {
+                classesList: "",
+                required: false,
+                disabled: false,
+                readonly: false,
+                label: "",
+                message: "",
+                arr: [
+                  {"text": "Подписаться на новости и анонсы", "name": "", "checked": "checked",},
+                ],
+              }
+            })
+
+            <div class="lk__info">Рассылка будет поступать на почту <a href="mailto:merenkovee@mail.ru">merenkovee@mail.ru</a></div>
+
+          </div>
+          <div class="form-box form-col-2">
+
+            @@include("./components/checkbox.html", {
+              context: {
+                classesList: "",
+                required: false,
+                disabled: false,
+                readonly: false,
+                label: "Новости",
+                message: "",
+                arr: [
+                  {"text": "Анонс", "name": "", "checked": "checked",},
+                  {"text": "Лекции", "name": "", "checked": "checked",},
+                  {"text": "Мнения", "name": "", "checked": "checked",},
+                  {"text": "События", "name": "", "checked": "checked",},
+                  {"text": "Вакансии", "name": "", "checked": "checked",},
+                ],
+              }
+            })
+
+            @@include("./components/checkbox.html", {
+              context: {
+                classesList: "",
+                required: false,
+                disabled: false,
+                readonly: false,
+                label: "Научно-исследовательские работы",
+                message: "",
+                arr: [
+                  {"text": "Монография", "name": "", "checked": "checked",},
+                  {"text": "Стенограмма", "name": "", "checked": "checked",},
+                  {"text": "Статья", "name": "", "checked": "checked",},
+                ],
+              }
+            })
+
+          </div>
+          <div class="row">
+            <div class="lk__buttons">
+              <button class="btn btn-black" type="submit">Сохранить</button>
+              <button class="btn btn-gray" type="reset">Отменить</button>
+            </div>
+            <span class="lk__text"><sup>*</sup> поле обязательное для заполнения</span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+@@include("./components/footer.html")
+
+@@include("./shared/script.html")
+</body>
+</html>

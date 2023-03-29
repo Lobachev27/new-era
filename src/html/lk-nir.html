@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include("./shared/head.html", {
+  "title": "Научно-исследовательские работы"
+})
+
+<body>
+
+@@include("./components/header.html", {
+  context: {
+    "classList": "",
+    "linkActive": false,
+    arr: [
+      {'class': '', 'link': './nir.html', 'text': 'Научно-исследовательские работы'},
+      {'class': '', 'link': './library.html', 'text': 'Библиотека'},
+      {'class': '', 'link': './news.html', 'text': 'Новости'},
+      {'class': '', 'link': './authors.html', 'text': 'Авторы'},
+      {'class': '', 'link': './about-project.html', 'text': 'О проекте'},
+      {'class': '', 'link': './contacts.html', 'text': 'Контакты'},
+    ],
+  }
+})
+
+<main class="main">
+
+  @@include("./components/breadcrumbs.html", {
+    context: {
+      'lastBreadcrumb': 'Научно-исследовательские работы',
+      arr: [
+        {'text': 'Главная', 'link': './'},
+        {'text': 'Личный кабинет', 'link': 'javascript:void(0);'},
+      ],
+    }
+  })
+
+  <section class="lk">
+    <div class="container">
+
+      @@include("./components/lk-sidebar.html", {
+        context: {
+          "linkActive": 6,
+        }
+      })
+
+      <div class="lk-content">
+        <h1 class="title-h1">Научно-исследовательские работы</h1>
+        <div class="row">
+          <a class="btn btn-black" href="/lk/add-nir/?action=new&amp;WEB_FORM_ID=4">Подать заявку</a>
+        </div>
+        <form class="lk-form-request" name="rform_8897" method="post" action="/lk/add-nir/?login=yes#nav_start">
+          <input type="hidden" name="WEB_FORM_ID" value="4">
+          <input type="hidden" name="sessid" id="sessid" value="289630cf596a8a14028d0f35dc77da32">
+          <div class="row"><input class="btn btn-gray" type="submit" name="delete" value="Удалить отмеченные" onclick="return OnDelete_8897()"></div>
+          <br>
+
+          <p><input type="submit" name="save" value="Сохранить"><input type="hidden" name="save" value="Y">&nbsp;<input type="reset" value="Сбросить"></p>
+          <p>
+          </p>
+
+          <div class="form-table-section">
+            <div class="form-table-wrapper">
+              <table class="form-table data-table">
+                <thead>
+                <tr>
+                  <th>
+                    <table class="form-results-header-inline">
+                      <tbody><tr>
+                        <th>
+                          <input type="checkbox" name="selectall" value="Y" onclick="OnSelectAll_8897(this.checked)">&nbsp;
+                          ID</th>
+                        <td><nobr><a href="/lk/add-nir/?login=yes&amp;by=s_id&amp;order=asc#nav_start"><img src="http://srv180598.hoster-test.ru/bitrix/images/icons/up.gif" width="15" height="15" border="0" alt="По возрастанию"></a><a href="/lk/add-nir/?login=yes&amp;by=s_id&amp;order=desc#nav_start"><img src="http://srv180598.hoster-test.ru/bitrix/images/icons/down.gif" width="15" height="15" border="0" alt="По убыванию"></a></nobr></td>
+                      </tr>
+                      <tr>
+                        <th>Статус</th>
+                        <td><nobr><a href="/lk/add-nir/?login=yes&amp;by=s_status&amp;order=asc#nav_start"><img src="http://srv180598.hoster-test.ru/bitrix/images/icons/up.gif" width="15" height="15" border="0" alt="По возрастанию"></a><a href="/lk/add-nir/?login=yes&amp;by=s_status&amp;order=desc#nav_start"><img src="http://srv180598.hoster-test.ru/bitrix/images/icons/down.gif" width="15" height="15" border="0" alt="По убыванию"></a></nobr></td>
+                      </tr>
+                      </tbody></table>
+                  </th>
+                  <th>Изменено<br><nobr><a href="/lk/add-nir/?login=yes&amp;by=s_timestamp&amp;order=asc#nav_start"><img src="http://srv180598.hoster-test.ru/bitrix/images/icons/up.gif" width="15" height="15" border="0" alt="По возрастанию"></a><a href="/lk/add-nir/?login=yes&amp;by=s_timestamp&amp;order=desc#nav_start"><img src="http://srv180598.hoster-test.ru/bitrix/images/icons/down.gif" width="15" height="15" border="0" alt="По убыванию"></a></nobr></th>
+                  <th>
+                    Название научной работы                        </th>                        <th>
+                  Направление научной работы                        </th>                        <th>
+                  Вид работы                        </th>                        <th>
+                  Иной вид работы (укажите, если нет подходящего вида работы)                        </th>                        <th>
+                  Авторы научной работы                        </th>                        <th>
+                  Аннотация                        </th>                        <th>
+                  Выберите 1 вариант                         </th>                        <th>
+                  Вопрос - выберите несколько вариантов                        </th>                        <th>
+                  Вопрос - чекобксы                        </th>                    </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <td class="td-wide" colspan="13"><input type="checkbox" name="ARR_RESULT[]" value="13"><input type="hidden" name="RESULT_ID[]" value="13">ID:&nbsp;<b><span class="form-result-id">13</span></b><br>
+                    Статус:&nbsp;[&nbsp;<span class="statusgreen">DEFAULT</span>&nbsp;]
+                    сменить на                                        <input type="hidden" name="STATUS_PREV_0" value="4">
+                    <select name="STATUS_13" id="STATUS_13">
+                      <option value="NOT_REF"> </option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="td-row-operations">
+                    [&nbsp;<a title="Редактировать результат" href="/lk/add-nir/?action=edit&amp;login=yes&amp;RESULT_ID=13&amp;WEB_FORM_ID=4">Изменить</a>&nbsp;]<br>
+
+                    [&nbsp;<a title="Просмотр результата" href="/lk/add-nir/?action=view&amp;login=yes&amp;RESULT_ID=13&amp;WEB_FORM_ID=4">Просмотр</a>&nbsp;]<br>
+                    [&nbsp;<a title="Удалить результат" href="javascript:if(confirm('Вы уверены что хотите удалить результат?')) window.location='/lk/add-nir/?login=yes&amp;WEB_FORM_ID=4&amp;del_id=13&amp;sessid=289630cf596a8a14028d0f35dc77da32#nav_start'">Удалить</a>&nbsp;]<br>
+                  </td>
+                  <td class="td-slim">24.10.2022<br>12:51:12</td>
+                  <td class="td-slim">
+                    333<br>                                            <br>
+                  </td>
+                  <td class="td-slim">
+                    [<span class="form-anstext">Философия</span>]&nbsp;                                            <br>
+                  </td>
+                  <td class="td-slim">
+                    [<span class="form-anstext">Дипломная работа</span>]&nbsp;                                            <br>
+                  </td>
+                  <td class="td-slim">
+                    444<br>                                            <br>
+                  </td>
+                  <td class="td-slim">
+                    555<br>                                            <br>
+                  </td>
+                  <td class="td-slim">
+                    666<br>                                            <br>
+                  </td>
+                  <td class="td-slim">
+                    [<span class="form-anstext">Вар 1</span>]&nbsp;                                            <br>
+                  </td>
+                  <td class="td-slim">
+                    [<span class="form-anstext">Мультивариант 2</span>]&nbsp;                                            <br>
+                    [<span class="form-anstext">Мультивариант 4</span>]&nbsp;                                            <br>
+                  </td>
+                  <td class="td-slim">
+                    [<span class="form-anstext">Вар 2</span>]&nbsp;                                            <br>
+                    [<span class="form-anstext">Вар 4</span>]&nbsp;                                            <br>
+                  </td>
+                </tr>
+                </tbody>
+                <tfoot>
+                <tr>
+                  <th colspan="13">Всего:&nbsp;1</th>
+                </tr>
+                </tfoot>
+              </table>
+            </div>
+          </div>
+
+          <p></p>
+          <p>
+            <input type="submit" name="save" value="Сохранить"><input type="hidden" name="save" value="Y">&nbsp;<input type="reset" value="Сбросить">
+          </p>
+
+          <div class="row"><input class="btn btn-gray" type="submit" name="delete" value="Удалить отмеченные" onclick="return OnDelete_8897()"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+@@include("./components/footer.html")
+
+@@include("./shared/script.html")
+</body>
+</html>

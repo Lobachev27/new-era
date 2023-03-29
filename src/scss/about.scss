@@ -1,0 +1,197 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.about {
+  position: relative;
+  margin: 22px 0;
+  z-index: 2;
+  @media screen and ($tablet1) {
+    margin: 40px 0;
+  }
+  @media screen and ($desktop1) {
+    margin: 50px 0;
+  }
+  @media screen and ($desktop2) {
+    margin: 60px 0;
+  }
+  @media screen and ($desktop3) {
+    margin: 80px 0;
+  }
+
+  & .container {
+    z-index: 2;
+  }
+
+  &__text {
+    position: relative;
+    display: inline-block;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: $black;
+    @media screen and ($tablet1) {
+      font-size: 18px;
+      line-height: 28px;
+    }
+    @media screen and ($desktop1) {
+      font-size: 20px;
+      line-height: 36px;
+    }
+    @media screen and ($desktop2) {
+      font-size: 22px;
+      line-height: 40px;
+      max-width: 75%;
+    }
+    @media screen and ($desktop3) {
+      font-size: 24px;
+      line-height: 44px;
+    }
+
+    &-center {
+      & a {
+        display: inline;
+        padding: 2px;
+        transition: background-color $transition-time-fast, border $transition-time-fast, color $transition-time-fast;
+        cursor: default;
+        pointer-events: none;
+        @media screen and ($tablet1) {
+          border-bottom: 2px solid #878787;
+          color: #878787;
+          cursor: pointer;
+          pointer-events: auto;
+        }
+
+        &:hover {
+          @media screen and ($tablet1) {
+            background-color: #8b8494;
+            border-bottom: 2px solid transparent;
+            color: $white;
+            transition: background-color $transition-time-fast, border $transition-time-fast, color $transition-time-fast;
+          }
+        }
+      }
+    }
+
+    &-club {
+      & a {
+        display: inline;
+        padding: 2px;
+        cursor: default;
+        pointer-events: none;
+        transition: background-color $transition-time-fast, border $transition-time-fast, color $transition-time-fast;
+        @media screen and ($tablet1) {
+          border-bottom: 2px solid #878787;
+          color: #878787;
+          cursor: pointer;
+          pointer-events: auto;
+        }
+
+        &:hover {
+          @media screen and ($tablet1) {
+            background-color: #73706d;
+            border-bottom: 2px solid transparent;
+            color: $white;
+            transition: background-color $transition-time-fast, border $transition-time-fast, color $transition-time-fast;
+          }
+        }
+      }
+    }
+  }
+
+  &__tooltip {
+    position: absolute;
+    visibility: hidden;
+    pointer-events: none;
+    opacity: 0;
+    top: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100vw - 50px);
+    max-width: 640px;
+    padding: 24px 16px;
+    transition: opacity $transition-time-middle;
+    z-index: 10;
+    @media screen and ($tablet1) {
+      padding: 32px 24px;
+    }
+    @media screen and ($desktop1) {
+      padding: 32px;
+    }
+
+    &.about__tooltip-center {
+      background: url("../img/bg-center.jpg") repeat-x;
+      background-position: center top;
+      background-size: auto 100%;
+    }
+
+    &.about__tooltip-club {
+      background: url("../img/bg-club.jpg") repeat-x;
+      background-position: center top;
+      background-size: auto 100%;
+    }
+
+    &.active {
+      @media screen and ($tablet1) {
+        visibility: visible;
+        pointer-events: auto;
+        opacity: 1;
+        transition: opacity $transition-time-middle;
+      }
+    }
+
+    &-title {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 22px;
+      letter-spacing: 0.01em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      color: $white;
+      @media screen and ($tablet1) {
+        font-size: 20px;
+        line-height: 32px;
+      }
+      @media screen and ($desktop1) {
+        font-size: 24px;
+        line-height: 40px;
+      }
+      @media screen and ($desktop2) {
+        font-size: 28px;
+        line-height: 42px;
+      }
+    }
+
+    &-description {
+      & * {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        color: $white;
+        @media screen and ($tablet1) {
+          font-size: 16px;
+          line-height: 28px;
+        }
+        @media screen and ($desktop1) {
+          font-size: 18px;
+          line-height: 30px;
+        }
+        @media screen and ($desktop2) {
+          font-size: 20px;
+          line-height: 32px;
+        }
+      }
+
+      & p {
+        margin-bottom: 16px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      & ul {
+        padding-left: 16px;
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+<ul class="news__list">
+  @@for (var i = 0; i < context.arrNews.length; i++) {
+  <li class="news__box">
+    <div class="news__box-image">
+      <img src="`+context.arrNews[i].img+`" alt="">
+    </div>
+    <div class="news__box-content">
+      <div class="news__box-text">`+context.arrNews[i].text+`</div>
+      <div class="news__box-info">
+        <span class="news__box-date">`+context.arrNews[i].date+`</span>,
+        <span class="news__box-city">`+context.arrNews[i].city+`</span>
+      </div>
+    </div>
+    <a class="news__box-link" href="`+context.arrNews[i].link+`"></a>
+  </li>
+  }
+</ul>

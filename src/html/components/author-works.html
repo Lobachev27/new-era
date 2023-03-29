@@ -1,0 +1,65 @@
+<section class="author-works">
+  <div class="container">
+    <div class="author-works__tabs">
+      <a class="author-works__tab" href="#nir">Научно-исследовательские работы</a>
+      <a class="author-works__tab" href="#lib">Библиотека</a>
+    </div>
+    <div id="nir" class="author-works__container">
+      <ul class="nir__list">
+        @@for (var i = 0; i < context.arrNir.length; i++) {
+        <li class="nir__box">
+          <div class="nir__box-image">
+            <img src="`+context.arrNir[i].img+`" alt="">
+          </div>
+          <div class="nir__box-chapter">`+context.arrNir[i].chapter+`</div>
+          <div class="nir__box-type">`+context.arrNir[i].type+`</div>
+          <div class="nir__box-content">
+            <div class="nir__box-text">`+context.arrNir[i].text+`</div>
+            <div class="nir__box-info">
+              Автор: <span class="news__box-city">`+context.arrNir[i].author+`</span>
+            </div>
+          </div>
+          <a class="nir__box-link" href="`+context.arrNir[i].link+`"></a>
+        </li>
+        }
+      </ul>
+    </div>
+    <div id="lib" class="author-works__container">
+      <div class="library">
+        <div class="library__wrapper">
+          <div class="library__table">
+            <div class="library__topic">
+              <div class="library__topic-col col-name">Название</div>
+              <div class="library__topic-col col-author">Автор</div>
+              <div class="library__topic-col col-year">Год</div>
+              <div class="library__topic-col col-publishing">Издательство</div>
+              <div class="library__topic-col col-categories">Категории</div>
+              <div class="library__topic-col col-link"></div>
+            </div>
+            <ul class="library__list">
+              @@for (var j = 0; j < context.arrLib.length; j++) {
+              <li class="library__item">
+                <div class="library__item-col col-name">
+                  <a class="js-popup" href="#library"
+                     data-image="`+context.arrLib[j].image+`"
+                     data-author="`+context.arrLib[j].author+`"
+                     data-name="`+context.arrLib[j].name+`"
+                     data-description="`+context.arrLib[j].description+`"
+                  >
+                    `+context.arrLib[j].name+`
+                  </a>
+                </div>
+                <div class="library__item-col col-author"><span>`+context.arrLib[j].author+`</span></div>
+                <div class="library__item-col col-year"><span>`+context.arrLib[j].year+`</span></div>
+                <div class="library__item-col col-publishing"><span>`+context.arrLib[j].publishing+`</span></div>
+                <div class="library__item-col col-categories"><span>`+context.arrLib[j].categories+`</span></div>
+                <div class="library__item-col col-link"><span>`+context.arrLib[j].link+`</span></div>
+              </li>
+              }
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

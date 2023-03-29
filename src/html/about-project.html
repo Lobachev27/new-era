@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include("./shared/head.html", {
+  "title": "О проекте"
+})
+
+<body>
+
+@@include("./components/header.html", {
+  context: {
+    "classList": "",
+    "linkActive": false,
+    arr: [
+      {'class': '', 'link': './nir.html', 'text': 'Научно-исследовательские работы'},
+      {'class': '', 'link': './library.html', 'text': 'Библиотека'},
+      {'class': '', 'link': './news.html', 'text': 'Новости'},
+      {'class': '', 'link': './authors.html', 'text': 'Авторы'},
+      {'class': 'active', 'link': './about-project.html', 'text': 'О проекте'},
+      {'class': '', 'link': './contacts.html', 'text': 'Контакты'},
+    ],
+  }
+})
+
+<main class="main">
+
+  @@include("./components/breadcrumbs.html", {
+    context: {
+    'lastBreadcrumb': 'О проекте',
+      arr: [
+        {'text': 'Главная', 'link': './'},
+      ],
+    }
+  })
+
+  <section class="about-page">
+    <div class="container">
+      <div class="about-page-left">
+        <h1 class="title-h1">О проекте</h1>
+      </div>
+      <div class="about-page-right">
+        <div class="about-page__description">
+          <p>Новая эра — научно-образовательный портала по тематике философии, политологии, политической истории и других социально-значимых дисциплин, который поддерживается серьезным научным сообществом и обладает собственным пулом авторитетных экспертов.</p>
+          <p>Основа сайта — научно-исследовательские работы (статьи, комментарии экспертов, научные труды в виде монографий и крупных политико-философских исследований), новости и информация о деятельности философско-политического клуба, актуальные новости общенациональной и мировой повестки, эксклюзивный библиотечный фонд с авторской философско-политической литературой.</p>
+          <p>Материалы  размещены в свободном online-доступе и регулярно обновляются, оставаясь актуальными и отражая последние достижения философско-политической мысли.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+@@include("./components/footer.html")
+
+@@include("./shared/script.html")
+</body>
+</html>

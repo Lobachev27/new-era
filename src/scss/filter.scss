@@ -1,0 +1,236 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.filter {
+  position: relative;
+  margin: 22px 0;
+  z-index: 5;
+
+  &-main {
+    position: relative;
+    display: grid;
+    grid-column-gap: 16px;
+    grid-row-gap: 24px;
+    margin: 22px 0 0;
+    z-index: 5;
+    @media screen and ($desktop1) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &-wrapper {
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height $transition-time-middle ease-out, opacity $transition-time-middle ease-out, margin $transition-time-middle ease-out;
+    max-height: 0;
+    margin: 0;
+    z-index: 1;
+
+    &.active{
+      max-height: 100vh;
+      opacity: 1;
+      overflow: visible;
+      transition: max-height $transition-time-middle ease-in, opacity $transition-time-middle ease-in, margin $transition-time-middle ease-in;
+      z-index: 3;
+      margin: 22px 0;
+    }
+  }
+
+  &__search {
+    display: flex;
+    align-items: center;
+
+    & .input-wrapper {
+      @media screen and ($desktop1) {
+        width: 415px;
+      }
+
+      & .message-text {
+        display: none;
+      }
+    }
+  }
+
+  &__more {
+    position: relative;
+    display: inline-block;
+    background-color: transparent;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    border: none;
+    outline: none;
+    padding-left: 24px;
+    margin-left: 16px;
+    cursor: pointer;
+    @media screen and ($desktop1) {
+      font-size: 16px;
+      margin-left: 24px;
+    }
+    @media screen and ($desktop2) {
+      font-size: 18px;
+      margin-left: 40px;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      background: url("../img/icon-filter.svg") no-repeat;
+      background-position: center;
+      background-size: contain;
+      width: 16px;
+      height: 16px;
+      transform: translateY(-50%);
+    }
+
+    &:hover {
+      & span {
+        border-bottom: 1px solid $black;
+        transition: border $transition-time-fast;
+      }
+    }
+
+    & span {
+      font-weight: 500;
+      display: inline;
+      padding: 3px 0;
+      border-bottom: 1px solid #D9D9D9;
+      transition: border $transition-time-fast;
+    }
+  }
+
+  &__sort {
+    display: flex;
+    flex-direction: column;
+    z-index: 5;
+    @media screen and ($tablet1) {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    &-text {
+      display: inline-block;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 20px;
+      width: max-content;
+      min-width: max-content;
+      margin-bottom: 4px;
+      @media screen and ($tablet1) {
+        margin-bottom: 0;
+        margin-right: 16px;
+      }
+      @media screen and ($desktop1) {
+        font-size: 16px;
+      }
+      @media screen and ($desktop2) {
+        font-size: 18px;
+        margin-right: 24px;
+      }
+    }
+
+    & .input-wrapper {
+      @media screen and ($desktop1) {
+        width: 360px;
+      }
+
+      & .message-text {
+        display: none;
+      }
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 24px;
+    @media screen and ($tablet1) {
+      display: none;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-column-gap: 16px;
+    grid-row-gap: 24px;
+    margin-bottom: 24px;
+    z-index: 1;
+    @media screen and ($tablet1) {
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 24px;
+      align-items: end;
+      margin-bottom: 32px;
+    }
+    @media screen and ($desktop1) {
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    }
+    @media screen and ($desktop3) {
+      grid-column-gap: 40px;
+      grid-row-gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    & .input-wrapper {
+      & .message-text {
+        display: none;
+      }
+    }
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+
+    & .btn {
+      height: 40px;
+      padding: 0 16px;
+      @media screen and ($desktop1) {
+        height: 48px;
+        margin-right: 16px;
+      }
+
+      &:first-child {
+        margin-right: 16px;
+      }
+    }
+  }
+
+  &__close {
+    position: absolute;
+    min-width: 20px;
+    height: 20px;
+    right: 0;
+    top: 2px;
+    cursor: pointer;
+    margin-left: auto;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    @media screen and ($tablet1) {
+      position: relative;
+
+    }
+
+    &:hover {
+      & svg {
+        fill: #717070;
+        transition: fill $transition-time-fast;
+      }
+    }
+
+    & svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      fill: $black;
+      transition: opacity $transition-time-fast, fill $transition-time-fast;
+      opacity: 1;
+      width: 20px;
+      height: 20px;
+    }
+  }
+}

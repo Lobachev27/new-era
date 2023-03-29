@@ -1,0 +1,131 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.textarea {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.01em;
+  width: 100%;
+  height: 120px;
+  padding: 12px 40px 12px 16px;
+  background-color: transparent;
+  border-radius: 8px;
+  border: 1px solid $input-border;
+  outline: none;
+  resize: vertical;
+  transition: border $transition-time-fast;
+  @media screen and ($desktop1) {
+    font-size: 16px;
+    border-radius: 16px;
+    height: 180px;
+  }
+  @media screen and ($desktop2) {
+    font-size: 18px;
+  }
+  &:hover {
+    border: 1px solid $input-border-hover;
+    transition: border $transition-time-fast;
+  }
+
+  &:focus {
+    border: 1px solid $input-border-hover;
+  }
+
+  &:-webkit-autofill {
+    -webkit-box-shadow: inset 0 0 0 50px transparent !important;
+  }
+
+  &::placeholder{
+    color: #BAB5B0;
+  }
+
+  &-box {
+    position: relative;
+    width: 100%;
+
+    &.not-empty {
+      & .icon-delete {
+        visibility: visible;
+        pointer-events: auto;
+      }
+    }
+
+    & .icon-delete {
+      top: 14px;
+      right: 12px;
+      transform: translateY(0%);
+    }
+  }
+}
+
+.input-wrapper {
+  &.is-readonly {
+    & .textarea {
+      border: 1px solid $input-border;
+      resize: none;
+      cursor: default;
+
+      &:hover {
+        border: 1px solid $input-border;
+      }
+
+      &-box {
+        & .icon-readonly {
+          top: 14px;
+          right: 12px;
+          transform: translateY(0%);
+        }
+
+        & .icon-delete {
+          visibility: hidden;
+          pointer-events: none;
+        }
+      }
+    }
+  }
+
+  &.is-disabled {
+    & .label-text {
+      color: $label-disabled;
+    }
+
+    & .textarea {
+      background-color: $input-bg-disabled;
+      border: 1px solid $input-border-disabled;
+      resize: none;
+
+      &:hover {
+        background-color: $input-bg-disabled;
+        border: 1px solid $input-border-disabled;
+      }
+
+      &-box {
+        & .icon-delete {
+          visibility: hidden;
+          pointer-events: none;
+        }
+      }
+    }
+  }
+
+  &.is-warning {
+    & .textarea {
+      border: 1px solid #DD9A1A;
+
+      &:focus {
+        border: 1px solid $input-border-hover;
+      }
+    }
+  }
+
+  &.is-error {
+    & .textarea {
+      border: 1px solid $red;
+
+      &:focus {
+        border: 1px solid $input-border-hover;
+      }
+    }
+  }
+}

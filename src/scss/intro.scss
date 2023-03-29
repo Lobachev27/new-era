@@ -1,0 +1,96 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.intro {
+  position: relative;
+  padding-top: 90px;
+  @media screen and ($tablet1) {
+    padding-top: 120px;
+  }
+  @media screen and ($desktop1) {
+    padding-top: 150px;
+    min-height: 550px;
+  }
+  @media screen and ($desktop2) {
+    padding-top: 200px;
+    min-height: 600px;
+  }
+  @media screen and ($desktop3) {
+    min-height: 700px;
+  }
+
+  & > .container {
+    padding-top: 24px;
+    padding-bottom: 48px;
+    @media screen and ($tablet1) {
+      padding-top: 32px;
+      padding-bottom: 60px;
+    }
+    @media screen and ($tablet2) {
+      padding-top: 40px;
+      padding-bottom: 80px;
+    }
+  }
+
+  &.intro-club {
+    background: url("../img/bg-club.jpg") repeat-x;
+    background-position: center top;
+    background-size: auto 100%;
+  }
+
+  &.intro-center {
+    background: url("../img/bg-center.jpg") repeat-x;
+    background-position: center top;
+    background-size: auto 100%;
+  }
+
+  & .breadcrumbs {
+    &__list {
+      & span {
+        background: url("../img/icon-chevron-white.svg") no-repeat;
+        background-position: center;
+        background-size: contain;
+      }
+    }
+
+    &__link {
+      color: $white;
+    }
+  }
+
+  & .title-h1 {
+    color: $white;
+    @media screen and ($tablet2) {
+      max-width: 50%;
+    }
+  }
+
+  &__description {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: $white;
+    margin-top: 16px;
+    @media screen and ($tablet1) {
+      font-size: 18px;
+      line-height: 28px;
+      margin-top: 24px;
+    }
+    @media screen and ($tablet2) {
+      max-width: 75%;
+    }
+    @media screen and ($desktop1) {
+      font-size: 20px;
+      line-height: 36px;
+    }
+    @media screen and ($desktop2) {
+      font-size: 22px;
+      line-height: 40px;
+      max-width: 75%;
+    }
+    @media screen and ($desktop3) {
+      font-size: 24px;
+      line-height: 42px;
+    }
+  }
+}

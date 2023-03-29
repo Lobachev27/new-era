@@ -1,0 +1,12 @@
+<div class="input-wrapper @@context.classesList">
+  @@if(context.label){
+  <label class="label-text">@@context.label</label>
+  }
+  <select class="select @@context.class" name="" @@if(context.required){required} @@if(context.readonly){readonly="readonly"} @@if(context.disabled){disabled}>
+    <option value="hide">@@context.placeholder</option>
+    @@for (var i = 0; i < context.arr.length; i++) {
+    <option `+context.arr[i].selected+`>`+context.arr[i].text+`</option>
+    }
+  </select>
+  <span class="message-text">@@context.message</span>
+</div>

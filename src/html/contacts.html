@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include("./shared/head.html", {
+  "title": "Контакты"
+})
+
+<body>
+
+@@include("./components/header.html", {
+  context: {
+    "classList": "",
+    "linkActive": false,
+    arr: [
+      {'class': '', 'link': './nir.html', 'text': 'Научно-исследовательские работы'},
+      {'class': '', 'link': './library.html', 'text': 'Библиотека'},
+      {'class': '', 'link': './news.html', 'text': 'Новости'},
+      {'class': '', 'link': './authors.html', 'text': 'Авторы'},
+      {'class': '', 'link': './about-project.html', 'text': 'О проекте'},
+      {'class': 'active', 'link': './contacts.html', 'text': 'Контакты'},
+    ],
+  }
+})
+
+<main class="main">
+
+  @@include("./components/breadcrumbs.html", {
+    context: {
+      'lastBreadcrumb': 'Контакты',
+      arr: [
+        {'text': 'Главная', 'link': './'},
+      ],
+    }
+  })
+
+  <section class="contacts">
+    <div class="container">
+      <h1 class="title-h1">Контакты</h1>
+      <div class="contacts__wrapper">
+        <div class="contacts__info">
+          <div class="contacts__box">
+            <div class="contacts__box-title">Центр развития гуманитарных технологий</div>
+            <div class="contacts__box-item">
+              <span class="contacts__box-text">119991, Москва, Ломоносовский пр-т, 27к4 (Шуваловский корпус МГУ)</span>
+            </div>
+            <div class="contacts__box-item">
+              <span class="contacts__box-phone"><a href="tel:+74959393045">+7 (495) 939 30 45</a></span>
+              <span class="contacts__box-email"><a href="mailto:graduate.politmsu@yandex.ru">graduate.politmsu@yandex.ru</a></span>
+            </div>
+            <div class="contacts__box-item">
+              <span class="contacts__box-text">Шабалтин Александр, директор</span>
+              <span class="contacts__box-phone"><a href="tel:+79151509131">+7 (915) 150 91 31</a></span>
+            </div>
+            <div class="contacts__box-item">
+              <span class="contacts__box-text">Сушенцова Мария, заместитель директора</span>
+              <span class="contacts__box-phone"><a href="tel:+79151888394">+7 (915) 188 83 94</a></span>
+            </div>
+            <div class="contacts__box-item">
+              <span class="contacts__box-social"><a href="javascript:void(0);">Telegram</a></span>
+              <span class="contacts__box-social"><a href="javascript:void(0);">Вконтакте</a></span>
+            </div>
+          </div>
+          <div class="contacts__box">
+            <div class="contacts__box-title">Философский клуб</div>
+            <div class="contacts__box-item">
+              <span class="contacts__box-phone"><a href="tel:+79150125050">+7 (915) 012 50 50</a></span>
+              <span class="contacts__box-phone"><a href="tel:+79165783605">+7 (916) 578 36 05</a></span>
+            </div>
+            <div class="contacts__box-item">
+              <span class="contacts__box-email"><a href="mailto:civrussfuture@yandex.ru">civrussfuture@yandex.ru</a></span>
+            </div>
+            <div class="contacts__box-item">
+              <span class="contacts__box-social"><a href="javascript:void(0);">Telegram</a></span>
+              <span class="contacts__box-social"><a href="javascript:void(0);">Вконтакте</a></span>
+            </div>
+          </div>
+        </div>
+        <div class="contacts__feedback">
+          <div class="contacts__feedback-title">Обратная связь</div>
+          <form class="contacts__feedback-form">
+
+            <!--<div class="alert-text alert-text-success">Сообщение с успехом для всей формы</div>
+            <div class="alert-text alert-text-success">Сообщение с успехом для всей формы</div>
+            <div class="alert-text alert-text-success">Сообщение с успехом для всей формы</div>
+            <div class="alert-text alert-text-error">Сообщение с ошибкой для всей формы</div>
+            <div class="alert-text alert-text-error">Сообщение с ошибкой для всей формы</div>
+            <div class="alert-text alert-text-error">Сообщение с ошибкой для всей формы</div>-->
+
+            <div class="form-box form-col-4">
+
+              @@include("./components/select.html", {
+                context: {
+                  classesList: "is-required",
+                  class: "",
+                  required: true,
+                  disabled: false,
+                  readonly: false,
+                  label: "Направление",
+                  placeholder: "Введите раздел",
+                  message: "",
+                  arr: [
+                    {'selected': '', 'text': 'Новая эра',},
+                    {'selected': '', 'text': 'Философский клуб',},
+                    {'selected': '', 'text': 'Центр развития',},
+                  ],
+                }
+              })
+
+              @@include("./components/input.html", {
+                context: {
+                  classesList: "is-required",
+                  required: true,
+                  disabled: false,
+                  readonly: false,
+                  datepicker: false,
+                  type: "text",
+                  label: "Имя",
+                  placeholder: "Введите ваше имя",
+                  icon: "",
+                  value: "",
+                  message: "",
+                }
+              })
+
+              @@include("./components/input.html", {
+                context: {
+                  classesList: "",
+                  required: false,
+                  disabled: false,
+                  readonly: false,
+                  datepicker: false,
+                  type: "tel",
+                  label: "Телефон",
+                  placeholder: "Введите телефон",
+                  icon: "",
+                  value: "",
+                  message: "",
+                }
+              })
+
+              @@include("./components/input.html", {
+                context: {
+                  classesList: "is-required",
+                  required: true,
+                  disabled: false,
+                  readonly: false,
+                  datepicker: false,
+                  type: "email",
+                  label: "Электронная почта",
+                  placeholder: "Введите почту",
+                  icon: "",
+                  value: "",
+                  message: "",
+                }
+              })
+
+            </div>
+            <div class="form-box form-col-1">
+
+              @@include("./components/textarea.html", {
+                context: {
+                  classesList: "is-required",
+                  required: true,
+                  disabled: false,
+                  readonly: false,
+                  label: "Комментарий",
+                  placeholder: "Оставьте ваш комментарий",
+                  value: "",
+                  message: "",
+                }
+              })
+
+            </div>
+            <div class="row">
+              <button class="btn btn-black" type="submit">Отправить</button>
+              <span class="contacts__feedback-text"><sup>*</sup> поле обязательное для заполнения</span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+@@include("./components/footer.html")
+
+@@include("./shared/script.html")
+</body>
+</html>

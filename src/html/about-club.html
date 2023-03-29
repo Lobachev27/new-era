@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include("./shared/head.html", {
+  "title": "О клубе"
+})
+
+<body>
+
+@@include("./components/header.html", {
+  context: {
+    "classList": "",
+    "linkActive": '',
+    arr: [
+      {'class': '', 'link': './nir.html', 'text': 'Научно-исследовательские работы'},
+      {'class': '', 'link': './library.html', 'text': 'Библиотека'},
+      {'class': '', 'link': './news.html', 'text': 'Новости'},
+      {'class': '', 'link': './members.html', 'text': 'Члены клуба'},
+      {'class': 'active', 'link': './about-club.html', 'text': 'О клубе'},
+      {'class': '', 'link': './contacts.html', 'text': 'Контакты'},
+    ],
+  }
+})
+
+<main class="main">
+
+  @@include("./components/breadcrumbs.html", {
+    context: {
+    'lastBreadcrumb': 'О клубе',
+      arr: [
+        {'text': 'Главная', 'link': './'},
+        {'text': 'Философский клуб', 'link': './club.html'},
+      ],
+    }
+  })
+
+  <section class="about-page">
+    <div class="container">
+      <div class="about-page-left">
+        <h1 class="title-h1">О клубе</h1>
+        <div class="about-page__image">
+          <img src="./img/club-image.png" alt="">
+        </div>
+      </div>
+      <div class="about-page-right">
+        <div class="about-page__description">
+          <p>Клуб создан с целью дискуссии и поиска консенсуса в области базовых смыслов Российской цивилизации как суверенной культурно-исторической общности.</p>
+          <p>Предметами обсуждения в клубе являются:</p>
+          <ul>
+            <li>концепция Российской цивилизации, основания ее идентичности;</li>
+            <li>образ будущего России;</li>
+            <li>очерчивание образов «своих» и «чужих»;</li>
+            <li>ценности и миссия Российской цивилизации;</li>
+            <li>социально-политическая и экономическая модели ее развития,</li>
+            <li>выработка «большой стратегии» для достижения целей Российской цивилизации.</li>
+          </ul>
+          <p>Деятельность клуба направлена на выявление в России влиятельных носителей смыслов, способных продвигать ценности Российской цивилизации в интеллектуальной среде.</p>
+          <p>Миссия клуба — стать ядром российского познавательного сообщества, разделяющего базовые ценности Российской цивилизации.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+@@include("./components/footer.html")
+
+@@include("./shared/script.html")
+</body>
+</html>

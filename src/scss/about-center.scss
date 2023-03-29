@@ -1,0 +1,72 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.about-center {
+  position: relative;
+  margin: 22px 0;
+  z-index: 2;
+  @media screen and ($tablet1) {
+    margin: 40px 0 20px;
+  }
+  @media screen and ($desktop1) {
+    margin: 50px 0 25px;
+  }
+  @media screen and ($desktop2) {
+    margin: 60px 0 30px;
+  }
+  @media screen and ($desktop3) {
+    margin: 80px 0 40px;
+  }
+
+  & .container {
+    @media screen and ($desktop2) {
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      grid-gap: 24px;
+    }
+    @media screen and ($desktop3) {
+      grid-gap: 40px;
+    }
+  }
+
+  & .text-opening {
+    margin: 12px 0;
+    @media screen and ($tablet1) {
+      margin: 16px 0;
+    }
+    @media screen and ($desktop2) {
+      margin: 12px 0;
+    }
+    @media screen and ($desktop3) {
+      margin: 16px 0;
+    }
+
+    &.active {
+      & .text-opening__box {
+        @media screen and ($desktop1) {
+          max-height: 100vh;
+          opacity: 1;
+        }
+      }
+    }
+
+    &__box {
+      @media screen and ($desktop1) {
+        max-height: 100vh;
+        opacity: 1;
+      }
+
+      &:before {
+        @media screen and ($desktop1) {
+          height: 0;
+        }
+      }
+    }
+
+    &__more {
+      @media screen and ($desktop1) {
+        display: none;
+      }
+    }
+  }
+}

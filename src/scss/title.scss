@@ -1,0 +1,72 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.title {
+  &-h1 {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    @media screen and ($tablet1) {
+      font-size: 24px;
+      line-height: 30px;
+    }
+    @media screen and ($desktop1) {
+      font-size: 30px;
+      line-height: 36px;
+    }
+    @media screen and ($desktop2) {
+      font-size: 36px;
+      line-height: 48px;
+    }
+    @media screen and ($desktop3) {
+      font-size: 48px;
+      line-height: 72px;
+    }
+  }
+
+  &-h2 {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+    @media screen and ($tablet1) {
+      font-size: 24px;
+      line-height: 30px;
+    }
+    @media screen and ($desktop1) {
+      font-size: 30px;
+      line-height: 36px;
+    }
+    @media screen and ($desktop2) {
+      font-size: 36px;
+      line-height: 48px;
+    }
+    @media screen and ($desktop3) {
+      font-size: 42px;
+      line-height: 60px;
+    }
+  }
+
+  &-h6 {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+    margin-bottom: 12px;
+    @media screen and ($tablet1) {
+      font-size: 24px;
+      line-height: 30px;
+      margin-bottom: 20px;
+    }
+    @media screen and ($desktop1) {
+      font-size: 30px;
+      line-height: 36px;
+    }
+    @media screen and ($desktop2) {
+      font-size: 24px;
+      line-height: 30px;
+    }
+  }
+}

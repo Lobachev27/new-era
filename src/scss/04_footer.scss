@@ -1,0 +1,427 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.footer {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background-color: $gray;
+  z-index: 1;
+  & .container {
+    @media screen and ($desktop1) {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__subscribe {
+    padding: 40px 0 22px;
+    border-bottom: 1px solid #BDBBBB;
+    @media screen and ($tablet1) {
+      padding: 50px 0 32px;
+    }
+    @media screen and ($desktop1) {
+      padding: 60px 0 42px;
+      width: 100%;
+    }
+
+    &-title {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 20px;
+      text-align: center;
+      color: $black;
+      @media screen and ($tablet1) {
+        font-size: 20px;
+        line-height: 24px;
+      }
+      @media screen and ($desktop1) {
+        font-size: 24px;
+        line-height: 66px;
+      }
+    }
+
+    &-description {
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 32px;
+      text-align: center;
+      color: $black;
+      @media screen and ($tablet1) {
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+      @media screen and ($desktop1) {
+        font-size: 20px;
+        margin-bottom: 22px;
+      }
+    }
+
+    &-form {
+      position: relative;
+      max-width: 570px;
+      margin: 0 auto;
+
+      & .input-wrapper {
+        & input {
+          padding-right: 154px;
+          @media screen and ($desktop1) {
+            padding-right: 200px;
+          }
+        }
+
+        & .icon-delete {
+          right: 130px;
+          @media screen and ($desktop1) {
+            right: 170px;
+          }
+        }
+      }
+
+      & .btn {
+        position: absolute;
+        top: 4px;
+        right: 4px;
+      }
+    }
+  }
+
+  &__contacts {
+    padding: 40px 0;
+    border-bottom: 1px solid #BDBBBB;
+    @media screen and ($tablet1) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 24px;
+      padding: 50px 0;
+    }
+    @media screen and ($desktop1) {
+      padding: 60px 0 40px;
+      border-bottom: none;
+      order: 2;
+      width: 50%;
+    }
+
+    &-single {
+      padding: 40px 0;
+      border-bottom: 1px solid #BDBBBB;
+      @media screen and ($tablet1) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 24px;
+        padding: 50px 0;
+      }
+      @media screen and ($desktop1) {
+        padding: 60px 0 40px;
+        border-bottom: none;
+        order: 2;
+        width: 50%;
+      }
+
+      &-right {
+        @media screen and ($tablet1) {
+          margin-top: 36px;
+        }
+      }
+    }
+
+    &-item {
+      margin-bottom: 40px;
+      @media screen and ($tablet1) {
+        margin-bottom: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &-link {
+      position: relative;
+      display: block;
+      width: max-content;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 14px;
+      letter-spacing: 0.01em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      @media screen and ($tablet1) {
+        font-size: 16px;
+        line-height: 16px;
+        margin-bottom: 20px;
+      }
+
+      &:hover {
+        &:after {
+          background-color: $black;
+          transition: background-color $transition-time-fast;
+        }
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: #D9D9D9;
+        transition: background-color $transition-time-fast;
+      }
+    }
+
+    &-phone {
+      display: inline-block;
+      margin-right: 16px;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 24px;
+      letter-spacing: 0.01em;
+      color: #878787 ;
+      transition: color $transition-time-fast;
+      @media screen and ($tablet1) {
+        display: block;
+        width: max-content;
+        margin-right: 0;
+        font-size: 14px;
+        line-height: 26px;
+      }
+      @media screen and ($desktop2) {
+        font-size: 16px;
+        line-height: 32px;
+      }
+
+      &:hover {
+        color: $black;
+        transition: color $transition-time-fast;
+      }
+    }
+
+    &-email {
+      position: relative;
+      display: block;
+      width: max-content;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 24px;
+      letter-spacing: 0.01em;
+      color: #878787 ;
+      transition: color $transition-time-fast;
+      @media screen and ($tablet1) {
+        margin-right: 0;
+        font-size: 14px;
+        line-height: 26px;
+        margin-bottom: 30px;
+      }
+      @media screen and ($desktop2) {
+        font-size: 16px;
+        line-height: 32px;
+      }
+
+      &:hover {
+        color: $black;
+        transition: color $transition-time-fast;
+
+        &:after {
+          background-color: $black;
+          transition: background-color $transition-time-fast;
+        }
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 2px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: #D9D9D9;
+        transition: background-color $transition-time-fast;
+      }
+    }
+
+    &-social {
+      position: relative;
+      display: inline-block;
+      margin-right: 16px;
+      width: max-content;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 24px;
+      letter-spacing: 0.01em;
+      color: #878787 ;
+      transition: color $transition-time-fast;
+      @media screen and ($tablet1) {
+        display: block;
+        width: max-content;
+        margin-right: 0;
+        font-size: 14px;
+        line-height: 26px;
+      }
+      @media screen and ($desktop2) {
+        font-size: 16px;
+        line-height: 32px;
+      }
+
+      &:hover {
+        color: $black;
+        transition: color $transition-time-fast;
+
+        &:after {
+          background-color: $black;
+          transition: background-color $transition-time-fast;
+        }
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 2px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: #D9D9D9;
+        transition: background-color $transition-time-fast;
+      }
+    }
+  }
+
+  &__about {
+    position: relative;
+    padding: 40px 0 30px;
+    @media screen and ($tablet1) {
+      padding: 50px 0 40px;
+    }
+    @media screen and ($desktop1) {
+      padding: 60px 0 40px;
+      width: 50%;
+    }
+
+    & .btn {
+      /*position: absolute;*/
+      width: max-content;
+      margin: 20px 0;
+      /*right: 0;
+      top: 67px;*/
+      @media screen and ($tablet1) {
+        /*position: static;*/
+        margin: 20px 0 40px;
+      }
+      @media screen and ($desktop1) {
+        margin: 20px 0 50px;
+      }
+      @media screen and ($desktop2) {
+        margin: 20px 0 60px;
+      }
+    }
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+
+    & span {
+      font-size: 17px;
+      font-weight: 700;
+      line-height: 16px;
+      letter-spacing: 0.01em;
+      text-transform: uppercase;
+      @media screen and ($tablet1) {
+        font-size: 26px;
+        line-height: 26px;
+      }
+    }
+  }
+
+  &__pact {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin-top: 10px;
+    @media screen and ($tablet1) {
+      flex-direction: row;
+    }
+
+    & li {
+      width: max-content;
+      @media screen and ($tablet1) {
+        padding: 0 12px;
+      }
+
+      &:first-child {
+        @media screen and ($tablet1) {
+          padding-left: 0;
+          border-right: 1px solid #bdbbbb;
+        }
+      }
+
+      & a {
+        position: relative;
+        display: block;
+        width: max-content;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 24px;
+        letter-spacing: 0.01em;
+        color: #878787 ;
+        transition: color $transition-time-fast;
+        @media screen and ($tablet1) {
+          font-size: 14px;
+          line-height: 18px;
+        }
+        @media screen and ($desktop2) {
+          font-size: 16px;
+          line-height: 20px;
+        }
+
+        &:hover {
+          color: $black;
+          transition: color $transition-time-fast;
+
+          &:after {
+            background-color: $black;
+            transition: background-color $transition-time-fast;
+          }
+        }
+
+        &:after {
+          content: '';
+          position: absolute;
+          bottom: 2px;
+          left: 0;
+          width: 100%;
+          height: 1px;
+          background-color: #D9D9D9;
+          transition: background-color $transition-time-fast;
+          @media screen and ($tablet1) {
+            bottom: -3px;
+          }
+        }
+      }
+    }
+  }
+
+  &__copyright {
+    /*position: absolute;*/
+    display: block;
+    width: max-content;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+    color: $black;
+    right: 0;
+    top: 36px;
+    @media screen and ($tablet1) {
+      /*position: static;*/
+      font-size: 14px;
+      line-height: 26px;
+    }
+    @media screen and ($desktop2) {
+      font-size: 16px;
+      line-height: 32px;
+    }
+  }
+}

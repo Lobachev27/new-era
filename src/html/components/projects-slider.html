@@ -1,0 +1,27 @@
+<section class="projects-slider">
+  <div class="container">
+    <div class="row">
+      <h2 class="title-h2">Проекты</h2>
+      <a class="projects__more" href="./projects.html"><span>Смотреть все проекты</span></a>
+    </div>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        @@for (var i = 0; i < context.arr.length; i++) {
+        <div class="swiper-slide">
+          <div class="projects__box">
+            <div class="projects__box-image">
+              <img src="`+context.arr[i].img+`" alt="">
+            </div>
+            <div class="projects__box-info">
+              <div class="projects__box-title">`+context.arr[i].title+`</div>
+              <div class="projects__box-description">`+context.arr[i].description+`</div>
+            </div>
+            <a class="projects__box-link" href="`+context.arr[i].link+`"></a>
+          </div>
+        </div>
+        }
+      </div>
+    </div>
+    <a class="projects__more" href="./projects.html"><span>Смотреть все проекты</span></a>
+  </div>
+</section>

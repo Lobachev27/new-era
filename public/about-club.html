@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>О клубе</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="title" content="" />
+    <meta name="description" content="" />
+    <link
+      rel="stylesheet"
+      href="https://necolas.github.io/normalize.css/latest/normalize.css"
+    />
+    <link rel="stylesheet" href="./css/swiper.min.css" />
+    <link rel="stylesheet" href="./css/flatpickr.min.css" />
+    <link rel="stylesheet" href="./css/jquery.dropdown.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container">
+        <a class="header__logo" href="./">
+          <span>Новая эра</span>
+        </a>
+        <div class="header__main">
+          <ul>
+            <li>
+              <a class="header__link" href="./club.html"
+                ><span>Философский клуб</span></a
+              >
+            </li>
+            <li>
+              <a class="header__link" href="./center.html"
+                ><span>Центр развития</span></a
+              >
+            </li>
+            <li>
+              <a class="btn btn-black js-popup" href="#application"
+                >Подать заявку</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="header__extra">
+          <ul>
+            <li>
+              <a class="header__link" href="./nir.html"
+                ><span>Научно-исследовательские работы</span></a
+              >
+            </li>
+
+            <li>
+              <a class="header__link" href="./library.html"
+                ><span>Библиотека</span></a
+              >
+            </li>
+
+            <li>
+              <a class="header__link" href="./news.html"
+                ><span>Новости</span></a
+              >
+            </li>
+
+            <li>
+              <a class="header__link" href="./members.html"
+                ><span>Члены клуба</span></a
+              >
+            </li>
+
+            <li>
+              <a class="header__link active" href="./about-club.html"
+                ><span>О клубе</span></a
+              >
+            </li>
+
+            <li>
+              <a class="header__link" href="./contacts.html"
+                ><span>Контакты</span></a
+              >
+            </li>
+          </ul>
+          <div class="header__action">
+            <div class="search">
+              <div class="input-wrapper input-search">
+                <div class="input-box">
+                  <input
+                    class="input"
+                    type="text"
+                    placeholder="Поиск"
+                    autocomplete="off"
+                    value=""
+                  />
+                  <i class="icon-delete">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      version="1.1"
+                      width="512"
+                      height="512"
+                      x="0"
+                      y="0"
+                      viewBox="0 0 32 32"
+                      style="enable-background: new 0 0 512 512"
+                      xml:space="preserve"
+                      class=""
+                    >
+                      <g>
+                        <g
+                          xmlns="http://www.w3.org/2000/svg"
+                          id="Layer_22"
+                          data-name="Layer 22"
+                        >
+                          <path
+                            d="m25.9 6.1a14 14 0 1 0 0 19.8 14 14 0 0 0 0-19.8zm-4.9 13.44a1 1 0 0 1 0 1.46 1 1 0 0 1 -.71.29 1 1 0 0 1 -.7-.29l-3.59-3.59-3.54 3.59a1 1 0 0 1 -.7.29 1 1 0 0 1 -.71-.29 1 1 0 0 1 0-1.41l3.54-3.59-3.54-3.54a1 1 0 0 1 1.41-1.41l3.54 3.54 3.54-3.54a1 1 0 0 1 1.46 1.41l-3.59 3.54z"
+                            data-original="#000000"
+                          ></path>
+                        </g>
+                      </g>
+                    </svg>
+                  </i>
+
+                  <i class="icon"
+                    ><svg
+                      width="17"
+                      height="17"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M7 0a7 7 0 015.6 11.2l.012.009.094.083 3.02 3.01a1 1 0 01-1.318 1.499l-.094-.083-3.02-3.01a1.023 1.023 0 01-.094-.108A7 7 0 117 0zm0 2a5 5 0 100 10A5 5 0 007 2z"
+                        fill-rule="evenodd"
+                      /></svg
+                  ></i>
+                </div>
+                <span class="message-text"></span>
+              </div>
+            </div>
+
+            <div class="user">
+              <div class="user__box">
+                <div class="user__box-image">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 5a4 4 0 100 8 4 4 0 000-8zm0 2a2 2 0 110 4 2 2 0 010-4zm0 7c2.991 0 5.308 1.16 6.835 3.448a1 1 0 11-1.664 1.11c-1.144-1.715-2.829-2.557-5.171-2.557-2.34 0-4.017.841-5.147 2.553a1 1 0 11-1.669-1.102c1.512-2.291 3.823-3.451 6.816-3.451z"
+                    />
+                  </svg>
+                  <img src="./img/person-06.jpg" alt="" />
+                </div>
+                <span class="user__box-name">Администратор</span>
+              </div>
+              <div class="user__dd">
+                <a class="user__dd-link" href="./lk-personal-data.html"
+                  >Личный кабинет</a
+                >
+                <a class="user__dd-link" href="javascript:void(0);">Выход</a>
+              </div>
+            </div>
+            <!--
+
+        <div class="input-wrapper ">
+  
+  <select class="select " name=""   >
+    <option value="hide">Выберите язык</option>
+    
+    <option selected>RU</option>
+    
+    <option >ENG</option>
+    
+  </select>
+  <span class="message-text"></span>
+</div>
+-->
+
+            <div class="header__menu">
+              <svg
+                class="m-1"
+                width="24"
+                height="18"
+                viewBox="0 0 24 18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect width="24" height="2" rx="1" />
+                <rect y="16" width="24" height="2" rx="1" />
+                <rect y="8" width="24" height="2" rx="1" />
+              </svg>
+              <svg
+                class="m-2"
+                xmlns="http://www.w3.org/2000/svg"
+                version="1.1"
+                width="512"
+                height="512"
+                x="0"
+                y="0"
+                viewBox="0 0 512.001 512.001"
+              >
+                <path
+                  d="M284.286,256.002L506.143,34.144c7.811-7.811,7.811-20.475,0-28.285c-7.811-7.81-20.475-7.811-28.285,0L256,227.717    L34.143,5.859c-7.811-7.811-20.475-7.811-28.285,0c-7.81,7.811-7.811,20.475,0,28.285l221.857,221.857L5.858,477.859    c-7.811,7.811-7.811,20.475,0,28.285c3.905,3.905,9.024,5.857,14.143,5.857c5.119,0,10.237-1.952,14.143-5.857L256,284.287    l221.857,221.857c3.905,3.905,9.024,5.857,14.143,5.857s10.237-1.952,14.143-5.857c7.811-7.811,7.811-20.475,0-28.285 L284.286,256.002z"
+                  data-original="#000000"
+                ></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="header-mobile">
+      <div class="container">
+        <ul>
+          <li>
+            <a class="header__link" href="./nir.html"
+              ><span>Научно-исследовательские работы</span></a
+            >
+          </li>
+
+          <li>
+            <a class="header__link" href="./library.html"
+              ><span>Библиотека</span></a
+            >
+          </li>
+
+          <li>
+            <a class="header__link" href="./news.html"><span>Новости</span></a>
+          </li>
+
+          <li>
+            <a class="header__link" href="./members.html"
+              ><span>Члены клуба</span></a
+            >
+          </li>
+
+          <li>
+            <a class="header__link active" href="./about-club.html"
+              ><span>О клубе</span></a
+            >
+          </li>
+
+          <li>
+            <a class="header__link" href="./contacts.html"
+              ><span>Контакты</span></a
+            >
+          </li>
+        </ul>
+        <a class="btn btn-black js-popup" href="#application">Подать заявку</a>
+      </div>
+    </div>
+
+    <main class="main">
+      <div class="breadcrumbs">
+        <div class="container">
+          <div class="breadcrumbs__list">
+            <a class="breadcrumbs__link" href="./">Главная</a>
+            <span></span>
+
+            <a class="breadcrumbs__link" href="./club.html">Философский клуб</a>
+            <span></span>
+
+            <p class="breadcrumbs__link">О клубе</p>
+          </div>
+        </div>
+      </div>
+
+      <section class="about-page">
+        <div class="container">
+          <div class="about-page-left">
+            <h1 class="title-h1">О клубе</h1>
+            <div class="about-page__image">
+              <img src="./img/club-image.png" alt="" />
+            </div>
+          </div>
+          <div class="about-page-right">
+            <div class="about-page__description">
+              <p>
+                Клуб создан с целью дискуссии и поиска консенсуса в области
+                базовых смыслов Российской цивилизации как суверенной
+                культурно-исторической общности.
+              </p>
+              <p>Предметами обсуждения в клубе являются:</p>
+              <ul>
+                <li>
+                  концепция Российской цивилизации, основания ее идентичности;
+                </li>
+                <li>образ будущего России;</li>
+                <li>очерчивание образов «своих» и «чужих»;</li>
+                <li>ценности и миссия Российской цивилизации;</li>
+                <li>
+                  социально-политическая и экономическая модели ее развития,
+                </li>
+                <li>
+                  выработка «большой стратегии» для достижения целей Российской
+                  цивилизации.
+                </li>
+              </ul>
+              <p>
+                Деятельность клуба направлена на выявление в России влиятельных
+                носителей смыслов, способных продвигать ценности Российской
+                цивилизации в интеллектуальной среде.
+              </p>
+              <p>
+                Миссия клуба — стать ядром российского познавательного
+                сообщества, разделяющего базовые ценности Российской
+                цивилизации.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__subscribe">
+          <div class="footer__subscribe-title">Подпишитесь на анонсы</div>
+          <div class="footer__subscribe-description">
+            Главные новости — каждую неделю в вашей почте
+          </div>
+          <form class="footer__subscribe-form">
+            <div class="input-wrapper is-required">
+              <div class="input-box">
+                <input
+                  class="input"
+                  type="email"
+                  placeholder="Введите ваш email"
+                  autocomplete="off"
+                  required
+                  value=""
+                />
+                <i class="icon-delete">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    version="1.1"
+                    width="512"
+                    height="512"
+                    x="0"
+                    y="0"
+                    viewBox="0 0 32 32"
+                    style="enable-background: new 0 0 512 512"
+                    xml:space="preserve"
+                    class=""
+                  >
+                    <g>
+                      <g
+                        xmlns="http://www.w3.org/2000/svg"
+                        id="Layer_22"
+                        data-name="Layer 22"
+                      >
+                        <path
+                          d="m25.9 6.1a14 14 0 1 0 0 19.8 14 14 0 0 0 0-19.8zm-4.9 13.44a1 1 0 0 1 0 1.46 1 1 0 0 1 -.71.29 1 1 0 0 1 -.7-.29l-3.59-3.59-3.54 3.59a1 1 0 0 1 -.7.29 1 1 0 0 1 -.71-.29 1 1 0 0 1 0-1.41l3.54-3.59-3.54-3.54a1 1 0 0 1 1.41-1.41l3.54 3.54 3.54-3.54a1 1 0 0 1 1.46 1.41l-3.59 3.54z"
+                          data-original="#000000"
+                        ></path>
+                      </g>
+                    </g>
+                  </svg>
+                </i>
+              </div>
+              <span class="message-text"></span>
+            </div>
+            <button class="btn btn-black" type="submit">Подписаться</button>
+          </form>
+        </div>
+        <div class="footer__contacts">
+          <div class="footer__contacts-item">
+            <a class="footer__contacts-link" href="./club.html"
+              >Философский клуб</a
+            >
+            <a class="footer__contacts-phone" href="tel:+79150125050"
+              >+7 915 012 50 50</a
+            >
+            <a class="footer__contacts-phone" href="tel:+79165783605"
+              >+7 916 578 36 05</a
+            >
+            <a
+              class="footer__contacts-email"
+              href="mailto:civrussfuture@yandex.ru"
+              >civrussfuture@yandex.ru</a
+            >
+            <a class="footer__contacts-social" href="javascript:void(0);"
+              >Telegram</a
+            >
+            <a class="footer__contacts-social" href="javascript:void(0);"
+              >Вконтакте</a
+            >
+          </div>
+          <div class="footer__contacts-item">
+            <a class="footer__contacts-link" href="./center.html"
+              >Центр развития</a
+            >
+            <a class="footer__contacts-phone" href="tel:+74959393045"
+              >+7 (495) 9393 045</a
+            >
+            <a
+              class="footer__contacts-email"
+              href="mailto:graduate.politmsu@yandex.ru"
+              >graduate.politmsu@yandex.ru</a
+            >
+            <a
+              class="footer__contacts-social"
+              href="https://t.me/graduatepolitmsu"
+              >Telegram</a
+            >
+            <a
+              class="footer__contacts-social"
+              href="https://vk.com/graduate.politmsu"
+              >Вконтакте</a
+            >
+          </div>
+        </div>
+        <!--<div class="footer__contacts-single">
+      <div class="footer__contacts-single-left">
+        <a class="footer__contacts-link" href="./center.html">Центр развития</a>
+        <a class="footer__contacts-email" href="mailto:graduate.politmsu@yandex.ru">graduate.politmsu@yandex.ru</a>
+      </div>
+      <div class="footer__contacts-single-right">
+        <a class="footer__contacts-social" href="https://t.me/graduatepolitmsu">Telegram</a>
+        <a class="footer__contacts-social" href="https://vk.com/graduate.politmsu">Вконтакте</a>
+      </div>
+    </div>-->
+        <div class="footer__about">
+          <a class="footer__logo" href="./">
+            <span>Новая эра</span>
+          </a>
+          <a class="btn btn-black" href="./contacts.html">Обратная связь</a>
+          <div class="footer__copyright">© Новая эра, 2022</div>
+          <ul class="footer__pact">
+            <li>
+              <a href="./user-agreement.html">Пользовательское соглашение </a>
+            </li>
+            <li><a href="./user-policy.html">Конфидициальность</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <button id="scrollToTop" class="btn btn-gray" type="button"></button>
+
+    <div id="auth" class="popup">
+      <div class="popup__wrapper">
+        <div class="popup__close">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            version="1.1"
+            width="512"
+            height="512"
+            x="0"
+            y="0"
+            viewBox="0 0 512.001 512.001"
+          >
+            <path
+              d="M284.286,256.002L506.143,34.144c7.811-7.811,7.811-20.475,0-28.285c-7.811-7.81-20.475-7.811-28.285,0L256,227.717    L34.143,5.859c-7.811-7.811-20.475-7.811-28.285,0c-7.81,7.811-7.811,20.475,0,28.285l221.857,221.857L5.858,477.859    c-7.811,7.811-7.811,20.475,0,28.285c3.905,3.905,9.024,5.857,14.143,5.857c5.119,0,10.237-1.952,14.143-5.857L256,284.287    l221.857,221.857c3.905,3.905,9.024,5.857,14.143,5.857s10.237-1.952,14.143-5.857c7.811-7.811,7.811-20.475,0-28.285 L284.286,256.002z"
+              data-original="#000000"
+            ></path>
+          </svg>
+        </div>
+        <div class="popup__title">Вход в личный кабинет</div>
+        <form class="popup__content">
+          <div class="popup__box">
+            <div class="input-wrapper input-login is-required">
+              <div class="input-box">
+                <input
+                  class="input"
+                  type="text"
+                  placeholder="Логин"
+                  autocomplete="off"
+                  required
+                  value=""
+                />
+                <i class="icon-delete">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    version="1.1"
+                    width="512"
+                    height="512"
+                    x="0"
+                    y="0"
+                    viewBox="0 0 32 32"
+                    style="enable-background: new 0 0 512 512"
+                    xml:space="preserve"
+                    class=""
+                  >
+                    <g>
+                      <g
+                        xmlns="http://www.w3.org/2000/svg"
+                        id="Layer_22"
+                        data-name="Layer 22"
+                      >
+                        <path
+                          d="m25.9 6.1a14 14 0 1 0 0 19.8 14 14 0 0 0 0-19.8zm-4.9 13.44a1 1 0 0 1 0 1.46 1 1 0 0 1 -.71.29 1 1 0 0 1 -.7-.29l-3.59-3.59-3.54 3.59a1 1 0 0 1 -.7.29 1 1 0 0 1 -.71-.29 1 1 0 0 1 0-1.41l3.54-3.59-3.54-3.54a1 1 0 0 1 1.41-1.41l3.54 3.54 3.54-3.54a1 1 0 0 1 1.46 1.41l-3.59 3.54z"
+                          data-original="#000000"
+                        ></path>
+                      </g>
+                    </g>
+                  </svg>
+                </i>
+
+                <i class="icon"
+                  ><svg
+                    width="20"
+                    height="22"
+                    viewBox="0 0 20 22"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      cx="10"
+                      cy="6"
+                      r="5"
+                      stroke="black"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M1 21C2.71656 17.4295 6.103 15 10 15C13.897 15 17.2834 17.4295 19 21"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    /></svg
+                ></i>
+              </div>
+              <span class="message-text"></span>
+            </div>
+
+            <div class="input-wrapper input-password is-required">
+              <div class="input-box">
+                <input
+                  class="input"
+                  type="password"
+                  placeholder="Пароль"
+                  autocomplete="off"
+                  required
+                  value=""
+                />
+                <i class="icon-delete">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    version="1.1"
+                    width="512"
+                    height="512"
+                    x="0"
+                    y="0"
+                    viewBox="0 0 32 32"
+                    style="enable-background: new 0 0 512 512"
+                    xml:space="preserve"
+                    class=""
+                  >
+                    <g>
+                      <g
+                        xmlns="http://www.w3.org/2000/svg"
+                        id="Layer_22"
+                        data-name="Layer 22"
+                      >
+                        <path
+                          d="m25.9 6.1a14 14 0 1 0 0 19.8 14 14 0 0 0 0-19.8zm-4.9 13.44a1 1 0 0 1 0 1.46 1 1 0 0 1 -.71.29 1 1 0 0 1 -.7-.29l-3.59-3.59-3.54 3.59a1 1 0 0 1 -.7.29 1 1 0 0 1 -.71-.29 1 1 0 0 1 0-1.41l3.54-3.59-3.54-3.54a1 1 0 0 1 1.41-1.41l3.54 3.54 3.54-3.54a1 1 0 0 1 1.46 1.41l-3.59 3.54z"
+                          data-original="#000000"
+                        ></path>
+                      </g>
+                    </g>
+                  </svg>
+                </i>
+
+                <i class="icon"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    version="1.1"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xmlns:svgjs="http://svgjs.com/svgjs"
+                    width="512"
+                    height="512"
+                    x="0"
+                    y="0"
+                    viewBox="0 0 24 24"
+                    style="enable-background: new 0 0 512 512"
+                    xml:space="preserve"
+                    class=""
+                  >
+                    <g>
+                      <path
+                        xmlns="http://www.w3.org/2000/svg"
+                        d="m18.75 24h-13.5c-1.24 0-2.25-1.009-2.25-2.25v-10.5c0-1.241 1.01-2.25 2.25-2.25h13.5c1.24 0 2.25 1.009 2.25 2.25v10.5c0 1.241-1.01 2.25-2.25 2.25zm-13.5-13.5c-.413 0-.75.336-.75.75v10.5c0 .414.337.75.75.75h13.5c.413 0 .75-.336.75-.75v-10.5c0-.414-.337-.75-.75-.75z"
+                        fill="#000000"
+                        data-original="#000000"
+                        class=""
+                      ></path>
+                      <path
+                        xmlns="http://www.w3.org/2000/svg"
+                        d="m17.25 10.5c-.414 0-.75-.336-.75-.75v-3.75c0-2.481-2.019-4.5-4.5-4.5s-4.5 2.019-4.5 4.5v3.75c0 .414-.336.75-.75.75s-.75-.336-.75-.75v-3.75c0-3.309 2.691-6 6-6s6 2.691 6 6v3.75c0 .414-.336.75-.75.75z"
+                        fill="#000000"
+                        data-original="#000000"
+                        class=""
+                      ></path>
+                      <path
+                        xmlns="http://www.w3.org/2000/svg"
+                        d="m12 17c-1.103 0-2-.897-2-2s.897-2 2-2 2 .897 2 2-.897 2-2 2zm0-2.5c-.275 0-.5.224-.5.5s.225.5.5.5.5-.224.5-.5-.225-.5-.5-.5z"
+                        fill="#000000"
+                        data-original="#000000"
+                        class=""
+                      ></path>
+                      <path
+                        xmlns="http://www.w3.org/2000/svg"
+                        d="m12 20c-.414 0-.75-.336-.75-.75v-2.75c0-.414.336-.75.75-.75s.75.336.75.75v2.75c0 .414-.336.75-.75.75z"
+                        fill="#000000"
+                        data-original="#000000"
+                        class=""
+                      ></path>
+                    </g></svg
+                ></i>
+              </div>
+              <span class="message-text"></span>
+            </div>
+
+            <div class="row">
+              <button class="btn btn-black" type="submit">Войти</button>
+              <a class="popup__link js-popup" href="#pass"
+                ><span>Забыли пароль?</span></a
+              >
+            </div>
+          </div>
+          <div class="popup__bottom">
+            <a class="popup__link" href="./registration.html"
+              ><span>Зарегистрироваться</span></a
+            >
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div id="pass" class="popup">
+      <div class="popup__wrapper">
+        <div class="popup__close">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            version="1.1"
+            width="512"
+            height="512"
+            x="0"
+            y="0"
+            viewBox="0 0 512.001 512.001"
+          >
+            <path
+              d="M284.286,256.002L506.143,34.144c7.811-7.811,7.811-20.475,0-28.285c-7.811-7.81-20.475-7.811-28.285,0L256,227.717    L34.143,5.859c-7.811-7.811-20.475-7.811-28.285,0c-7.81,7.811-7.811,20.475,0,28.285l221.857,221.857L5.858,477.859    c-7.811,7.811-7.811,20.475,0,28.285c3.905,3.905,9.024,5.857,14.143,5.857c5.119,0,10.237-1.952,14.143-5.857L256,284.287    l221.857,221.857c3.905,3.905,9.024,5.857,14.143,5.857s10.237-1.952,14.143-5.857c7.811-7.811,7.811-20.475,0-28.285 L284.286,256.002z"
+              data-original="#000000"
+            ></path>
+          </svg>
+        </div>
+        <div class="popup__title">Восстановление пароля</div>
+        <form class="popup__content">
+          <div class="popup__box">
+            <div class="input-wrapper is-required">
+              <div class="input-box">
+                <input
+                  class="input"
+                  type="email"
+                  placeholder="Электронная почта"
+                  autocomplete="off"
+                  required
+                  value=""
+                />
+                <i class="icon-delete">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    version="1.1"
+                    width="512"
+                    height="512"
+                    x="0"
+                    y="0"
+                    viewBox="0 0 32 32"
+                    style="enable-background: new 0 0 512 512"
+                    xml:space="preserve"
+                    class=""
+                  >
+                    <g>
+                      <g
+                        xmlns="http://www.w3.org/2000/svg"
+                        id="Layer_22"
+                        data-name="Layer 22"
+                      >
+                        <path
+                          d="m25.9 6.1a14 14 0 1 0 0 19.8 14 14 0 0 0 0-19.8zm-4.9 13.44a1 1 0 0 1 0 1.46 1 1 0 0 1 -.71.29 1 1 0 0 1 -.7-.29l-3.59-3.59-3.54 3.59a1 1 0 0 1 -.7.29 1 1 0 0 1 -.71-.29 1 1 0 0 1 0-1.41l3.54-3.59-3.54-3.54a1 1 0 0 1 1.41-1.41l3.54 3.54 3.54-3.54a1 1 0 0 1 1.46 1.41l-3.59 3.54z"
+                          data-original="#000000"
+                        ></path>
+                      </g>
+                    </g>
+                  </svg>
+                </i>
+              </div>
+              <span class="message-text"></span>
+            </div>
+
+            <div class="row">
+              <button class="btn btn-black" type="submit">Отправить</button>
+              <a class="popup__link js-popup" href="#auth"
+                ><span>Авторизоваться</span></a
+              >
+            </div>
+          </div>
+          <div class="popup__bottom">
+            <a class="popup__link" href="./registration.html"
+              ><span>Зарегистрироваться</span></a
+            >
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div id="application" class="popup">
+      <div class="popup__wrapper">
+        <div class="popup__close">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            version="1.1"
+            width="512"
+            height="512"
+            x="0"
+            y="0"
+            viewBox="0 0 512.001 512.001"
+          >
+            <path
+              d="M284.286,256.002L506.143,34.144c7.811-7.811,7.811-20.475,0-28.285c-7.811-7.81-20.475-7.811-28.285,0L256,227.717    L34.143,5.859c-7.811-7.811-20.475-7.811-28.285,0c-7.81,7.811-7.811,20.475,0,28.285l221.857,221.857L5.858,477.859    c-7.811,7.811-7.811,20.475,0,28.285c3.905,3.905,9.024,5.857,14.143,5.857c5.119,0,10.237-1.952,14.143-5.857L256,284.287    l221.857,221.857c3.905,3.905,9.024,5.857,14.143,5.857s10.237-1.952,14.143-5.857c7.811-7.811,7.811-20.475,0-28.285 L284.286,256.002z"
+              data-original="#000000"
+            ></path>
+          </svg>
+        </div>
+        <div class="popup__title">Подать заявку</div>
+        <form class="popup__content">
+          <div class="popup__box">
+            <div class="popup__application">
+              <a class="btn btn-gray closed" href="javascript:void(0);"
+                >Опубликовать работу</a
+              >
+              <a class="btn btn-gray closed" href="javascript:void(0);"
+                >Получить стипендию</a
+              >
+              <a class="btn btn-gray closed" href="javascript:void(0);"
+                >Получить грунт</a
+              >
+            </div>
+          </div>
+
+          <div class="popup__bottom">
+            <div class="popup__text">
+              Для доступа к функционалу необходимо
+              <a class="popup__link js-popup" href="#auth"
+                ><span>авторизоваться</span></a
+              >
+              на портале
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div id="library" class="popup">
+      <div class="popup__wrapper">
+        <div class="popup__close">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            version="1.1"
+            width="512"
+            height="512"
+            x="0"
+            y="0"
+            viewBox="0 0 512.001 512.001"
+          >
+            <path
+              d="M284.286,256.002L506.143,34.144c7.811-7.811,7.811-20.475,0-28.285c-7.811-7.81-20.475-7.811-28.285,0L256,227.717    L34.143,5.859c-7.811-7.811-20.475-7.811-28.285,0c-7.81,7.811-7.811,20.475,0,28.285l221.857,221.857L5.858,477.859    c-7.811,7.811-7.811,20.475,0,28.285c3.905,3.905,9.024,5.857,14.143,5.857c5.119,0,10.237-1.952,14.143-5.857L256,284.287    l221.857,221.857c3.905,3.905,9.024,5.857,14.143,5.857s10.237-1.952,14.143-5.857c7.811-7.811,7.811-20.475,0-28.285 L284.286,256.002z"
+              data-original="#000000"
+            ></path>
+          </svg>
+        </div>
+        <div class="popup__content">
+          <div class="popup__box">
+            <div class="library__item-tooltip">
+              <div class="library__item-tooltip-image">
+                <img src="" alt="" />
+              </div>
+              <div class="library__item-tooltip-info">
+                <div class="library__item-tooltip-author"></div>
+                <div class="library__item-tooltip-name"></div>
+                <div class="library__item-tooltip-description"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./js/swiper.min.js"></script>
+    <script src="./js/flatpickr.min.js"></script>
+    <script src="./js/flatpickr-ru.min.js"></script>
+    <script src="./js/jquery.dropdown.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

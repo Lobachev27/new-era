@@ -1,0 +1,108 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.info {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #F5F5F5;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 956px;
+  padding: 16px;
+  margin: 0 auto;
+  @media screen and ($tablet1) {
+    border-radius: 8px;
+    padding: 24px;
+  }
+  @media screen and ($desktop1) {
+    border-radius: 16px;
+  }
+  @media screen and ($desktop2) {
+    padding: 40px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.01em;
+    @media screen and ($tablet1) {
+      font-size: 24px;
+      line-height: 30px;
+    }
+    @media screen and ($desktop2) {
+      font-size: 30px;
+      line-height: 44px;
+    }
+  }
+
+  &__description {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: center;
+    color: $black;
+    margin: 16px 0;
+    @media screen and ($tablet1) {
+      font-size: 16px;
+      line-height: 28px;
+      max-width: 85%;
+      margin: 24px 0;
+    }
+    @media screen and ($desktop2) {
+      font-size: 18px;
+      line-height: 36px;
+      margin: 24px 0 40px;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-top: 1px solid #D9D9D9;
+    padding-top: 16px;
+    margin-top: 16px;
+    @media screen and ($tablet1) {
+      padding-top: 24px;
+      margin-top: 24px;
+    }
+    @media screen and ($desktop2) {
+      padding-top: 40px;
+      margin-top: 40px;
+    }
+  }
+
+  &__link {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 24px;
+    color: #878787;
+    transition: color $transition-time-fast;
+    @media screen and ($tablet1) {
+      font-size: 14px;
+    }
+
+    &:hover {
+      color: $black;
+      transition: color $transition-time-fast;
+
+      & span {
+        border-bottom: 1px solid transparent;
+        transition: border $transition-time-fast;
+      }
+    }
+
+    & span {
+      display: inline;
+      padding: 3px 0;
+      border-bottom: 1px solid #D9D9D9;
+      transition: border $transition-time-fast;
+    }
+  }
+}

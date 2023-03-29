@@ -1,0 +1,67 @@
+<header class="header @@context.classList">
+  <div class="container">
+    <a class="header__logo" href="./">
+      <span>Новая эра</span>
+    </a>
+    <div class="header__main">
+      <ul>
+        <li><a class="header__link @@if (context.linkActive === 1){active}" href="./club.html"><span>Философский клуб</span></a></li>
+        <li><a class="header__link @@if (context.linkActive === 2){active}" href="./center.html"><span>Центр развития</span></a></li>
+        <li><a class="btn btn-black js-popup" href="#application">Подать заявку</a></li>
+      </ul>
+    </div>
+    <div class="header__extra">
+      <ul>
+        @@for (var i = 0; i < context.arr.length; i++) {
+        <li><a class="header__link `+context.arr[i].class+`" href="`+context.arr[i].link+`"><span>`+context.arr[i].text+`</span></a></li>
+        }
+      </ul>
+      <div class="header__action">
+
+        @@include("./search.html")
+
+        @@include("./user.html", {
+          context: {
+            user: "Администратор",
+            image: "./img/person-06.jpg",
+          }
+        })
+<!--
+
+        @@include("./select.html", {
+          context: {
+            classesList: "",
+            class: "",
+            required: false,
+            disabled: false,
+            readonly: false,
+            label: "",
+            placeholder: "Выберите язык",
+            message: "",
+            arr: [
+              {'selected': 'selected', 'text': 'RU',},
+              {'selected': '', 'text': 'ENG',},
+            ],
+          }
+        })
+-->
+
+        <div class="header__menu">
+          <svg class="m-1" width="24" height="18" viewBox="0 0 24 18" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="2" rx="1"/><rect y="16" width="24" height="2" rx="1"/><rect y="8" width="24" height="2" rx="1"/></svg>
+          <svg class="m-2" xmlns="http://www.w3.org/2000/svg" version="1.1"  width="512" height="512" x="0" y="0" viewBox="0 0 512.001 512.001"><path d="M284.286,256.002L506.143,34.144c7.811-7.811,7.811-20.475,0-28.285c-7.811-7.81-20.475-7.811-28.285,0L256,227.717    L34.143,5.859c-7.811-7.811-20.475-7.811-28.285,0c-7.81,7.811-7.811,20.475,0,28.285l221.857,221.857L5.858,477.859    c-7.811,7.811-7.811,20.475,0,28.285c3.905,3.905,9.024,5.857,14.143,5.857c5.119,0,10.237-1.952,14.143-5.857L256,284.287    l221.857,221.857c3.905,3.905,9.024,5.857,14.143,5.857s10.237-1.952,14.143-5.857c7.811-7.811,7.811-20.475,0-28.285 L284.286,256.002z" data-original="#000000"></path></svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="header-mobile @@context.classList">
+  <div class="container">
+    <ul>
+      @@for (var i = 0; i < context.arr.length; i++) {
+      <li><a class="header__link `+context.arr[i].class+`" href="`+context.arr[i].link+`"><span>`+context.arr[i].text+`</span></a></li>
+      }
+    </ul>
+    <a class="btn btn-black js-popup" href="#application">Подать заявку</a>
+  </div>
+</div>

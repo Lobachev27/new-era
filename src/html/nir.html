@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include("./shared/head.html", {
+  "title": "Научно-исследовательские работы"
+})
+
+<body>
+
+@@include("./components/header.html", {
+  context: {
+    "classList": "",
+    "linkActive": false,
+    arr: [
+      {'class': 'active', 'link': './nir.html', 'text': 'Научно-исследовательские работы'},
+      {'class': '', 'link': './library.html', 'text': 'Библиотека'},
+      {'class': '', 'link': './news.html', 'text': 'Новости'},
+      {'class': '', 'link': './authors.html', 'text': 'Авторы'},
+      {'class': '', 'link': './about-project.html', 'text': 'О проекте'},
+      {'class': '', 'link': './contacts.html', 'text': 'Контакты'},
+    ],
+  }
+})
+
+<main class="main">
+
+  @@include("./components/breadcrumbs.html", {
+    context: {
+      'lastBreadcrumb': 'Научно-исследовательские работы',
+        arr: [
+        {'text': 'Главная', 'link': './'},
+      ],
+    }
+  })
+
+  <section class="nir-page">
+    <div class="container">
+      <h1 class="title-h1">Научно-исследовательские работы</h1>
+
+      @@include("./components/filter.html")
+
+      @@include("./components/nir-list.html", {
+        context: {
+          arrNir: [
+            {'link': './transcript.html', 'img': './img/nir-1.jpg', 'chapter': 'Философский клуб', 'type': 'Стенограмма', 'text': 'Гибридная война и кризис  западной цивилизации', 'author': 'Чихарев И.А',},
+            {'link': './transcript.html', 'img': './img/nir-2.jpg', 'chapter': 'Философский клуб', 'type': 'статья', 'text': 'От гибридной к синергетической войне', 'author': 'Чихарев И.А',},
+            {'link': './transcript.html', 'img': './img/nir-3.jpg', 'chapter': 'Центр развития', 'type': 'Монография', 'text': 'Синергетическая война:  координация и синхронизация элементов гибридной войны', 'author': 'Чихарев И.А',},
+            {'link': './transcript.html', 'img': './img/nir-1.jpg', 'chapter': 'Философский клуб', 'type': 'Стенограмма', 'text': 'Гибридная война и кризис  западной цивилизации', 'author': 'Чихарев И.А',},
+            {'link': './transcript.html', 'img': './img/nir-2.jpg', 'chapter': 'Философский клуб', 'type': 'статья', 'text': 'От гибридной к синергетической войне', 'author': 'Чихарев И.А',},
+            {'link': './transcript.html', 'img': './img/nir-3.jpg', 'chapter': 'Центр развития', 'type': 'Монография', 'text': 'Синергетическая война:  координация и синхронизация элементов гибридной войны', 'author': 'Чихарев И.А',},
+            {'link': './transcript.html', 'img': './img/nir-1.jpg', 'chapter': 'Философский клуб', 'type': 'Стенограмма', 'text': 'Гибридная война и кризис  западной цивилизации', 'author': 'Чихарев И.А',},
+            {'link': './transcript.html', 'img': './img/nir-2.jpg', 'chapter': 'Философский клуб', 'type': 'статья', 'text': 'От гибридной к синергетической войне', 'author': 'Чихарев И.А',},
+            {'link': './transcript.html', 'img': './img/nir-3.jpg', 'chapter': 'Центр развития', 'type': 'Монография', 'text': 'Синергетическая война:  координация и синхронизация элементов гибридной войны', 'author': 'Чихарев И.А',},
+            {'link': './transcript.html', 'img': './img/nir-1.jpg', 'chapter': 'Философский клуб', 'type': 'Стенограмма', 'text': 'Гибридная война и кризис  западной цивилизации', 'author': 'Чихарев И.А',},
+            {'link': './transcript.html', 'img': './img/nir-2.jpg', 'chapter': 'Философский клуб', 'type': 'статья', 'text': 'От гибридной к синергетической войне', 'author': 'Чихарев И.А',},
+            {'link': './transcript.html', 'img': './img/nir-3.jpg', 'chapter': 'Центр развития', 'type': 'Монография', 'text': 'Синергетическая война:  координация и синхронизация элементов гибридной войны', 'author': 'Чихарев И.А',},
+            {'link': './transcript.html', 'img': './img/nir-1.jpg', 'chapter': 'Философский клуб', 'type': 'Стенограмма', 'text': 'Гибридная война и кризис  западной цивилизации', 'author': 'Чихарев И.А',},
+            {'link': './transcript.html', 'img': './img/nir-2.jpg', 'chapter': 'Философский клуб', 'type': 'статья', 'text': 'От гибридной к синергетической войне', 'author': 'Чихарев И.А',},
+            {'link': './transcript.html', 'img': './img/nir-3.jpg', 'chapter': 'Центр развития', 'type': 'Монография', 'text': 'Синергетическая война:  координация и синхронизация элементов гибридной войны', 'author': 'Чихарев И.А',},
+            {'link': './transcript.html', 'img': './img/nir-1.jpg', 'chapter': 'Философский клуб', 'type': 'Стенограмма', 'text': 'Гибридная война и кризис  западной цивилизации', 'author': 'Чихарев И.А',},
+          ],
+        }
+      })
+
+      @@include("./components/pagination.html")
+
+    </div>
+  </section>
+
+</main>
+
+@@include("./components/footer.html")
+
+@@include("./shared/script.html")
+</body>
+</html>

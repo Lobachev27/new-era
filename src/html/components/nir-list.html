@@ -1,0 +1,18 @@
+<ul class="nir__list">
+  @@for (var i = 0; i < context.arrNir.length; i++) {
+  <li class="nir__box">
+    <div class="nir__box-image">
+      <img src="`+context.arrNir[i].img+`" alt="">
+    </div>
+    <div class="nir__box-chapter">`+context.arrNir[i].chapter+`</div>
+    <div class="nir__box-type">`+context.arrNir[i].type+`</div>
+    <div class="nir__box-content">
+      <div class="nir__box-text">`+context.arrNir[i].text+`</div>
+      <div class="nir__box-info">
+        Автор: <span class="news__box-city">`+context.arrNir[i].author+`</span>
+      </div>
+    </div>
+    <a class="nir__box-link" href="`+context.arrNir[i].link+`"></a>
+  </li>
+  }
+</ul>

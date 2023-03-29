@@ -1,0 +1,104 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.search {
+  position: relative;
+  width: 28px;
+  margin: 0 8px;
+  cursor: pointer;
+  @media screen and ($tablet1) {
+    margin: 0 8px;
+  }
+  @media screen and ($desktop2) {
+    margin: 0 12px;
+  }
+
+  &.active {
+    & .input-wrapper {
+      width: calc(100vw - 178px);
+      transition: width $transition-time-fast;
+      @media screen and ($tablet1) {
+        width: 280px;
+      }
+      @media screen and ($desktop1) {
+        width: 320px;
+      }
+
+      & .input {
+        background-color: $white;
+        border-radius: 8px;
+        color: $black;
+        padding: 0 40px 0 40px;
+        transition: border $transition-time-fast, background-color $transition-time-fast, color $transition-time-fast;
+        @media screen and ($desktop1) {
+          border-radius: 16px;
+        }
+
+        &::placeholder {
+          color: #BAB5B0;
+          transition: color $transition-time-fast;
+        }
+      }
+
+      &.input-search .icon {
+        left: 12px;
+      }
+    }
+  }
+
+  & .input-wrapper {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 28px;
+    transition: width $transition-time-fast;
+    @media screen and ($desktop1) {
+      width: 34px;
+    }
+
+    & .input {
+      background-color: transparent;
+      border-radius: 28px;
+      padding: 0;
+      width: 100%;
+      color: transparent;
+      transition: border $transition-time-fast, background-color $transition-time-fast, color $transition-time-fast;
+      @media screen and ($desktop1) {
+        font-size: 16px;
+      }
+      @media screen and ($desktop2) {
+        font-size: 16px;
+      }
+
+      &::placeholder {
+        color: transparent;
+        transition: color $transition-time-fast;
+      }
+
+      &-box {
+        position: relative;
+        width: 100%;
+        height: 28px;
+        @media screen and ($desktop1) {
+          height: 34px;
+        }
+      }
+    }
+
+    & .icon-delete {
+      display: none;
+    }
+
+    &.input-search .icon {
+      left: 6px;
+      @media screen and ($desktop1) {
+        left: 9px;
+      }
+    }
+
+    & .message-text {
+      display: none;
+    }
+  }
+}

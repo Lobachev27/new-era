@@ -1,0 +1,589 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.lk {
+  position: relative;
+
+  & .container {
+    position: relative;
+    @media screen and ($desktop2) {
+      display: grid;
+      grid-template-columns: 1fr 75%;
+      grid-column-gap: 32px;
+    }
+    @media screen and ($desktop3) {
+      grid-column-gap: 64px;
+    }
+  }
+
+  &-content {
+    @media screen and ($desktop2) {
+      max-width: 100%;
+      margin-top: 16px;
+    }
+    @media screen and ($desktop3) {
+      margin-top: 4px;
+    }
+  }
+
+  &-sidebar {
+    position: relative;
+    width: calc(100% + 32px);
+    min-width: 100vw;
+    background-color: #F5F5F5;
+    margin-left: -16px;
+    margin-right: -16px;
+    margin-bottom: 24px;
+    padding: 16px;
+    overflow-x: auto;
+    @media screen and ($tablet1) {
+      width: calc(100% + 64px);
+      padding: 16px 32px;
+      margin-left: -32px;
+      margin-right: -32px;
+      margin-bottom: 32px;
+    }
+    @media screen and ($desktop2) {
+      background-color: transparent;
+      width: 100%;
+      min-width: auto;
+      padding: 0;
+      margin-left: 0;
+      margin-right: 0;
+      overflow-x: visible;
+    }
+
+    &::-webkit-scrollbar {
+      -webkit-appearance: none;
+      height: 3px;
+      width: 3px;
+      cursor: pointer;
+    }
+
+    &::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 3px #F5F5F5;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #D9D9D9;
+      border-radius: 3px;
+      outline: none;
+      background-clip: border-box;
+      cursor: pointer;
+    }
+
+    &__list {
+      position: relative;
+      display: flex;
+      align-items: center;
+      flex-wrap: nowrap;
+      width: 100%;
+      min-width: max-content;
+      list-style: none;
+      @media screen and ($desktop2) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    &__item {
+      position: relative;
+      margin-right: 8px;
+      @media screen and ($tablet1) {
+        margin-right: 12px;
+      }
+      @media screen and ($desktop2) {
+        margin-right: 0;
+        display: block;
+        width: 100%;
+        border-bottom: 1px solid #D9D9D9;
+        padding: 22px 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+        @media screen and ($desktop2) {
+          border-bottom: 0;
+        }
+      }
+    }
+
+    &__link {
+      position: relative;
+      display: flex;
+      align-items: center;
+      font-size: 12px;
+      line-height: 24px;
+      font-weight: 500;
+      color: #878787;
+      border: 1px solid #D9D9D9;
+      border-radius: 4px;
+      width: max-content;
+      height: 24px;
+      padding: 0 8px;
+      transition: color $transition-time-fast;
+      @media screen and ($tablet1) {
+        font-size: 14px;
+        height: 32px;
+        padding: 0 12px;
+      }
+      @media screen and ($desktop2) {
+        font-size: 16px;
+        width: 100%;
+        height: auto;
+        border: none;
+        padding: 0;
+      }
+
+      &:hover {
+        color: $black;
+        transition: color $transition-time-fast;
+
+        &:after {
+          opacity: 1;
+          transition: opacity $transition-time-fast;
+        }
+
+        & span {
+          @media screen and ($desktop2) {
+            border-bottom: 1px solid $black;
+            transition: border $transition-time-fast;
+          }
+        }
+      }
+
+      &.active {
+        color: $black;
+        background-color: $white;
+        border: 1px solid transparent;
+        transition: color $transition-time-fast;
+        &:after {
+          @media screen and ($desktop2) {
+            opacity: 1;
+          }
+        }
+      }
+
+      &:after {
+        @media screen and ($desktop2) {
+          content: '';
+          position: absolute;
+          top: 50%;
+          right: 0;
+          transform: translateY(-50%);
+          background: url("../img/icon-chevron.svg") no-repeat;
+          background-position: center;
+          background-size: contain;
+          width: 8px;
+          height: 14px;
+          opacity: 0.6;
+          transition: opacity $transition-time-fast;
+        }
+      }
+
+      & span {
+        @media screen and ($desktop2) {
+          padding: 2px 0;
+          border-bottom: 1px solid transparent;
+          transition: border $transition-time-fast;
+        }
+      }
+    }
+  }
+
+  &-form {
+    position: relative;
+    margin: 22px 0 0;
+    @media screen and ($tablet1) {
+      margin: 20px 0 0;
+    }
+    @media screen and ($desktop1) {
+      margin: 25px 0 0;
+    }
+    @media screen and ($desktop2) {
+      margin: 30px 0 0;
+    }
+    @media screen and ($desktop3) {
+      margin: 40px 0 0;
+    }
+
+    &.lk-form-personal-data {
+      & .form-box {
+        @media screen and ($tablet1) {
+          padding: 12px 0;
+          border-bottom: 1px solid #D9D9D9;
+        }
+
+        &:nth-child(1) {
+          & .input-wrapper {
+            &:nth-last-child(2) {
+              @media screen and ($tablet1) {
+                order: 2;
+              }
+            }
+          }
+        }
+
+        &:nth-child(2) {
+          @media screen and ($tablet1) {
+            padding-bottom: 0;
+            border-bottom: none;
+          }
+        }
+      }
+
+      & .input-wrapper.input-image {
+        @media screen and ($tablet1) {
+          grid-column-start: 2;
+          grid-column-end: 3;
+          grid-row-start: 1;
+          grid-row-end: 4;
+        }
+      }
+
+      & .input-wrapper.two-col-full-width {
+        grid-column-start: 1;
+        grid-column-end: 3;
+      }
+
+    }
+
+    &.lk-form-contacts {
+      & .form-box {
+        @media screen and ($tablet1) {
+          padding: 12px 0;
+          border-bottom: 1px solid #D9D9D9;
+        }
+
+        &:nth-child(1) {
+          align-items: center;
+        }
+
+        &:nth-child(2) {
+          @media screen and ($tablet1) {
+            padding-bottom: 0;
+            border-bottom: none;
+          }
+        }
+
+        & .lk__info {
+          @media screen and ($tablet1) {
+            margin-top: 8px;
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+
+    &.lk-form-education {
+      & .input-wrapper {
+        & .textarea {
+          z-index: 1;
+        }
+      }
+    }
+
+    &.lk-form-safety {
+      & .form-box {
+        @media screen and ($tablet1) {
+          padding: 12px 0;
+          border-bottom: 1px solid #D9D9D9;
+        }
+
+        &:nth-child(1) {
+          align-items: center;
+        }
+
+        &:nth-child(2) {
+          @media screen and ($tablet1) {
+            padding-bottom: 0;
+            border-bottom: none;
+          }
+        }
+
+        & .lk__info {
+          @media screen and ($tablet1) {
+            margin-top: 8px;
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+
+    &.lk-form-subscriptions {
+      & .form-box {
+        @media screen and ($tablet1) {
+          padding: 12px 0;
+          border-bottom: 1px solid #D9D9D9;
+        }
+
+        &:nth-child(1) {
+          align-items: center;
+        }
+
+        &:nth-child(2) {
+          @media screen and ($tablet1) {
+            padding-bottom: 0;
+            border-bottom: none;
+          }
+        }
+      }
+    }
+  }
+
+  & .row {
+    align-items: center;
+    margin-top: 16px;
+    @media screen and ($tablet1) {
+      margin-top: 24px;
+    }
+    @media screen and ($desktop3) {
+      margin-top: 32px;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+
+    & .btn {
+      &:first-child {
+        margin-right: 16px;
+      }
+    }
+  }
+
+  &__text {
+    display: none;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 12px;
+    text-align: right;
+    @media screen and ($tablet1) {
+      display: block;
+      font-size: 14px;
+      line-height: 14px;
+    }
+
+    & sup {
+      color: #EA1B1B;
+    }
+  }
+
+  &__info {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    color: $black;
+    margin-bottom: 24px;
+    @media screen and ($tablet1) {
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
+
+    & a {
+      display: inline;
+      font-weight: 700;
+      padding: 2px 0;
+      border-bottom: 1px solid transparent;
+      transform: border $transition-time-fast;
+
+      &:hover {
+        border-bottom: 1px solid $black;
+        transform: border $transition-time-fast;
+      }
+    }
+  }
+}
+
+.lk-form-request {
+  & p {
+    input[type='submit'],
+    input[type='reset'] {
+      position: relative;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 11px;
+      font-weight: 500;
+      text-align: center;
+      line-height: 11px;
+      letter-spacing: 0.01em;
+      text-transform: uppercase;
+      width: auto;
+      height: 32px;
+      border-radius: 6px;
+      padding: 0 12px;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      transition: background-color $transition-time-fast, color $transition-time-fast;
+      @media screen and ($desktop1) {
+        font-size: 14px;
+        line-height: 14px;
+        height: 40px;
+        padding: 0 18px;
+        border-radius: 12px;
+      }
+
+      &:hover {
+        transition: background-color $transition-time-fast, color $transition-time-fast;
+      }
+    }
+
+    input[type='submit'] {
+      background-color: $button-bg;
+      color: $white;
+      margin: 0;
+
+      &:hover {
+        background-color: $button-bg-hover;
+      }
+    }
+
+    input[type='reset'] {
+      background-color: rgba(23, 23, 23, 0.1);
+      color: $black;
+      margin: 0 0 0 12px;
+
+      &:hover {
+        background-color: $gray;
+      }
+    }
+  }
+}
+
+.form-table-section {
+  position: relative;
+  width: 100%;
+  margin: 16px 0;
+}
+
+.form-table-wrapper {
+  position: relative;
+  padding: 0 16px;
+  margin: 0 -16px;
+  width: auto;
+  overflow-x: auto;
+  overflow-y: visible;
+  @media screen and ($tablet1) {
+    padding: 0 32px;
+    margin: 0 -32px;
+  }
+  @media screen and ($desktop2) {
+    background-color: transparent;
+    width: 100%;
+    min-width: auto;
+    padding: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  &::-webkit-scrollbar {
+    -webkit-appearance: none;
+    height: 3px;
+    width: 3px;
+    cursor: pointer;
+  }
+
+  &::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 3px #F5F5F5;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #D9D9D9;
+    border-radius: 3px;
+    outline: none;
+    background-clip: border-box;
+    cursor: pointer;
+  }
+
+  table.form-table {
+    font-family: 'GothamPro';
+    position: relative;
+    min-width: 1118px;
+    margin: 0 auto;
+    width: 100%;
+    background-color: white;
+    border-collapse: collapse;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.4em;
+
+    & th,
+    & td {
+      border:1px solid #d9d9d9;;
+      padding: 12px;
+      vertical-align:top;
+    }
+
+    & th {
+      background-color: #f5f5f5;
+      text-align: left;
+      vertical-align: middle;
+      font-weight: 500;
+      color: $black;
+    }
+
+    & td {
+      padding: 12px;
+      vertical-align: middle;
+
+      &.td-row-operations {
+        & a {
+          color: $black;
+          opacity: 0.7;
+          transition: opacity $transition-time-fast;
+
+          &:hover {
+            opacity: 1;
+            transition: opacity $transition-time-fast;
+          }
+        }
+      }
+    }
+  }
+
+  table.form-filter-table {
+    background-color: white;
+    font-size: 100%;
+    border-collapse: collapse;
+  }
+
+  table.form-filter-table th {
+    background-image: url(images/table_head.gif);
+    background-repeat:repeat-x;
+    text-align: center;
+    font-size:100%;
+    color: #25639A;
+  }
+
+  table.form-filter-table td, table.form-filter-table th {
+    padding:3px;
+    border:1px solid #d9d9d9;;
+  }
+
+  table.form-filter-table td {
+    vertical-align: top;
+  }
+
+  .form-filter-none {
+    display: none;
+  }
+
+  .form-filter-inline {
+    display: inline;
+  }
+
+  table.form-table table.form-results-header-inline td, table.form-table table.form-results-header-inline th {
+    border: 0px !important;
+    padding: 0px !important;
+    background: none !important;
+  }
+
+  .form-anstext {color:#166122;}
+  .form-ansvalue {color:#FF0000;}
+
+  .form-filteron {color:#FF0000;}
+  .form-filteroff {color:#1C7729;}
+}

@@ -1,0 +1,16 @@
+<div class="input-wrapper @@context.classesList">
+  @@if(context.label){
+  <label class="label-text">@@context.label</label>
+  }
+  <ul class="checkbox-list">
+    @@for (var i = 0; i < context.arr.length; i++) {
+    <li class="checkbox-item">
+      <label class="checkbox">
+        <input class="checkbox-input" type="checkbox" name="`+context.arr[i].name+`" @@if(context.required){required} @@if(context.readonly){onclick="return false;"} @@if(context.disabled){disabled} `+context.arr[i].checked+` />
+        <div class="checkbox-text">`+context.arr[i].text+`</div>
+      </label>
+    </li>
+    }
+  </ul>
+  <span class="message-text">@@context.message</span>
+</div>

@@ -1,0 +1,14 @@
+<ul class="projects__list">
+  @@for (var i = 0; i < context.arr.length; i++) {
+  <li class="projects__box">
+    <div class="projects__box-image">
+      <img src="`+context.arr[i].img+`" alt="">
+    </div>
+    <div class="projects__box-info">
+      <div class="projects__box-title">`+context.arr[i].title+`</div>
+      <div class="projects__box-description">`+context.arr[i].description+`</div>
+    </div>
+    <a class="projects__box-link" href="`+context.arr[i].link+`"></a>
+  </li>
+  }
+</ul>

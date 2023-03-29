@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include("./shared/head.html", {
+  "title": "Личные данные"
+})
+
+<body>
+
+@@include("./components/header.html", {
+  context: {
+    "classList": "",
+    "linkActive": false,
+    arr: [
+      {'class': '', 'link': './nir.html', 'text': 'Научно-исследовательские работы'},
+      {'class': '', 'link': './library.html', 'text': 'Библиотека'},
+      {'class': '', 'link': './news.html', 'text': 'Новости'},
+      {'class': '', 'link': './authors.html', 'text': 'Авторы'},
+      {'class': '', 'link': './about-project.html', 'text': 'О проекте'},
+      {'class': '', 'link': './contacts.html', 'text': 'Контакты'},
+    ],
+  }
+})
+
+<main class="main">
+
+  @@include("./components/breadcrumbs.html", {
+    context: {
+      'lastBreadcrumb': 'Личные данные',
+      arr: [
+        {'text': 'Главная', 'link': './'},
+        {'text': 'Личный кабинет', 'link': 'javascript:void(0);'},
+      ],
+    }
+  })
+
+  <section class="lk">
+    <div class="container">
+
+      @@include("./components/lk-sidebar.html", {
+        context: {
+          "linkActive": 1,
+        }
+      })
+
+      <div class="lk-content">
+        <h1 class="title-h1">Личные данные</h1>
+        <form class="lk-form lk-form-personal-data">
+          <div class="form-box form-col-2">
+
+            @@include("./components/input-image.html", {
+              context: {
+                classesList: "",
+                label: "Аватар",
+                message: "",
+              }
+            })
+
+            @@include("./components/input.html", {
+              context: {
+                classesList: "",
+                required: false,
+                disabled: false,
+                readonly: false,
+                datepicker: false,
+                type: "text",
+                label: "Фамилия",
+                placeholder: "Введите фамилию",
+                icon: "",
+                value: "М*********",
+                message: "",
+              }
+            })
+
+            @@include("./components/input.html", {
+              context: {
+                classesList: "",
+                required: false,
+                disabled: false,
+                readonly: false,
+                datepicker: false,
+                type: "text",
+                label: "Имя",
+                placeholder: "Введите имя",
+                icon: "",
+                value: "Евгений",
+                message: "",
+              }
+            })
+
+            @@include("./components/input.html", {
+              context: {
+                classesList: "",
+                required: false,
+                disabled: false,
+                readonly: false,
+                datepicker: false,
+                type: "text",
+                label: "Отчество",
+                placeholder: "Введите отчество",
+                icon: "",
+                value: "Алексеевич",
+                message: "",
+              }
+            })
+
+            @@include("./components/input.html", {
+              context: {
+                classesList: "input-datepicker datepicker-single",
+                required: false,
+                disabled: false,
+                readonly: false,
+                datepicker: true,
+                type: "text",
+                label: "Дата рождения",
+                placeholder: "дд.мм.гггг",
+                icon: '<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 323.358 323.358" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><g xmlns="http://www.w3.org/2000/svg"><g><path d="m48.863 323.358h225.632c23.653 0 42.875-19.222 42.875-42.875v-213.656c0-23.653-19.222-42.875-42.875-42.875h-17.006v-11.976c0-6.587-5.39-11.976-11.977-11.976s-11.976 5.389-11.976 11.976v11.976h-143.714v-11.976c0-6.587-5.39-11.976-11.977-11.976s-11.976 5.389-11.976 11.976v11.976h-17.006c-23.653 0-42.875 19.222-42.875 42.875v213.656c0 23.653 19.222 42.875 42.875 42.875zm-18.922-256.531c0-10.419 8.503-18.922 18.922-18.922h17.006v11.976c0 6.587 5.389 11.976 11.976 11.976s11.976-5.389 11.976-11.976v-11.976h143.715v11.976c0 6.587 5.389 11.976 11.976 11.976s11.976-5.389 11.976-11.976v-11.976h17.006c10.419 0 18.922 8.503 18.922 18.922v34.971h-263.475zm0 58.923h263.477v154.733c0 10.419-8.503 18.922-18.922 18.922h-225.633c-10.419 0-18.922-8.503-18.922-18.922z" data-original="#000000"></path></g></g></g></svg>',
+                value: "01.03.1988",
+                message: "",
+              }
+            })
+
+            @@include("./components/select.html", {
+              context: {
+                classesList: "",
+                class: "",
+                required: false,
+                disabled: false,
+                readonly: false,
+                label: "Регион",
+                placeholder: "Выберите регион",
+                message: "",
+                arr: [
+                  {'selected': 'selected', 'text': 'г. Москва',},
+                  {'selected': '', 'text': 'Московская область',},
+                  {'selected': '', 'text': 'г. Санкт-Петербург',},
+                  {'selected': '', 'text': 'Ленинградская область',},
+                  {'selected': '', 'text': 'Белгородская область',},
+                  {'selected': '', 'text': 'Брянская область',},
+                  {'selected': '', 'text': 'Владимирская область',},
+                  {'selected': '', 'text': 'Воронежская область',},
+                  {'selected': '', 'text': 'Ивановская область',},
+                  {'selected': '', 'text': 'Калужская область',},
+                ],
+              }
+            })
+
+          </div>
+          <div class="form-box form-col-2">
+
+            @@include("./components/input.html", {
+              context: {
+                classesList: "",
+                required: false,
+                disabled: false,
+                readonly: false,
+                datepicker: false,
+                type: "text",
+                label: "Место работы",
+                placeholder: "Введите место работы",
+                icon: "",
+                value: "ООО «Орлан»",
+                message: "",
+              }
+            })
+
+            @@include("./components/input.html", {
+              context: {
+                classesList: "",
+                required: false,
+                disabled: false,
+                readonly: false,
+                datepicker: false,
+                type: "text",
+                label: "Должность",
+                placeholder: "Введите должность",
+                icon: "",
+                value: "Начальник отдела",
+                message: "",
+              }
+            })
+
+          </div>
+
+          <div class="row">
+            <div class="lk__buttons">
+              <button class="btn btn-black" type="submit">Сохранить</button>
+              <button class="btn btn-gray" type="reset">Отменить</button>
+            </div>
+            <span class="lk__text"><sup>*</sup> поле обязательное для заполнения</span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+@@include("./components/footer.html")
+
+@@include("./shared/script.html")
+</body>
+</html>
